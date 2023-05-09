@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        /* ==== body ==== */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .star {
+            color: red;
+        }
+
+        #wrap {
+            width: 1180px;
+            margin: 0 auto;
+        }
+
+        legend {
+            display: none;
+        }
+
+        /* ==== h1 ==== */
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 500;
+        }
+
+        #wrap p {
+            text-align: right;
+        }
+
+        /* ====form==== */
+        form {
+            margin-top: 20px;
+            width: 1180px;
+            border-radius: 10px;
+            border:1px solid #ebebeb;
+            box-shadow: 0 2px 4px 0 rgba(138, 149, 158, 0.15);
+        }
+
+        form>div {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        form div h2 {
+            text-indent: 20px;
+            margin-top: 20px;
+        }
+
+        form div p {
+            line-height: 40px;
+            font-size: 12px;
+            color: red;
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+
+        /* ==== fieldset ==== */
+        form fieldset {
+            padding: 20px;
+        }
+
+        form fieldset {
+            border: none;
+        }
+
+        /* ==== table ==== */
+        form fieldset table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        form fieldset table th,
+        form fieldset table td {
+            border-bottom: 1px solid #ebebeb;
+            border-top: 1px solid #ebebeb;
+        }
+
+        form fieldset table th {
+            height: 80px;
+            width: 160px;
+            text-align: left;
+            text-indent: 30px;
+        }
+
+        form fieldset input {
+            width: 380px;
+            height: 40px;
+            border: 1px solid #e1e1e1;
+            text-indent: 10px;
+            border-radius: 10px;
+        }
+
+        /* ==== 중복체크 ==== */
+        .checkBtn {
+            width: 140px;
+            height: 40px;
+            border: 1px solid #000;
+            border-radius: 20px;
+            background: #fff;
+            margin-left: 20px;
+        }
+
+        /* ==== 전화번호 , 휴대폰 ==== */
+        #call {
+            width: 120px;
+            height: 40px;
+            border: 1px solid #e1e1e1;
+            border-radius: 10px;
+            text-indent: 10px;
+        }
+
+        .phone {
+            width: 110px;
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        /* ==== 인증번호 ==== */
+        .code {
+            border: none;
+        }
+
+        /* ==== 생년월일 ==== */
+        .birth {
+            width: 24px;
+            height: 24px;
+            position:relative;
+            top:6px;
+        }
+
+        .birth_td p{
+            float:right;
+            font-size:12px;
+            color:red;
+        }
+        .birth_td label{
+            margin-left:5px;
+        }
+
+        .birth_td .selectWrap {
+            display:inline-block;
+            margin-left:50px;
+        }
+        .birth_td .selectWrap  select{
+            border:1px solid #e1e1e1;
+            border-radius: 10px;
+            width: 100px;
+            height: 40px;
+        }
+        
+
+        /* ==== gender ==== */
+        .gend{
+            width: 24px;
+            height: 24px;
+            position:relative;
+            top:6px;
+        }
+        .gend_txt{
+            margin-left:5px;
+        }
+
+        /* ==== 가입완료 btn ==== */
+
+        .btnWrap {
+            width: 100%;
+        }
+        .btnWrap button{
+            display: block;
+            background: #da291c;
+            border: none;
+            width: 200px;
+            height: 50px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 25px;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>회원가입</h1>
+        <!-- 현재 위치가 들어가거나 안내말이 들어가는부분 -->
+
+        <p>홈&gt;회원가입</p>
+        <form action="">
+            <div>
+                <h2>정보입력</h2>
+                <p>*필수사항 입니다.</p>
+            </div>
+            <fieldset>
+                <legend>회원가입양식</legend>
+                <!-- 양식에 들어가는 콘텐츠는 일반적인 마크업을 할 수 있고, table태그를 사용해서 할 수 있다 -->
+                <table>
+                    <tr>
+                        <!--행 tr-->
+                        <th><label for="userName">이름</label><span class="star" title="필수 입력 사항">*</span></th>
+                        <!--열제목 th-->
+                        <td><input type="text" required id="userName" placeholder="이름을 입력해주세요."></td>
+                        <!--칸 td-->
+                    </tr>
+                    <tr>
+                        <th><label for="userId"> 아이디</label><span class="star" title="필수 입력 사항">*</span></th>
+                        <td><input type="text" required id="userId" placeholder="영문,숫자,조합으로 6~20글자를 입력해주세요."><button
+                                value="중복체크" class="checkBtn">중복체크</button></td>
+                    </tr>
+                    <tr>
+                        <th><label for="userPassword"> 비밀번호</label><span class="star" title="필수 입력 사항">*</span></th>
+                        <td><input type="password" required id="userPassword"
+                                placeholder="영문,숫자,특수문자 ! @ # $ & 조합으로 8~20글자 내외">
+                            <input type="password" required id="userPassword" placeholder="비밀번호를 한번 더 입력해 주세요.">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>이메일</th>
+                        <td><input type="email" placeholder="이메일을 입력해주세요."></td>
+                    </tr>
+                    <tr>
+                        <th>전화번호</th>
+                        <td>
+                            <select name="" id="call">
+                                <option value="02" selected>02</option>
+                                <option value="031">031</option>
+                                <option value="032">032</option>
+                                <option value="033">033</option>
+                                <option value="041">041</option>
+                                <option value="042">042</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>휴대폰</th>
+                        <td>
+                            <select title="휴대폰 앞자리 번호" id="call">
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="017">017</option>
+                            </select>
+                            <input type="tel" size="4" maxlength="4" title="휴대폰 중간자리 번호" required class="phone">
+                            <input type="tel" size="4" maxlength="4" title="휴대폰 끝자리 번호" required class="phone">
+                            <button value="인증번호발송" class="checkBtn">인증번호발송</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>인증번호</th>
+                        <td><input type="text" disabled value="인증번호를 발송해주세요" class="code"></td>
+                    </tr>
+                    <tr>
+                        <th>생년월일</th>
+                        <td class="birth_td">
+                            <p>※만 14세 미만의 어린이는 가입이 불가능합니다.</p>
+                            <input type="radio" id="birthday_t" name="birthday" class="birth" checked><label
+                                for="birthday_t">양력</label>
+                            <input type="radio" id="birthday_s" name="birthday" class="birth"><label
+                                for="birthday_s">음력</label>
+                            <div class="selectWrap">
+                                <select name="" id="days">
+                                    <option value="2023년" selected>2023년</option>
+                                    <option value="2022년">2022년</option>
+                                    <option value="2021년">2021년</option>
+                                    <option value="2020년">2020년</option>
+                                    <option value="2019년">2019년</option>
+                                    <option value="2018년">2018년</option>
+                                </select>
+                                </select>
+                                <select name="" id="days">
+                                    <option value="12월">12월</option>
+                                    <option value="11월">11월</option>
+                                    <option value="10월">10월</option>
+                                    <option value="9월">9월</option>
+                                    <option value="8월">8월</option>
+                                    <option value="7월">7월</option>
+                                    <option value="6월">6월</option>
+                                    <option value="5월">5월</option>
+                                    <option value="4월" selected>4월</option>
+                                    <option value="3월">3월</option>
+                                    <option value="2월">2월</option>
+                                    <option value="1월">1월</option>
+                                </select>
+                                <select name="" id="days">
+                                    <option value="31일">31일</option>
+                                    <option value="30일">30일</option>
+                                    <option value="29일">29일</option>
+                                    <option value="19일" selected>19일</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>성별</th>
+                        <td>
+                            <input type="radio" name="gender" id="gend_m" class="gend"><label for="gend_m"
+                                class="gend_txt">남성</label>
+                            <input type="radio" name="gender" id="gend_g" class="gend"><label for="gend_g"
+                                class="gend_txt">여성</label>
+                        </td>
+                    </tr>
+                </table>
+                <div class="btnWrap">
+                    <button class="loginBtn">가입하기</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>

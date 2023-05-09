@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미리보기 컨텐츠</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ====content==== */
+        section{width: 500px; padding-bottom:10px;}
+
+        section dl dt {
+            font-size: 150%;
+            color: crimson;
+            font-weight: bold;
+        }
+
+        section dl:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* ====images==== */
+        section .img {
+            float: left;
+            width: 110px;
+            margin: 10px 10px 10px 20px;
+        }
+        section .img figure img{
+            width: 100px;
+            height: 150px;
+        }
+
+        section  dl figcaption {
+            font-size: 80%;
+        }
+
+        /* ====text==== */
+        section .txt {
+            float: right;
+            width: 230px;
+            margin: 10px;
+            line-height: 200%;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <dl>
+            <dt>더 퍼스트 슬램덩크</dt>
+            <dd class="img">
+                <figure>
+                    <img src="image.jpg" alt="slamdunk">
+                    <figcaption>애니메이션 포스터</figcaption>
+                </figure>
+            </dd>
+            <dd class="txt">
+                <p>
+                    <b>감독 : 이노우에 다케히코</b><br>
+                    장르 : 애니메이션<br>
+                    기본 : 12 , 124분,일본<br>
+                    개봉: 2023.01.04<br>
+                </p>
+            </dd>
+        </dl>
+    </section>
+</body>
+
+</html>

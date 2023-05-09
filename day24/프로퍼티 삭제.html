@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로토타입 프로퍼티 삭제</title>
+    <script>
+        var Member = function(){
+
+        }
+        Member.prototype.person = "어린이"
+        
+        var mem1 = new Member(); // 객체생성
+        var mem2 = new Member(); // 객체생성
+
+        console.log(mem1.person + mem2.person); //어린이 어린이
+
+        mem2.person="청소년";
+        console.log(mem1.person + mem2.person); //어린이 청소년
+
+        delete mem1.person; // mem1.person 삭제
+        delete mem2.person; // mem1.person 삭제
+        console.log(mem1.person + mem2. person); // 어린이청소년
+        //mem1.person 은 프로토타입으로 추가된것은 삭제불가
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

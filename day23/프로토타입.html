@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var Member = function(firstName, lastName){
+            this.firstName = firstName;
+            this.lastName = lastName;
+        };
+        var mem = new Member("마리오","리");
+        mem.getName = function(){
+            return this.lastName + this.firstName;
+        }
+
+        console.log(mem.getName());
+
+        var mem2 = new Member("마리오","슈퍼");
+        console.log(mem2.getName());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

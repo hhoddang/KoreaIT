@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var data = "abc";
+        var box1 = { data: "값1" }
+        var box2 = { data: "값2" }
+
+        function i(){
+            console.log(this.data);
+        }
+
+        i.call(null);
+        //call 메소드는 인수null this로 전달
+        //null의 경우 전역변수(전역객체)를 참조
+
+        i.call(box1);
+        i.call(box2);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

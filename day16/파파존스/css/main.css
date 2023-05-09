@@ -1,0 +1,331 @@
+/* ==== loginbox ==== */
+#loginBoxWrap {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  display: none;
+}
+#loginBoxWrap .loginBackgroud {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+#loginBoxWrap .loginBox {
+  width: 800px;
+  height: 600px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+}
+
+/* ==== loginbox design ==== */
+
+.wrap h4 {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 30px;
+}
+.wrap p {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+/* ==== 로그인영역 ==== */
+
+.wrap h4 {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 30px;
+}
+.wrap p {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}
+/* ==== 로그인영역 ==== */
+#loginBox {
+    width: 350px;
+    margin: 0 auto;
+    position: relative;
+}
+#loginBox .login{
+    position:absolute;
+    top:10px;
+}
+
+#loginBox .login_guest{
+    position:absolute;
+    top:10px;
+}
+
+#loginBox h3 a {
+  color: #000;
+}
+#loginBox #tab01 {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 175px;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 3px solid red;
+}
+#loginBox #tab02 {
+  position: absolute;
+  right: 0;
+  top: 100px;
+  width: 175px;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 3px solid red;
+}
+
+.loginBoxclosebtn{
+    position:absolute;
+    right:15px;
+    top:15px;
+    background:none;
+    border:none;
+}
+
+/* ==== 로그인 폼 영역 ==== */
+
+#login{
+    display: none;
+}
+.login form table {
+  width: 350px;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.login form table tr td {
+  margin-bottom: 10px;
+}
+
+/* ==== 로그인 / 비밀번호 입력 상자 ==== */
+
+.login button {
+  font-size: 12px;
+  background: #da291c;
+  width: 350px;
+  height: 50px;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+
+.login form table .box {
+  width: 250px;
+  height: 50px;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+}
+
+.userpr {
+  display: inline-block;
+  width: 85px;
+  font-size: 14px;
+  color: #000;
+}
+.userIp {
+  display: inline-block;
+  width: 85px;
+  font-size: 14px;
+  color: #000;
+}
+
+#remBtn {
+  width: 260px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+#remBtn input {
+  width: 24px;
+  height: 24px;
+}
+#remBtn label {
+    position:relative;
+  top: -7px;
+}
+
+.find{
+    width: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.find a{
+    margin-top:20px;
+    color:#000;
+    text-align: center;
+}
+
+
+/* ============
+===비회원===
+============ */
+#login_guest{
+    /* display: none; */
+}
+
+#loginBox {
+  width: 350px;
+  margin: 0 auto;
+  position: relative;
+}
+_guest
+#loginBox h3 a {
+  color: #000;
+}
+#loginBox #tab01 {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 175px;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 3px solid red;
+}
+#loginBox #tab02 {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 175px;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 3px solid red;
+}
+#loginBox section {
+  margin-top: 100px;
+}
+
+.loginBoxclosebtn{
+    position:absolute;
+    right:15px;
+    top:15px;
+    background:none;
+    border:none;
+    cursor: pointer;
+}
+
+/* ==== 로그인 폼 영역 ==== */
+
+.login_guest form table {
+  width: 350px;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.login_guest form table tr td {
+  margin-bottom: 10px;
+}
+
+/* ==== 로그인 / 비밀번호 입력 상자 ==== */
+
+.login_guest button {
+  font-size: 12px;
+  background: #da291c;
+  width: 350px;
+  height: 50px;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+
+.login_guest form table .box {
+  width: 250px;
+  height: 50px;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+}
+
+.userpr {
+  display: inline-block;
+  width: 85px;
+  font-size: 14px;
+  color: #000;
+}
+.userIp {
+  display: inline-block;
+  width: 85px;
+  font-size: 14px;
+  color: #000;
+}
+
+#remBtn {
+  width: 260px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+#remBtn input {
+  width: 24px;
+  height: 24px;
+}
+#remBtn label {
+    position:relative;
+  top: -7px;
+}
+
+.find{
+    width: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.find a{
+    margin-top:20px;
+    color:#000;
+    text-align: center;
+}
+
+/* ==== header ==== */
+
+.header_inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+
+.header_inner {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+header div h1 img {
+  margin-top: 20px;
+}
+
+header div ul li {
+  float: left;
+  margin: 20px;
+  line-height: 50px;
+}
+header div ul li a {
+  color: #000;
+  font-weight: 600;
+}
+header div ul li .loginBtn {
+  border: 2px solid #000;
+  background: #fff;
+  border-radius: 20px;
+  padding: 7px 25px;
+}
+
+/* ==== section main img ==== */
+
+section .mainImg {
+  position: relative;
+}
+section .mainImg div {
+  position: absolute;
+  left: 0;
+  top: 0;
+}

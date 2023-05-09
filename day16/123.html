@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자동차 색상 변경하기</title>
+    <link rel="stylesheet" href="../reset.css">
+    <script>
+        // function test(x){
+        //     var box1 = document.getElementById("anchor")
+        //     var box2 = document.getElementsByClassName('button')
+
+        //     var back = ["노트","볼펜","물통",10000]
+
+        //     if(x==box1){
+        //         alert(box1 +"타입은" + typeof(box1));
+        //     }else if(x==box2){
+        //         alert(box2 +"타입은" + typeof(box2));
+        //     }
+
+        // }
+        function showCar(x) {
+            //getAttribute() 는 속성을 다루는 메소드
+            //setAttribute() 는 속성과 그 속성의 값을 다루는 메소드
+            var source = x.getAttribute("href")
+            // alert(source);
+            var placeholder = document.getElementById("placeholder");
+            placeholder.setAttribute("src", source);
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h3>자동차 슬라이드 이미지</h3>
+    <button id="button" class="button" onclick="test(this)"></button>
+    <button id="button2" class="button" onclick="test(this)"></button>
+    <div id="wrap">
+        <div id="slideImage">
+            <img src="images/white.jpg" alt="하얀색자동차">
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+        </div>
+        <h3>자동차 색상</h3>
+        
+    </div>
+</body>
+
+</html>

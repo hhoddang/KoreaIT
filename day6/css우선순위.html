@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>
+            Keat
+        </title>
+        <style>
+            /* 아이디 + 아이디 선택자 */
+            #box #p1{
+                background:black;
+            }
+            /* 아이디 선택자 */
+            #p1{
+                background:orange;
+            }
+            /* 클래스 + 클래스  */
+            .box .txt {
+                background: purple;
+            }
+
+            /* 클래스 선택자 */
+            .txt {
+                background: yellow;
+            }
+
+            /* 하위선택자 */
+            div p {
+                background: aqua;
+            }
+
+            /* 태그선택자 */
+            p {
+                background: blue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>선택자 사용시 우선순위</h1>
+        <div id="box" class="box">
+            <p id="p1" class="txt">css</p>
+        </div>
+    </body>
+
+</html>

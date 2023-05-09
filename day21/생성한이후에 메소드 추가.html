@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var Member = function(firstName, lastName){
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }// 익명함수
+        var mem = new Member("마리오","리"); //생성자 함수 , 복제 (인스턴스화)
+        var mem2 = new Member("마리오","슈퍼"); //생성자 함수 , 복제 (인스턴스화)
+
+        // 생성자 함수를 사용해서 객체를 새로 만든후에 (인스턴스화한 이후에)
+        // 메소드를 추가할 수 있다.
+        Member.prototype.getName = function(){
+            return this.lastName + this.firstName;
+        }
+        console.log(mem.getName());
+        console.log(mem2.getName());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

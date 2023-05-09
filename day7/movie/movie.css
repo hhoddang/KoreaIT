@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size:12px;
+    font-family: "맑은 고딕",sans-serif;
+}
+
+#wrap {
+    width:
+}
+
+header {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+section {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+header h1 {
+    text-align: center;
+    height: 100px;
+    font-size: 50px;
+    line-height: 100px;
+    font-weight: bold;
+    background: lightcyan;
+}
+nav {
+    width: 200px;
+    height: 800px;
+    float: left;    
+}
+
+nav>ul {
+    width: 100%;
+    height: 100%;
+    padding-top:50px;
+    background:#f7f7f7;
+}
+nav>ul>li{
+    width: 100%;
+    border-bottom:1px solid #ccc;
+    box-shadow: 0px 1px 1px 0px  #ccc;
+}
+nav>ul>li:hover{
+    background:#e0e0e0;
+}
+nav>ul>li a{
+    display: block;
+    line-height: 60px;
+    font-size :15px;
+    color:#000;
+    text-align:center;
+}
+nav>ul>li:hover .sub{
+    display: block;
+}
+nav>ul>li .sub li:hover{
+    background:rgb(179, 179, 179);
+}
+nav .sub{
+    width: 100%;
+    height:200px;
+    transition: all 1s;
+    display: none;
+}
+nav .sub li a{
+    display: block;
+    padding:5px;
+    text-align: center;
+}
+
+section .content {
+    width: 1080px;
+    height: 800px;
+    float: left;
+}
+
+section .content .story {
+    width: 100%;
+    padding-bottom:30px;
+}
+section .content .story h2 {
+    width: 100%;
+    height: 70px;
+    background: #c8c8c8;
+    font-family: "궁서";
+    line-height: 70px;
+    font-size: 30px;
+    text-indent: 20px;
+}
+section .content .story:after{
+    content:'';
+    display: block;
+    clear:both;
+}
+section .content .story figure{
+    width: 300px;
+    height: 400px;
+    padding:15px 20px 0 20px;
+    float:left;
+}
+section .content .story figure figcaption{
+    text-align: center;
+    margin-top:5px;
+}
+
+section .content .story figure img{
+    width: 100%;
+    height: 100%;
+}
+section .content .story p{
+    padding-top:15px;
+    line-height: 3;
+}
+
+section .content .people{
+    width: 100%;
+    height: 300px;
+}
+section .content .people h2{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    background:#c8c8c8;
+    font-size:30px;
+    font-family: "궁서";
+    text-indent: 20px;
+}
+section .content .people p{
+    padding:20px;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="jquery-3.6.4.min.js"></script>
+    <script>
+        $(function () {
+            $("nav > ul > li").mouseenter(function(){
+                $(this).children(".submenu").stop().slideDown(500);
+            });
+            $("nav > ul > li").mouseleave(function(){
+                $(this).children(".submenu").stop().slideUp(500);
+            });
+
+
+        }); //제이쿼리 시작
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        .mainmenu {
+            border: 1px solid black;
+        }
+
+        .mainmenu li {
+            float: left;
+            position: relative;
+            width: 100px;
+            text-align: center;
+        }
+
+        .mainmenu li ul {
+            position: absolute;
+            left: 0;
+            top: 30px;
+            border: 1px solid red;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div>제이쿼리</div>
+    <button>클릭</button> -->
+    <header>
+        <nav>
+            <ul class="mainmenu">
+                <li class="main1 menuWrap">메뉴
+                    <ul class="submenu1 submenu">
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                    </ul>
+                </li>
+                <li class="main2 menuWrap">메뉴
+                    <ul class="submenu2 submenu">
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                    </ul>
+                </li>
+                <li class="main3 menuWrap">메뉴
+                    <ul class="submenu3 submenu">
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                    </ul>
+                </li>
+                <li class="main4 menuWrap">메뉴
+                    <ul class="submenu4 submenu">
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

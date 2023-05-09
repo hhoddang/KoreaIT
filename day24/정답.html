@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var Member = function (stu, subject, score) {
+            this.stu = stu; //이름
+            this.subject = subject;//과목
+            this.score = score; //점수
+        };
+
+        Member.prototype = {
+            finish: function () { //이수 유무
+                if (this.score < 60) { //60점 이하인 경우
+                    return "fail"
+                } else { //60점 이상인 경우
+                    return "pass"
+                }
+            },
+            rank: function () {
+                if (this.score >= 90) { //90점 이상인 경우
+                    return "excellent"
+                } else { //90점 이하인 경우 
+                    return "good"
+                }
+            }
+        }
+
+        var mem1 = new Member("마이클", "역사", 70) //새로운 객체 생성 
+        var mem2 = new Member("제인", "역사", 59) // 새로운 객체 생성
+        var mem3 = new Member("제임스", "역사", 90) // 새로운 객체 생성
+
+        console.log(mem1.stu + "," + mem1.subject + "," + mem1.score + "," + mem1.finish() + "," + mem1.rank()); //마이클
+        console.log(mem2.stu + "," + mem2.subject + "," + mem2.score + "," + mem2.finish() + "," + mem2.rank()); // 제인
+        console.log(mem3.stu + "," + mem3.subject + "," + mem3.score + "," + mem3.finish() + "," + mem3.rank()); // 제임스
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

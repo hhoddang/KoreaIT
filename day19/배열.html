@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // 5개의 배열소를 가지는 변수 family를 선언하기
+        // 첫번째 배열요소와 두번째 배열요소를 더한값을 length 속성을 사용하여 배열에 추가하기
+        // push() 메소드를 사용하여 "고양이"를 마지막 배열요소로 추가하기
+        // ( 배열의 요소는 1, 11 , 강아지 , 1010 ,101 )
+
+        var family = [1, 11, "강아지", 1010, 101]
+        // 5개의 배열소를 가지는 변수 family를 선언하기
+
+        family[family.length] = family[0] + family[1];
+        // 첫번째 배열요소와 두번째 배열요소를 더한값을 length 속성을 사용하여 배열에 추가하기
+
+        family.push("고양이");
+        // push() 메소드를 사용하여 "고양이"를 마지막 배열요소로 추가하기
+
+        family.pop("고양이");
+        family.push("강아지");
+
+
+
+        var i = 0;
+        while(i < family.length){
+            alert(family[i]);
+            i++
+        }
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

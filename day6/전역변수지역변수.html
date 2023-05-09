@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>전역변수 지역변수</title>
+        <script>
+            var box = 100; // 변수 생성하고 초기화 , 여기서는 전역변수
+            var box2 = 1000;
+            function a() {
+                // var box2 = 1000; // a함수에서만 사용가능한 변수 , 지역변수 
+                alert(box);
+            }
+            function b() {
+                alert(box2); // b 함수 내부에 box2 라는 변수가 없기때문에 사용 불가
+            }
+            a();
+            b();
+        </script>
+    </head>
+    <body></body>
+</html>

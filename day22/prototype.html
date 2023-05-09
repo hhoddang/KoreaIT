@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로토타입의 사용</title>
+    <script> //스타일 { 속성:값 }
+        var animal = function () {
+
+        }
+        animal.prototype = {
+            walk: function () {
+                alert("종종");
+            }
+        }
+        var dog = function () {  //call 불러온느 메소드 // animal에 담겨있는 프로퍼티를 불러옴
+            animal.call(this);
+        }
+        dog.prototype = new animal(); // animal 을 인스턴스화 하여 dog.prototype 에 담음
+        // dog.prototype.bark = function () {
+        //     alert("멍멍");
+        // }
+        dog.prototype = {
+            bark : function(){
+                alert("멍멍");
+            }
+        }
+
+        var dogs = new dog(); // dog를 인스턴스화 하여 dogs에 담음
+        dogs.walk();
+        dogs.bark();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

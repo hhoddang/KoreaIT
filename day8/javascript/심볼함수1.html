@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>심볼함수</title>
+    <script>
+        //심볼함수는 유일한 속성을 만들때 사용
+        var user = { name:"심다영"} //객체를 변수에 저장
+        var id = Symbol("id"); // 심볼함수를 사용해서 유일한 속성을 만들고 변수에 저장
+        user[id]="no1";
+        // alert(user);
+        // alert(user.name);
+        // alert(user["name"]);
+        alert(user["id"]);
+        alert(user[id])
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

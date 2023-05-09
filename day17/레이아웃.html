@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/1fec5e6e1a.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #wrapper {
+            width: 100%;
+            box-sizing: border-box;
+            border: 10px solid black;
+        }
+
+        .header_box:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .header_box h1 {
+            float: left;
+            margin-top: 5px;
+            margin-left: 50px;
+            font-size: 30px;
+        }
+
+        .header_box h1 a {
+            color: darkcyan;
+        }
+
+
+        /* ==== 보조 메뉴 ==== */
+        .header_box .util {
+            width: 200px;
+            float: right;
+            margin-top: 10px;
+        }
+
+        .header_box .util:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .header_box .util li {
+            float: left;
+            list-style: none;
+        }
+
+        .header_box .util li a {
+            text-decoration: none;
+            display: block;
+            padding: 5px;
+            font-size: 12px;
+        }
+
+        .header_box .util i {
+            /*단축아이콘 숨김처리*/
+            display: none;
+        }
+
+        .header_box .util i {
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .header_box .util i:hover {
+            cursor: pointer;
+        }
+
+        /* ==== 메인메뉴 ==== */
+
+        .header_box_nav h2 {
+            display: none;
+        }
+
+        .header_box_nav ul {
+            background: rgb(210, 230, 173);
+        }
+
+        .header_box_nav ul:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+
+        .header_box_nav ul li {
+            float: left;
+            list-style: none;
+            width: auto;
+        }
+
+        .header_box_nav ul li a {
+            text-decoration: none;
+            display: block;
+            padding: 15px;
+            color: #000;
+            font-size: 14px;
+        }
+
+        .header_box_nav ul li a:hover {
+            background: skyblue;
+        }
+
+        /* ====콘텐츠영역==== */
+        /* #contents {
+            width: 1024px;
+            height: 1000px;
+            background: lightcoral;
+            margin: 0 auto;
+
+        } */
+
+        #left_column {
+            padding: 40px 10px;
+            box-sizing: border-box;
+        }
+
+        /* ==2단영역== */
+        #right_column {
+            padding: 40px 5px;
+            box-sizing: border-box;
+        }
+
+
+        /* 분류 아이콘 */
+
+        article .story_cate ul:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        article .story_cate ul li {
+            float: left;
+            width: auto;
+        }
+
+        article .story_cate ul li a {
+            display: block;
+            padding: 4px;
+            background: cadetblue;
+            color: #fff;
+            margin-right: 5px;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+
+        /* == 제목 == */
+        article h1 {
+            font-size: 35px;
+        }
+
+        article .story_time {
+            margin-bottom: 20px;
+        }
+
+        /* image */
+        article.story p img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* == 기사내용 == */
+
+        article.story p {
+            margin-bottom: 20px;
+        }
+
+        article.story h2 {
+            margin-bottom: 20px;
+        }
+
+        /* sns */
+        .story .story_share ul li {
+            width: 33.33%;
+            float: left;
+        }
+
+        .story .story_share ul li a {
+            display: block;
+            width: auto;
+            text-align: center;
+            padding: 10px 5px;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .story .story_share ul li .twitter {
+            background: rgb(85, 198, 233);
+        }
+
+        .story .story_share ul li .facebook {
+            background: rgb(13, 20, 128);
+        }
+
+        .story .story_share ul li .google {
+            background: rgb(250, 86, 21);
+        }
+
+        .story .story_share ul li a i {
+            margin-right: 5px;
+        }
+
+        /* 관련기사 */
+        article.relation {
+            background: blanchedalmond;
+        }
+
+        article.relation h1 {
+            font-size: 20px;
+            margin-top: 100px;
+            padding-left: 20px;
+            padding-top: 20px;
+        }
+
+        article.relation ul {
+            padding: 0 20px 10px 20px;
+        }
+
+        article.relation ul:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        article.relation ul li {
+            float: left;
+            width: 25%;
+        }
+
+        article.relation ul li a {
+            display: block;
+            padding: 4px;
+        }
+
+        article.relation ul li a img {
+            width: 100%;
+            height: auto;
+        }
+
+        article.relation ul li a div {
+            font-size: 14px;
+        }
+
+        /* 599px 이하 */
+        @media (max-width:599px) {
+            #header .header_box {
+                width: 100%;
+                background: lightpink;
+            }
+
+            .header_box .util {
+                width: 30px;
+                height: 30px;
+                overflow: hidden;
+                margin-right: 10px;
+            }
+
+            .header_box .util i {
+                /*단축아이콘 숨김처리*/
+                display: block;
+                width: 30px;
+                height: 30px;
+                font-size: 30px;
+            }
+
+            #wrapper:before {
+                content: '599px';
+                display: block;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                left: 0;
+            }
+
+            #left_column {
+                background: lightcyan;
+                width: 100%;
+            }
+
+            /* ==2단영역== */
+            #right_column {
+                background: lightgoldenrodyellow;
+                width: 100%;
+                height: 100px;
+            }
+
+            #footer .footer_inner {
+                width: 100%;
+                background: red;
+            }
+        }
+
+        /* 600px 이상 767이하  */
+        @media (min-width:600px) and (max-width:767px) {
+            #wrapper:before {
+                content: '600px';
+                display: block;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                right: 0;
+            }
+
+            #header .header_box {
+                width: 100%;
+                background: lightpink;
+            }
+
+            #footer .footer_inner {
+                width: 100%;
+                background: red;
+            }
+
+            #left_column {
+                background: lightcyan;
+                width: 100%;
+            }
+
+            /* ==2단영역== */
+            #right_column {
+                background: lightgoldenrodyellow;
+                width: 100%;
+                height: 100px;
+            }
+        }
+
+        /* 768px이상 */
+        @media (min-width:768px) {
+            #wrapper:before {
+                content: '768px';
+                display: block;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                right: 0;
+            }
+
+            #header .header_box {
+                width: 100%;
+                background: lightpink;
+            }
+
+            #footer {
+                width: 100%;
+                height: 40px;
+                background: lightsalmon;
+                margin: 0 auto;
+            }
+
+            #footer .footer_inner {
+                width: 100%;
+                margin: 0 auto;
+                background: lightseagreen;
+            }
+
+            #contents:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            #left_column {
+                background: lightcyan;
+                float: left;
+                width: 70%;
+            }
+
+            /* ==2단영역== */
+            #right_column {
+                background: lightgoldenrodyellow;
+                float: right;
+                width: 30%;
+            }
+        }
+
+        /* 1024px 이상 */
+        @media (min-width:1024px) {
+            #wrapper:before {
+                content: '1024px';
+                display: block;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                right: 0;
+            }
+
+            /* ====전체영역==== */
+            #wrapper {
+                width: 100%;
+            }
+
+            /* ====헤더영역====*/
+            #header {
+                width: 100%;
+                height: 100px;
+                background: lightblue;
+                margin: 0 auto;
+            }
+
+            #header .header_box {
+                width: 1024px;
+                margin: 0 auto;
+                background: lightpink;
+            }
+
+            .header_box_nav {
+                width: 1024px;
+                margin: 0 auto;
+            }
+
+            #contents {
+                width: 1024px;
+                margin: 0 auto;
+                background: lightskyblue;
+            }
+
+            /* ====푸터영역==== */
+            #footer {
+                width: 100%;
+                height: 40px;
+                background: lightsalmon;
+                margin: 0 auto;
+            }
+
+            #footer .footer_inner {
+                width: 1024px;
+                margin: 0 auto;
+                background: lightseagreen;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 전체영역 -->
+    <div id="wrapper">
+        <!-- 로고 로그인 회원가입 -->
+        <header id="header">
+            <div class="header_box">
+                <h1><a href="#">TimeSwich</a></h1>
+                <ul class="util">
+                    <i class="fa-solid fa-bars" onclick="javascript:alert('로그인,회원가입')"></i>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+            </div>
+            <div class="header_box_nav">
+                <nav class="menu">
+                    <h2>메인메뉴</h2>
+                    <ul>
+                        <li><a href="#">메인</a></li>
+                        <li><a href="#">잡화</a></li>
+                        <li><a href="#">도구</a></li>
+                        <li><a href="#">외출</a></li>
+                        <li><a href="#">음식</a></li>
+                        <li><a href="#">문의</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="contents">
+
+            <!-- 1단영역 시작-->
+            <section id="left_column">
+                <!-- 메인메뉴 -->
+                <!-- 기사분류 -->
+                <article class="story">
+                    <div class="story_cate">
+                        <ul>
+                            <li><a href="#">음식</a></li>
+                            <li><a href="#">외출</a></li>
+                        </ul>
+                    </div>
+                    <!-- 메인기사제목 -->
+                    <h1>토마토를 맛있게 먹는 방법</h1>
+                    <!-- 기사작성날짜 -->
+                    <div class="story_time">
+                        <time>2014년 8월 10일</time>
+                    </div>
+                    <!-- 메인기사 --사진 , 글-->
+                    <p><img src="img/tomato.jpg" alt="토마토사진"></p>
+                    <p>수확한 토마토를 바로 먹고 싶어서 서울 외곽에 있는 토마토 농가에 직접 다녀왔습니다. 이번에 온 농가의 토마토는 신선하고 저렴하군요.</p>
+
+                    <h2>신선한 토마토 구별 방법</h2>
+                    <p>신선한 토마토는 꼭지가 초록색이고 곧게 되어 있습니다. 빨간 열매는 껍질의 감이 좋고 둥근 것이 좋습니다. 당도가 높은 토마토는 물이 가라앉으므로 쉽게 판별할 수 있습니다.
+                        하지만 무조건
+                        달다고 좋은 것은 아니랍니다.</p>
+
+                    <h2>토마토를 맛있게 먹는 방법</h2>
+                    <p>일반적으로 토마토는 물에 씻어서 바로 먹는 것이 가장 좋습니다. 더운 날에 맛있는 토마토를 먹으면 그것만으로도 행복한데요. 수분 공급도 가능해서 일석이조랍니다.
+                        물론 다른 것을 함께 뿌려 먹는 것도 맛있는데요. 소금, 설탕, 마요네즈, 올리브유를 추천합니다.</p>
+
+                    <div class="story_share">
+                        <!-- sns공유 -->
+                        <ul>
+                            <li><a href="#" class="twitter"><i class="fa-brands fa-twitter"></i>Twiiter로 공유</a></li>
+                            <li><a href="#" class="facebook"><i class="fa-brands fa-twitter"></i>Facebook으로 공유</a></li>
+                            <li><a href="#" class="google"><i class="fa-brands fa-google-plus-g"></i>Google+로 공유</a>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="relation">
+                    <!-- 관련기사  -->
+                    <h1>관련 기사</h1>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/red-150x150.jpg" alt="방울토마토">
+                                <div> 토마토 재배 8화 - 토마토들이 붉은색으로 물들기 시작합니다</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/potato-150x150.jpg" alt="감자">
+                                <div> 맛있는 감자 요리</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/eggplant-150x150.jpg" alt="가지">
+                                <div> 가지를 수확했습니다</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/can-150x150.jpg" alt="통조림">
+                                <div> 통조림을 활용한 절약과 효율화</div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul></ul>
+                </article>
+            </section>
+            <section id="right_column">
+
+                <!-- 특집기사 -->
+                <!-- 추천기사 -->
+                <!-- 인기기사 -->
+            </section>
+            <!-- //2단 영역 종료 -->
+        </div>
+        <!-- 사진 -->
+        <!-- 글 -->
+        <!-- // 1단영역 종료 -->
+
+        <!-- 2단영역 시작 -->
+        
+
+    </div>
+    <!-- //컨텐츠 영역 종료 -->
+
+    <!-- 저작권 -->
+    <footer id="footer">
+        <div class="footer_inner">
+            저작권
+        </div>
+    </footer>
+    </div>
+    <!-- // 전체영역 종료 -->
+</body>
+
+</html>

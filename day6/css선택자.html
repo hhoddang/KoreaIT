@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Keat </title>
+    <style>
+        /*            선택자 : 정보를 담아둔 태그를 선택한다는 의미*/
+        /*            태그선택자*/
+        
+        div {}
+        /*            하위선택자*/
+        
+        div p {}
+        /*            자식선택자*/
+        
+        div p>a {}
+        /*            형제선택자*/
+        
+        div p {}
+        /*            그룹선택자*/
+        
+        div,
+        p,
+        a {}
+        /*            클래스선택자*/
+        
+        .box {}
+        /*            아이디선택자*/
+        
+        #box {}
+        /*            가상클래스선택자*/
+        
+        div p a:link {}
+        
+        div p a:visited {}
+        
+        div p a:hover {}
+        
+        div p a:active {}
+        
+        div p a:focus {}
+        /*            가상요소선택자*/
+        
+        #box .money:before {
+            content: "비트코인";
+            background-image: url(coin.jpg);
+            width: 100px;
+            height: 100px;
+            display: block;
+            background-size: 100px 100px;
+        }
+        
+        #box .money:after {
+            content: "비트코인";
+            background-image: url(coin.jpg);
+            width: 100px;
+            height: 100px;
+            display: block;
+            background-size: 100px 100px;
+        }
+        /*            속성선택자*/
+        
+        a[title] {}
+    </style>
+</head>
+
+<body>
+    <h1>프론트엔드개발</h1>
+    <div id="box" class="box">
+        <p class="p1"><a href="http://www.w3c.org" target="_blank" title="새창으로 열립니다.">웹표준</a></p>
+        <p class="p2"><a href="http://www.w3c.org">웹접근성</a></p>
+        <p class="money">가상화폐개발</p>
+    </div>
+</body>
+
+</html>

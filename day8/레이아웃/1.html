@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap {
+            width: 1024px;
+            margin: 0 auto;
+            color: #fff;
+        }
+
+        /* ====header==== */
+        #header {
+            width: 1024px;
+            height: 100px;
+            background: black;
+            margin-bottom: 10px;
+        }
+
+        /* ====content==== */
+        #contents {
+            width: 1024px;
+            margin-bottom: 10px;
+        }
+
+        #contents:after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+
+        #contents #cont1 {
+            width: 500px;
+            height: 500px;
+            background: #000;
+            float: left;
+        }
+
+        #contents #cont2 {
+            width: 500px;
+            height: 500px;
+            background: #000;
+            float: right;
+        }
+
+        /* ====footer==== */
+        #footer {
+            width: 1024px;
+            height: 100px;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">헤더</header>
+
+        <div id="contents">
+            <div id="cont1">
+                <section>1단 영역</section>
+            </div>
+            <div id="cont2">
+                <section>2단 영역</section>
+            </div>
+        </div>
+        <footer id="footer">푸터</footer>
+    </div>
+</body>
+
+</html>

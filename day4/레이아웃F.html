@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 레이아웃F </title>
+    <style>
+        #wrapper {
+            width: 1024px;
+            height: 500px;
+            border:5px solid black;
+            margin-left:100px;
+        }
+        
+        #sidebar {
+            width: 224px;
+            height: 500px;
+            background: #235235;
+            float: left;
+        }
+        
+        #main {
+            width: 800px;
+            height: 500px;
+            background: red;
+            float: right;
+        }
+        
+        #header {
+            width: 800px;
+            height: 100px;
+            background: pink;
+        }
+        
+        #content {
+            width: 800px;
+            height: 350px;
+            background: green;
+        }
+        
+        #footer {
+            width: 800px;
+            height: 50px;
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!--   전체영역-->
+    <div id="wrapper">
+        <!--    ====sidebar====-->
+        <div id="sidebar">sidebar</div>
+        <!--    ====main====-->
+        <div id="main">
+            <div id="header">header</div>
+            <div id="content">content</div>
+            <div id="footer">footer</div>
+        </div>
+    </div>
+</body>
+</html

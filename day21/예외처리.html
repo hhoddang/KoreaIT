@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var i =1;
+
+        // try{ //예외가 발생할경우
+        //         i = i*k; //  k 라는 변수를 미정의하여 에러발생
+        // }catch(e){ //   e는 error객체 
+        //     console.log(e.message);
+        // }finally{
+        //     console.log("처리되었습니다.");
+        // }
+
+        var i = 1;
+        var y = 0;
+        try{
+            if(y===0){
+                throw new Error("0으로 나누려고 함");
+            }
+        }catch(e){
+            console.log(e.message);
+            //trrow 한 에러객체를 catch블럭에서 e라는 매개변수로 받아서 에러메세지를 콘솔로그창에 출력
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

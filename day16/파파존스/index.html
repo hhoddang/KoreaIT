@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>파파존스</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script>
+        function show_loginBox(){
+            document.getElementById("loginBoxWrap").style.display = " block ";
+        }
+        function hide_loginBox(){
+            document.getElementById("loginBoxWrap").style.display = " none ";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="loginBoxWrap">
+        <div class="loginBackgroud"></div>
+        <div class="loginBox">
+            <div class="wrap">
+                <button class="loginBoxclosebtn" onclick="hide_loginBox()"><img src="images/icon_pop_close.png" alt="닫기버튼"></button>
+                <h4>로그인</h4>
+                <p>주문하려면 로그인이 필요합니다.</p>
+                <div id="loginBox">
+                    <h3 id="tab01"><a href="#" id="tab1" onclick="javascript:tab1(); return false">회원주문</a></h3>
+                    <section id="login" class="login">
+                        <form action="" onsubmit="login()" <fieldset>
+                            <legend></legend>
+                            <!-- ==== 폼내용을 마크업하는 방법 3가지 : table,ul,li,p  -->
+                            <table>
+                                <tr>
+                                    <td class="userpr">
+                                        <label for="">아이디</label>
+                                    </td>
+                                    <td class="userIp">
+                                        <input type="text" id="userId" class="box" required placeholder="guest"
+                                            tabindex="1">
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="userpr">
+                                        <label for="">비밀번호</label>
+                                    </td>
+                                    <td class="userIp">
+                                        <input type="password" id="userPw" class="box" required placeholder="******"
+                                            tabindex="2">
+                                    </td>
+                                </tr>
+                            </table>
+                            <div id="remBtn">
+                                <div>
+                                    <input type="checkbox" id="checkbox1"><label for="checkbox1">아이디저장</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="checkbox2"><label for="checkbox2">자동로그인</label>
+                                </div>
+                            </div>
+                            <button type="submit" tabindex="3">로그인</button>
+                            </fieldset>
+                        </form>
+                        <div class="find">
+                            <a href="#">아이디</a>
+                            <a href="#">비밀번호찾기</a>
+                        </div>
+                    </section>
+                    <h3 id="tab02"><a href="#" id="tab2" onclick="javascript:tab2(); return false">비회원 주문</a></h3>
+                    <section id="login_guest" class="login_guest">
+                        <form action="" onsubmit="login()" <fieldset>
+                            <table>
+                                <tr>
+                                    <td class="userpr">
+                                        <label for="">이름</label>
+                                    </td>
+                                    <td class="userIp">
+                                        <input type="text" id="userId" class="box" required placeholder="guest"
+                                            tabindex="1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="userpr">
+                                        <label for="">연락처</label>
+                                    </td>
+                                    <td class="userIp">
+                                        <input type="password" id="userPw" class="box" required placeholder="******"
+                                            tabindex="2">
+                                    </td>
+                                </tr>
+                            </table>
+                            <button type="submit" tabindex="3">로그인</button>
+                            <input type="checkbox" id="checkbox1"><label for="checkbox1">아이디저장</label>
+                            <input type="checkbox" id="checkbox2"><label for="checkbox2">자동로그인</label>
+                            </fieldset>
+                        </form>
+                        <div class="find">
+                            <a href="#">아이디</a>
+                            <a href="#"> 비밀번호찾기</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="header_inner">
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">메뉴</a></li>
+                        <li><a href="#">이벤트/할인</a></li>
+                        <li><a href="#">E-쿠폰주문</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <h1><img src="images/220301_icon_logo.png" alt="파파존스로고"></h1>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#" onclick="show_loginBox(); return false" class="loginBtn" id="loginBtn">로그인</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="mainImg">
+            <div><img src="images/230126_main_UpAndUp.jpg" alt=""></div>
+            <div><img src="images/230222_03_main_donate.jpg" alt=""></div>
+            <div><img src="images/230324_04_main_promotion.jpg" alt=""></div>
+            <div><img src="images/230331_main_ShTops.jpg" alt=""></div>
+            <div><img src="images/230421_04_main_PizzaClassroom.jpg" alt=""></div>
+        </div>
+    </section>
+</body>
+
+</html>

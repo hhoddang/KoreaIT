@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화살표 함수</title>
+    <script>
+        // let xyz = (a,b,c) => {
+
+        //     let result = a+b+c;
+        //     return alert(result);
+        // }
+        // x,y,z(1,10,100);
+
+
+
+        // let xyz = a =>  alert (a+100);
+        // xyz(1);
+
+        function BlackDog(){
+            this.dogName = "화이트";
+            return{
+                dogName :"블랙",
+                bark:function(){
+                    alert(this.dogName+"멍멍")
+                }
+            };
+        }
+        let blackDog = new BlackDog();
+        blackDog.bark();
+
+        function WhiteDog(){
+            this.dogName="화이트";
+            return{
+                dogName:"블랙",
+                bark:()=>{
+                    alert(this.dogName+"멍멍");
+                }
+            };
+        }
+        let whitedog = new WhiteDog();
+        whitedog.bark();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

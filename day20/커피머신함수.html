@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커피머신함수</title>
+    <script>
+        function coffeeMachine() {
+            let americano = 1000; //아메리카노
+            let latte = 1500; //라떼
+            let cola = 900; //콜라
+            var total = null // 돈통
+
+            for (var i = 0; i < arguments.length; i++) {
+                total += arguments[i];
+            }
+
+            if (total == americano) {
+                var order = confirm("아메리카노, 콜라 중 아메리카노를 주문하시겠습니까?");
+                if (order == true) {
+                    return alert("주문하신 아메리카노 나왔습니다.");
+                } else {
+                    var order = confirm("콜라를 주문하시겠습니까?")
+                    if (order == 1) {
+                        alert("주문하신 콜라 나왔습니다.")
+                    } else {
+                        alert("아메리카노 또는 콜라중에 선택해주세요.")
+                    }
+                }
+                var total = [];
+
+
+            } else if (total == 2000) {
+                var order = confirm("아메리카노, 라떼, 콜라 중 라떼를 주문하시겠습니까?")
+                if (order == 1) {
+                    return alert("주문하신 아메리카노 나왔습니다.");
+                } else {
+                    var order = confirm("라떼와 콜라중 라떼를 주문하시겠습니까?")
+                    if (order == 1) {
+                        alert("주문하신 라떼 나왔습니다.")
+                    }else if(order ==0){
+                        var order = confirm("콜라를 주문하시겠습니까?")
+                        if(order ==1 ){
+                            alert("주문하신 콜라 나왔습니다.")
+                        }else{
+                            alert("음료를 선택해 주세요.")
+                        }
+                    }
+                }
+
+                var total = [];
+            } else if (total > 1500) {
+                var total = [];
+                return alert("거스름돈을 받으세요.")
+            }
+
+        }
+        coffeeMachine(1000,500, 500);
+
+
+
+        // function coffeeMachine() {
+        //     let americano_R = 900; //아메리카노
+        //     let americano_L = 1500; //아메리카노
+        //     let sickhye = 1000; //아메리카노
+        //     let latte = 2500; //아메리카노
+        //     var total = null // 돈통
+
+        //     for (var i = 0; i < arguments.length; i++){
+        //         total += arguments[i];
+        //     }
+
+        //         if (total == americano_R) {
+        //             var total = [];
+        //             return alert("아메리카노 커피 나왔습니다.");
+        //         }else if (total < 1400) {
+        //             var total = [];
+        //             return alert("잔액이 모자랍니다.");
+        //         } else if (total > latte) {
+        //             var total = [];
+        //             return alert("거스름돈을 받으세요.")
+        //         }
+
+        // }
+        // coffeeMachine(500,500);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

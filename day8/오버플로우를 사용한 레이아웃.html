@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            width: 1024px;
+            margin:0 auto;
+        }
+
+        /* ==== header ==== */
+9        #header {
+            background: yellow;
+            height: 100px;
+            
+        }
+
+        /* ==== content ==== */
+        #contents {
+            background: aqua;
+            width: 1024px;
+            overflow:auto;
+        }
+        /* #contents::after{
+            content:'';
+            clear:both;
+            display:block;
+        } */
+
+        #cont1 {
+            background: blue; 
+            float: left;
+            width: 200px;
+            height: 500px;
+        }
+
+        #cont2 {
+            background: greenyellow;
+            float: right;
+            width: 824px;
+            height: 500px;
+        }
+
+        /* ==== footer ==== */
+        #footer {
+            background: gray;
+            /* float를 사용한 요소를 인식해서 화면에 바르게 보이게 하기위함 */
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 모든 태그는 id속성, class 속성, style 속성 title 속성 4가지를 사용 할 수 있다. -->
+        <!-- ==== header ==== -->
+        <header id="header">헤더</header>
+
+        <!-- ==== content ==== -->
+        <div id="contents">
+            <div id="cont1">
+                <section>1단 영역
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                    콘텐츠<br>
+                </section>
+            </div>
+            <div id="cont2">
+                <section>2단 영역</section>
+            </div>
+        </div>
+
+        <!-- ==== footer ==== -->
+        <footer id="footer">푸터</footer>
+    </div>
+</body>
+
+</html>

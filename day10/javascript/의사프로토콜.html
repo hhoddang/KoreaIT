@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>의사프로토콜</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        pre {
+            background: aqua;
+        }
+
+        h1,
+        h2,
+        h3 {
+            padding: 10px;
+        }
+
+        a {
+            display: inline-block;
+            background: darkorange;
+            border: 1px solid orange;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #000;
+            margin-bottom: 3px;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> 의사프로토콜을 사용</h1>
+    <h2>변수와 상수</h2>
+    <h3>변수 (var)</h3>
+    <a href="javascript:window.alert(num)">var변수</a>
+    <pre>
+        <code>
+            var num= 1;
+        </code>
+    </pre>
+    <script>
+        var num = 1;
+    </script>
+
+    <h3>변수 (let)</h3>
+    <a href="javascript:window.alert(num)">let변수</a>
+    <pre>
+        <code>
+            let num = 1;
+        </code>
+    </pre>
+    <script>
+        let num = 1;
+    </script>
+
+
+
+    <h3>비교연산자</h3>
+    <a href="javascript:window.alert(110 > 100 > 10);">비교연산자</a>
+    <pre>
+        <code>
+        alert(110 > 100 > 10);
+        </code>
+    </pre>
+    <script>
+        // alert(110 > 100 > 10);
+        // alert( 110 > 100 && 100 > 10);
+    </script>
+
+    <h3>변수 (const)</h3>
+    <a href="javascript:window.alert(num)">const변수</a>
+    <pre>
+        <code>
+            const num = 1;
+        </code>
+    </pre>
+    <script>
+        const num = 1;
+    </script>
+
+    <h3>데이터형(숫자)</h3>
+    <a href="javascript:window.alert(10*4);">10*4 연산결과보기</a>
+    <pre>
+        <code>
+            //alert("자바스크립트");
+            alert(10*4);
+        </code>
+    </pre>
+    <script>
+        // alert(10 * 4);
+    </script>
+
+    <h3>데이터형(null)</h3>
+    <a href="javascript:window.alert(box3)">null값 확인하기</a>
+    <pre>
+        <code>
+            var box3 = " ";//null
+        </code>
+    </pre>
+    <script>
+        var box3 = "";
+    </script>
+
+    <h3>데이터형(undefined)</h3>
+    <a href="javascript:window.alert(und)">undefined 값 확인하기</a>
+    <pre>
+        <code>
+            var und;
+        </code>
+    </pre>
+    <script>
+        var und;
+    </script>
+
+    <h3>데이터형(템플릿리터럴)</h3>
+    <a href="javascript:window.alert(movie)">확인하기</a>
+    <pre>
+        <code>
+        var person1 = '둘리';
+        var person2 = '마이클';
+        var movie = `만화주인공  ${person1} ${person2}  있다.`;
+        </code>
+    </pre>
+    <script>
+        var person1 = '둘리';
+        var person2 = '마이클';
+        var movie = `만화주인공  ${person1} ${person2}  있다.`;
+    </script>
+
+    <h3>연산자 (+ - * / %)</h3>
+    <a href="javascript:window.alert(x+y)">변수x와 변수y를 더하기했을때 결과 값은?</a><br>
+    <a href="javascript:window.alert(x-y)">변수x와 변수y를 빼기했을때 결과 값은?</a><br>
+    <a href="javascript:window.alert(x*y)">변수x와 변수y를 곱하기했을때 결과 값은?</a><br>
+    <a href="javascript:window.alert(x/y)">변수x와 변수y를 나누기했을때 결과 값은?</a><br>
+    <a href="javascript:window.alert(x%y)">변수x와 변수y를 나누고난 나머지 결과 값은?</a><br>
+    <pre>
+        <code>
+            var x = 1;
+            var y = 100;
+        </code>
+    </pre>
+    <script>
+        var x = 1;
+        var y = 100;
+    </script>
+
+    <h3>데이터형(객체)</h3>
+    <a href="javascript:window.alert(cat['color'])">cat 객체의 색상값은?</a>
+    <a href="javascript:window.alert(cat['age'])">cat 객체의 나이값은?</a>
+    <pre>
+        <code>
+            const cat = {
+                nickname : "코코",
+                age:2,
+                color:"white"
+            }
+        </code>
+    </pre>
+    <script>
+        const cat = {
+            nickname: "코코",
+            age: 2,
+            color: "white"
+        }
+    </script>
+
+    <h3>데이터형(배열)</h3>
+    <a href="javascript:window.alert(puppies[0])">배열</a><br>
+    <pre>
+        <code>
+        const puppies = ["말티즈","진돗개","시츄"]
+        alert(puppies[0])
+        puppies[0]= "비글";
+        alert(puppies[0])
+        </code>
+    </pre>
+    <script>
+        const puppies = ["말티즈", "진돗개", "시츄"]
+        puppies[0] = "비글";
+    </script>
+
+
+    <h3>데이터형(심볼함수)</h3>
+    <a href="javascript:window.alert(user['name'])">심볼함수</a><br>
+    <pre>
+        <code>
+            var user = { name:"홍길동"}
+            var id = Symbol("id");
+            user[id]="no1";
+            alert(user["id"]);
+            alert(user[id])
+        </code>
+    </pre>
+    <script>
+        var user = { name: "홍길동" }
+        var id = Symbol("id");
+    </script>
+
+    <h3>데이터형(전역변수)</h3>
+    <a href="javascript:window.alert(box);">전역변수</a><br>
+    <a href="javascript:window.alert(box2);">지역변수</a><br>
+    <pre>
+        <code>
+            var box = 100; 
+            function a() {
+                var box2 = 1000;
+            }
+        </code>
+    </pre>
+    <script>
+        var box = 100;
+        var box2 = 1000;
+    </script>
+
+
+
+
+</body>
+
+</html>

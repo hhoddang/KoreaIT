@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var animal = function(){}
+
+        Animal.prototype = { walk: function(){alert("종종");}}
+
+        var Dog = function(){ Animal.call(this )}
+                //Animal 함수를 현재의 this로 불러온다
+                //Animal에 담겨있는 프로퍼티를 불러온다
+                // Dog 에는 Animal의 프로퍼티가 담겨있다.
+
+        Dog.prototype = new Animal(); // Animal 을 인스턴스화 하여 Dog.prototype에 담음.
+        Animal.prototype.bark = function(){ alert("멍멍") ;}
+        
+        var Dogs = new Dog();
+        Dogs.walk();
+        Dogs.bark();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

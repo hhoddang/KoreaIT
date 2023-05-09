@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자동차 색상 변경하기</title>
+    <link rel="stylesheet" href="../reset.css">
+    <script>
+
+    </script>
+    <style>
+        /* ==== 웹 초기화 ==== */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        /* ==== 이미지 영역 ==== */
+        #slideImage {
+            border: 10px solid #000;
+            width: 478px;
+            height: 268px;
+            position: relative;
+        }
+        #slideImage>a{
+            position:absolute;
+            top:50%;
+            width: 30px;
+            height: 30px;
+            border:1px solid red;
+            text-indent: -9999px;
+        }
+        #slideImage .prev{
+            position:absolute;
+            left:10px;
+        }
+        #slideImage .next{
+            position:absolute;
+            right:10px;
+        }
+
+        /* ==== 버튼 아이콘 ==== */
+        .control {
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            transform: translateX(-50%);
+        }
+
+        .control li {
+            float: left;
+            margin: 0 10px;
+        }
+
+        .control li a {
+            width: 10px;
+            height: 10px;
+            background: rgba(1, 1, 1, .5);
+            border-radius: 50%;
+            text-indent: -9999px;
+        }
+
+        .control li a.on {
+            background: yellow;
+        }
+    </style>
+    <script>
+        function showCar(x) {
+            var img_src = x.getAttribute("href") //사용자가 클릭한 a태그의 href 속성의 값을 담는다.
+            var photoArea = document.getElementById("photo") //자동차 이미지가 보이지는 영역
+            photoArea.setAttribute("src", img_src);// 1에서 담아놓은 자동차 이미지로 변경한다.
+
+            var color = document.getElementsByClassName("color");
+            for (var i = 0; i < color.length; i++) {
+                var colors = color.item(i);
+                if (x == colors) {
+                    x.setAttribute("style", "background:yellow")
+                } else {
+                    colors.setAttribute("style", "background:rgba(1,1,1,.5)")
+                }
+            }
+        }
+
+        var box = 1;
+        function prev() {
+            box--;
+            if (box < 1) {
+                box = 3;
+            }
+            if (box == 1) {
+                document.getElementById("one").style.background = "yellow"
+                document.getElementById("two").style.background = "black"
+                document.getElementById("three").style.background = "black"
+            }
+            if (box == 2) {
+                document.getElementById("one").style.background = "black"
+                document.getElementById("two").style.background = "yellow"
+                document.getElementById("three").style.background = "black"
+            }
+            if (box == 3) {
+                document.getElementById("one").style.background = "black"
+                document.getElementById("two").style.background = "black"
+                document.getElementById("three").style.background = "yellow"
+            }
+            document.getElementById("photo").src = "images/car_white" + box + ".jpg";
+        }
+        function next() {
+            box++;
+            if (box > 3) {
+                box = 1;
+            }
+            if (box == 1) {
+                document.getElementById("one").style.background = "yellow"
+                document.getElementById("two").style.background = "black"
+                document.getElementById("three").style.background = "black"
+            }
+            if (box == 2) {
+                document.getElementById("one").style.background = "black"
+                document.getElementById("two").style.background = "yellow"
+                document.getElementById("three").style.background = "black"
+            }
+            if (box == 3) {
+                document.getElementById("one").style.background = "black"
+                document.getElementById("two").style.background = "black"
+                document.getElementById("three").style.background = "yellow"
+            }
+            document.getElementById("photo").src = "images/car_white" + box + ".jpg";
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <h3>자동차 슬라이드 이미지</h3>
+    <div id="slideImage">
+        <p><img src="images/car_white1.jpg" id="photo" alt="하얀색자동차"></p>
+        <a href="#" class="prev" onclick="prev(); return false;">이전</a>
+        <a href="#" class="next" onclick="next(); return false;">다음</a>
+        <ul class="control">
+            <li><a href="images/car_white1.jpg" class="color on" id="one" onclick="showCar(this); return false">1</a>
+            </li>
+            <li><a href="images/car_white2.jpg" class="color" id="two" onclick="showCar(this); return false">2</a></li>
+            <li><a href="images/car_white3.jpg" class="color" id="three" onclick="showCar(this); return false">3</a>
+            </li>
+        </ul>
+        <button id="button" class="button" onclick="test(this)"></button>
+        <button id="button2" class="button" onclick="test(this)"></button>
+    </div>
+
+</body>
+
+</html>
