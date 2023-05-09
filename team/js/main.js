@@ -1,3 +1,6 @@
+// =====================//
+//메인이미지 슬릭슬라이더 //
+// =====================//
 $(function () {
   $(".bannerImg").slick({
     autoplay: true,
@@ -8,6 +11,19 @@ $(function () {
     pauseOnHover: true,
   });
 });
+// =====================//
+//메뉴이미지 슬릭슬라이더 //
+// =====================//
+$(function () {
+  $(".product").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: false,
+  });
+});
+// =====================//
+//네비게이션 메뉴 호버시  //
+// =====================//
 
 $(function () {
   $(".gnb").mouseenter(function () {

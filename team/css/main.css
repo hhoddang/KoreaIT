@@ -151,3 +151,99 @@ header {
   border-radius: 25px;
   background: #ffc300;
 }
+
+/* =================
+메뉴 박스 
+===================*/
+
+#menuWrap {
+  width: 100%;
+  margin-top: 30px;
+  position: relative;
+}
+
+#menuWrap .productWrap {
+  width: 1280px;
+  margin: 0 auto;
+}
+#menuWrap .productWrap h2 {
+  font-size: 45px;
+  line-height: 80px;
+  font-weight: bold;
+  padding: 17px 0 0 25px;
+  background: url("../images/bul_tit.png") 0 20px no-repeat;
+}
+#menuWrap .productWrap h2 span {
+  display: inline-block;
+  font-size: 40px;
+  color: #533801;
+}
+
+#menuWrap .product {
+  width: 1280px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+#menuWrap .product div {
+  width: 100%;
+  position:relative;
+}
+#menuWrap .product .product_text{
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  position:absolute;
+  bottom:0px;
+}
+#menuWrap .product div img {
+  width: 100%;
+}
+
+#menuWrap .slick-arrow {
+  text-indent: -9999px;
+  cursor: pointer;
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+#menuWrap .slick-prev {
+  position: absolute;
+  left: -100px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url("../images/angle-circle-left-icon.png") no-repeat;
+  background-size: cover;
+}
+#menuWrap .slick-next {
+  position: absolute;
+  right: -100px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url("../images/angle-circle-right-icon.png") no-repeat;
+  background-size: cover;
+}
+#menuWrap .slick-next:hover{
+  background:url("../images/angle-circle-arrow-right-icon-on.png");
+  background-size:cover;
+}
+#menuWrap .slick-prev:hover{
+  background:url("../images/angle-circle-arrow-left-icon-on.png");
+  background-size:cover;
+}
+
+/* =============
+콘텐츠 영역
+============= */
+
+#content{
+  width: 100%;
+  margin-top:100px;
+  height: 500px;
+  background:url("../images/bg_content.gif");
+}
+
+#content .News{
+  width: 1280px;
+  height: 500px;
+  margin:0 auto;
+}
