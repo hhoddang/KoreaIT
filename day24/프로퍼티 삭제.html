@@ -19,13 +19,17 @@
         mem2.person="청소년";
         console.log(mem1.person + mem2.person); //어린이 청소년
 
-        delete mem1.person; // mem1.person 삭제
-        delete mem2.person; // mem1.person 삭제
+        delete mem1.person; // mem1.person은 존재하지 않으므로 삭제가 불가능
+                            // 또한 prototype 에 있는것은 삭제가 불가
+
+        delete mem2.person; // mem2.person 청소년은 mem2라는 객체를 새로 만든후에 추가한것이므로 삭제가 가능
         console.log(mem1.person + mem2. person); // 어린이청소년
-        //mem1.person 은 프로토타입으로 추가된것은 삭제불가
+
+        //mem2.person은 delete해서 삭제되었으나, 자동적으로 prototype에 같은 것이 있는지 찾아서 있으면 결과를 return 한다.
+
     </script>
 </head>
-<body>
+<body>  
     
 </body>
 </html>
