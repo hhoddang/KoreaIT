@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로토타입</title>
+    <script>
+        function Person(x) {
+            this.x = x;
+        }
+        console.log(Person.prototype); // function 객체의 프로토타입을 사용할 수 있다.
+
+        Person.prototype.bag = {
+            function() {
+                console.log("가방");
+            }
+        };
+
+
+        var iam = new Person(); // 새 객채 생성 (인스턴스화)
+        // console.log(iam.prototype);
+        // console.log(Person.prototype);
+        console.log(iam.hasOwnProperty('x'))
+        console.log(Person.hasOwnProperty('x'))
+        alert(Object.prototype=== Person.prototype);
+
+        //자바스크립트 객체는 프로퍼티 , 메소드에 접근할때 없을경우
+        // 상위 (객체)역할을 하는 객체로 가서 프로토타입의 프로퍼티를 찾는다(검색)
+        // 프로토타입 체인.
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
