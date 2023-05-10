@@ -37,14 +37,19 @@ $(function () {
   });
 });
 
-$(window).scroll(function () {
-  // 스크롤바의 위치를 찾아주는 함수
-  var num = $(document).scrollTop();
-  console.log(num);
 
-  if (num > 100) {
-    $("#gnb_static").addClass("on");
-  } else {
-    $("#gnb_static").removeClass("on");
-  }
-});
+
+// ==================//
+//스크롤 헤더 Sticky //
+// =================//
+
+// $(window).scroll(function () {
+//   var num = $(document).scrollTop();
+//   console.log(num);
+
+//   if (num > 100) {
+//     $("#gnb_static").addClass("on");
+//   } else {
+//     $("#gnb_static").removeClass("on");
+//   }
+// });
