@@ -1,0 +1,130 @@
+#wrap {
+  width: 100%;
+}
+
+/* ==== header ==== */
+
+header {
+  width: 100%;
+  height: 100px;
+}
+header .header_inner {
+  position: relative;
+}
+header .header_inner .logo {
+  width: 100%;
+  height: 100px;
+}
+header .header_inner .logo h1 {
+  text-align: center;
+  line-height: 100px;
+  font-size: 40px;
+  font-family: "HANAMDAUM";
+}
+
+/* ===== gnb button ==== */
+
+.header_nav {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.header_nav .navButton {
+  width: 20px;
+  height: 3px;
+  background: #000;
+  position: relative;
+  top:50%;
+}
+.header_nav .navButton:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 3px;
+  background: #000;
+  position: absolute;
+  top: 7px;
+  left: 0;
+}
+.header_nav .navButton:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 3px;
+  background: #000;
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+}
+
+/* ==== gnb ==== */
+.gnb {
+    display: none;
+}
+
+
+
+/* ==== banner ==== */
+
+#contents{
+    width: 100%;
+}
+#contents .main{
+    width: 100%;
+    height: auto;
+}
+#contents .main div img{
+    width: 100%;
+}
+
+
+/* ==== menu ==== */
+
+.menu{
+    width: 100%;
+    padding: 20px 0;
+}
+
+.menu .menu_box{
+    height: auto;
+    position:relative;
+}
+.menu .more_product{
+    width: 150px;
+    height: 20px;
+    position:absolute;
+    right:-90px;
+    bottom:-10px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    font-size:12px;
+    color:rgb(121, 121, 121);
+}
+.menu div > h2{
+    font-size:20px;
+    text-indent : 10px;
+    font-weight: bold;
+    margin-bottom:10px;
+}
+.menu div ul:before{
+    content: '';
+    display: block;
+    clear: both;
+}
+.menu div ul li{
+    float:left;
+}
+.menu div ul li{
+    background:#fff;
+    width: 50%;
+    margin-bottom:20px;
+}
+.menu div ul li a img{
+    width: 100%;
+    height: auto;
+}

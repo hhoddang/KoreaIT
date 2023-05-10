@@ -1,0 +1,11 @@
+* a{color: black}
+h1 a{color: green;}
+
+header#header{background-color: antiquewhite;}
+section.main{background-color: azure;}
+div.popular{background-color: burlywood;}
+div.newmenu{background-color: beige;}
+div.cake{background-color: cadetblue;}
+section.news{background-color: darkgray;}
+section.event{background-color: darkorange;}
+footer#footer{background-color: deeppink;}
