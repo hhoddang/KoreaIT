@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오버라이딩과 섀도잉</title>
+    <script>
+        function Person(x) {
+            this.xbox = x;
+        }
+
+        Person.prototype = {  // 생성자 함수의 프로퍼티 추가 객체리터럴 방식
+            // 속성: 값 , 
+            bag: function () { 
+                console.log("노트")
+            }
+        }
+        var iam = new Person("마이클"); // 새 객체 (인스턴스) 생성
+        iam = { // 객체 (인스턴스) 의 프로퍼티 추가 객체 리터럴 방식
+            bag: function(){
+                console.log("공")
+            }            
+        }
+        iam.bag(); // 인스턴스 (객체) 의 bag 메서드가 호출 (작동),
+                    // 생성자 함수에서 prototype으로 추가한 bag 메서드는 가려짐 (섀도잉)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

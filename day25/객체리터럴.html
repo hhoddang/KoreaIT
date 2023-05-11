@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수리터럴과 객체리터럴의 차이</title>
+    <script>
+        var box = { first: "하나", second: "둘" } // 단순한 객체리터럴
+
+        function Person(x) { //생성자 함수
+            this.xbox = x;
+        }
+        Person.prototype = {
+            bag: function () {
+                console.log("객체리터럴");
+            }
+        };
+        // 함수리터럴 방식으로 prototype에 프로퍼티 추가
+        var iam = new Person("마이클"); // 인스턴스 객체 생성
+        console.log(box.constructor);
+        console.log(Person.constructor);
+        console.log(iam.constructor);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

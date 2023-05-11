@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로토타입체인</title>
+    <script>
+        var box = { first: " 하나", second: " 둘" } // 단순한 객체 리터럴 방식
+
+        function Person(x) { // 생성자함수
+            this.xbox = x;
+        }
+        // Person.prototype = {} // prototype을 사용하여 객체리터럴로 프로퍼티를 추가하거나
+        // Person.prototype.bag= function () { } // prototype을 사용하여 함수리터럴로 프로퍼티를 추가할 수 있다.
+
+        var iam = new Person("마이클"); //객체 생성
+        Person.prototype = { ball: function () { console.log("공") } }
+        iam.prototype = { bag: function () { console.log("가방") } };
+
+        console.dir(box.constructor); // 객체의 최상위 객체는 object 객체다.
+        console.dir(Person.constructor); // 생성자함수의 constructor는 function.prototype 객체
+        console.dir(iam.constructor); //
+
+
+        // console.log(Person.hasOwnProperty("prototype")); //true prototype이 존재
+        // console.log(Person.hasOwnProperty("xbox")); // false
+        // console.log(Person.xbox); // undifined 할당 된 값이 없음
+
+        // console.log(iam.hasOwnProperty("prototype")); //false
+        // console.log(iam.hasOwnProperty("xbox"));
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
