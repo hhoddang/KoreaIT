@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신호등</title>
+    <link rel="stylesheet" href="js/jquery-3.6.4.min.js">
+    <script>
+        $(function () {
+            $("#on_green").click(function(){
+                $("ul li:first-child").css("background","img/on_green.png")
+                $("ul li:lsat-child").css("background","img/off_red.png")
+            });
+            $("#on_red").click(function(){
+                $("ul li:first-child").css("background","img/off_green.png")
+                $("ul li:lsat-child").css("background","img/on_red.png")
+            });
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li{
+            width: 60px;
+            height: 60px;
+            background-repeat: no-repeat;
+        }
+        ul li:first-child {
+            background:url("img/off_green.png");
+        }
+        ul li:last-child {
+            background:url("img/on_red.png");
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>신호등</h2>
+        <ul>
+            <li></li>
+            <li></li>
+        </ul>
+        <button id="on_green">초록불 켜기</button>
+        <button id="on_red">빨간불 켜기</button>
+    </div>
+</body>
+
+</html>
