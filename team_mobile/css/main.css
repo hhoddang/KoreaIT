@@ -1,5 +1,91 @@
 #wrap {
   width: 100%;
+  position: relative;
+}
+
+/* ==== mobile. menu ==== */
+#mobileMenuWrap {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.mobileMenuBg {
+  width: 100vw;
+  height: 100vh;
+  background: #00000080;
+}
+.mobileMenu {
+  width: 70%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
+.mobileCloseBtn a{
+  display: block;
+  width: 25px;
+  height: 20px;
+  position:absolute;
+  right:10px; 
+  top:45px;
+}
+
+.mobileCloseBtn a span{
+  display: block;
+  width: 20px;
+  height: 2px;
+  background:#000;
+  text-indent: -99999px;
+  position:absolute;
+  top:10px; right:0px;   
+  transform: translateY(-50%);
+  transition:all ease 0.3s;
+
+}
+
+.mobileCloseBtn a span::before{
+  content: '';
+  width: 20px;
+  height: 2px;
+  background:#000;
+  position:absolute;
+  right:0px; top:-8px;
+  transition:all ease 0.3s;
+}
+
+.mobileCloseBtn a span::after{
+  content: '';
+  width: 20px;
+  height: 2px;
+  background:#000;
+  position:absolute;
+  right:0px; top:8px;
+  transition:all ease 0.3s;
+}
+
+.mobileCloseBtn button{
+  position:absolute;
+  right:0px; top:0px;
+  z-index: 10;
+  display: none;
+}
+.line.on span{
+  background:rgba(0, 0, 0, 0)
+}
+
+.line.on span::before{
+  top:0;
+  transform: rotate(45deg);
+}
+
+.line.on span::after{
+  top:0;
+  transform: rotate(-45deg);
 }
 
 /* ==== header ==== */
@@ -7,6 +93,7 @@
 header {
   width: 100%;
   height: 100px;
+  border-top: 3px solid #009329;
 }
 header .header_inner {
   position: relative;
@@ -18,8 +105,9 @@ header .header_inner .logo {
 header .header_inner .logo h1 {
   text-align: center;
   line-height: 100px;
-  font-size: 40px;
+  font-size: 8vw;
   font-family: "HANAMDAUM";
+  color: #009329;
 }
 
 /* ===== gnb button ==== */
@@ -32,6 +120,7 @@ header .header_inner .logo h1 {
   cursor: pointer;
   width: 20px;
   height: 20px;
+  /* z-index: 1000; */
 }
 
 .header_nav .navButton {
@@ -39,7 +128,7 @@ header .header_inner .logo h1 {
   height: 3px;
   background: #000;
   position: relative;
-  top:50%;
+  top: 50%;
 }
 .header_nav .navButton:before {
   content: "";
@@ -63,68 +152,92 @@ header .header_inner .logo h1 {
 }
 
 /* ==== gnb ==== */
-.gnb {
-    display: none;
-}
-
-
-
 /* ==== banner ==== */
 
-#contents{
-    width: 100%;
+#contents {
+  width: 100%;
+  height: auto;
 }
-#contents .main{
-    width: 100%;
-    height: auto;
+#contents .main {
+  width: 100%;
+  height: 100%;
 }
-#contents .main div img{
-    width: 100%;
+#contents .main div img {
+  width: 100%;
 }
-
 
 /* ==== menu ==== */
-
-.menu{
-    width: 100%;
-    padding: 20px 0;
+#menuWrap {
+  width: 100%;
+  padding: 20px 0;
+}
+.menu_box {
+  position: relative;
+}
+.menu_box h2 {
+  text-indent: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "HANAMDAUM";
+}
+.menu_box button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: none;
+  background: none;
+  color: rgb(51, 51, 51);
 }
 
-.menu .menu_box{
-    height: auto;
-    position:relative;
+.menu_box ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
 }
-.menu .more_product{
-    width: 150px;
-    height: 20px;
-    position:absolute;
-    right:-90px;
-    bottom:-10px;
-    transform: translateX(-50%);
-    cursor: pointer;
-    font-size:12px;
-    color:rgb(121, 121, 121);
+.menu_box ul li a img {
+  max-width: 100%;
+  height: auto;
 }
-.menu div > h2{
-    font-size:20px;
-    text-indent : 10px;
-    font-weight: bold;
-    margin-bottom:10px;
+
+/* ===== news ==== */
+
+#newsWrap {
+  width: 100%;
+  background: #00000033;
 }
-.menu div ul:before{
-    content: '';
-    display: block;
-    clear: both;
+
+#newsWrap .news {
+  width: 100%;
+  height: auto;
+  background: url("../images/bg_content.gif");
+  box-sizing: border-box;
+  padding: 20px;
 }
-.menu div ul li{
-    float:left;
+#newsWrap .news div {
+  height: 200px;
+  background: #fff;
+  margin-bottom: 20px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  padding: 20px;
+  box-sizing: border-box;
 }
-.menu div ul li{
-    background:#fff;
-    width: 50%;
-    margin-bottom:20px;
+
+/* ===== sns ===== */
+
+#sns {
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
 }
-.menu div ul li a img{
-    width: 100%;
-    height: auto;
+
+/* ===== footer ===== */
+
+footer {
+  width: 100%;
+  height: 100px;
+  background: rgb(32, 32, 32);
 }
