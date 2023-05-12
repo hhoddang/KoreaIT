@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <style>
+
+    </style>
+    <script>
+        $(function(){
+            $("#big").css("background","yellow");
+            $('#big.sea').css("border","5px solid blue")
+            $(".slow").css({background:"red",fontSize : "20px"})
+                $(".sea").css({background:"aqua",fontSize:"30px"})
+
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li id="big" class="sea">고래</li>
+        <li class="small">새우</li>
+        <li class="slow">거북이</li>
+        <li class="sea">대왕오징어</li>
+    </ul>
+</body>
+</html>

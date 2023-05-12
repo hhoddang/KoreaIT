@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스 추가 삭제하기</title>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <style>
+        div {
+            background: yellow;
+            padding: 30px;
+            margin: 5px;
+        }
+
+        button {
+            background: darkblue;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .show {
+            display: block;
+            border: 10px solid blue;
+        }
+    </style>
+    <script>
+        $(function () {
+            var two = $(".two");
+
+            two.css({
+                border: " 3px solid black",
+                fontSize: " 50px ",
+                position: "absolute",
+                left: "0",
+            });
+
+            $(".one").show();
+            two.width(100);
+            // two.hide();
+            $(".three").height(300);
+
+            //이미지 보기 버튼을 클릭했을때
+            $(".showImg").click(function () {
+                // two.show();
+                two.addClass('show');
+            });
+
+            // // 버튼을 클릭할때만 에니메이션 발생 
+
+            // $(".Move").click(function () {
+            //     two.animate({ left: 100, top: 100 }, 2000, function () {
+            //         // alert("애니메이션 종료");
+            //         two.animate({ left: 0, top: 0 }, 1000);
+            //     });
+            //     $(".Move").css("background", "black")
+            // });
+
+
+            // // 내용 바꾸기
+
+            // $(".one").text("바다"); // 내용 바꾸기
+            // $(".one").html("하늘"); // 내용 바꾸기
+            // // $(".two").text("<span>바다</span>"); // 내용 바꾸기
+            // $(".two").html("<img src='images/fish.png'>"); // 내용 바꾸기
+            // $(".one").empty();
+
+            // $(".changeImg").click(function () {
+            //     two.css({
+            //         width: "163px",
+            //         height: "127px",
+            //         border: "none",
+            //     })
+            //     // two.html("<img title='돌고래' src='images/fish2.png'>")
+            //     two.children("img").attr("src", "images/fish2.png");
+            // });
+
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="one">1</div>
+    <div class="two">2</div>
+    <div class="three">3</div>
+    <button class="Move">애니메이션 시작</button>
+    <button class="changeImg">이미지 바꾸기</button>
+    <button class="showImg">이미지보기</button>
+</body>
+
+</html>

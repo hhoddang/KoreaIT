@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <style>
+        div{background:yellow;}
+    </style>
+    <script>
+        $(function () {
+            $(".one , .two ").hide(); // 감추기
+            $(".one").show();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="one">1</div>
+    <div class="two">2</div>
+    <div class="three">3</div>
+</body>
+
+</html>

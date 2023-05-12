@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <style>
+
+    </style>
+    <script>
+        $(function () {
+            var seaWorld = $("seaWorld");
+            var big = $("#big");
+            var small = $(".small");
+            
+            // var sea = seaWorld.find("img"); // 새우 이미지 찾기
+            var sea = seaWorld.children(small); // 새우 이미지 찾기
+            sea.css("border","5px solid red"); // 새우이미지에 스타일 적용
+
+        });
+    </script>
+</head>
+
+<body>
+    <ul id="seaWorld">
+        <li id="big" class="sea">고래</li>
+        <li class="small">새우 <img src="images/image.jpg" alt="새우"></li>
+        <li class="slow">거북이</li>
+        <li class="sea">대왕오징어</li>
+    </ul>
+</body>
+
+</html>

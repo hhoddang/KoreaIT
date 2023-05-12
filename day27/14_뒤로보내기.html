@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스 추가 삭제하기</title>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <style>
+        div {
+            background: yellow;
+            font-size: 200%;
+            padding: 30px;
+        }
+
+        .one {
+            background: aqua;
+        }
+
+        .two {
+            background: blue;
+        }
+
+        .three {
+            background: orange;
+        }
+    </style>
+    <script>
+        $(function () {
+            var one = $(".one");
+            var two = $(".two");
+            var three = $(".three");
+
+            $(".append").click(function(){
+                one.append(two);
+            });
+
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="one">1</div>
+    <div class="two">2</div>
+    <div class="three">3</div>
+    <button class="append">뒤로보내기</button>
+</body>
+
+</html>

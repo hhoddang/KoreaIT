@@ -4,6 +4,78 @@
 }
 
 /* ==== mobile. menu ==== */
+.mobileCloseBtn {
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  right: 10px;
+  top: 45px;
+  z-index: 1000;
+  transition: 2s ease;
+}
+.mobileCloseBtn a {
+  display: block;
+  width: 25px;
+  height: 20px;
+  position: absolute;
+}
+
+.mobileCloseBtn a span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #000;
+  text-indent: -99999px;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  transform: translateY(-50%);
+  transition: all ease 0.3s;
+}
+
+.mobileCloseBtn a span::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  right: 0px;
+  top: -8px;
+  transition: all ease 0.3s;
+}
+
+.mobileCloseBtn a span::after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  right: 0px;
+  top: 8px;
+  transition: all ease 0.3s;
+}
+
+.mobileCloseBtn button {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 10;
+  display: none;
+}
+.line.on span {
+  background: rgba(0, 0, 0, 0);
+}
+
+.line.on span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.line.on span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
 #mobileMenuWrap {
   position: fixed;
   right: 0;
@@ -15,85 +87,98 @@
   width: 100vw;
   height: 100vh;
   background: #00000080;
+  display: none;
+}
+.mobileMenuBg.on {
+  display: block;
+  opacity: 1;
+  transition: 0.5s ease;
 }
 .mobileMenu {
-  width: 70%;
+  width: 100%;
   height: 100%;
   background: #fff;
   position: absolute;
+  right: -999px;
+  top: 0;
+  transition: 0.5s ease;
+}
+
+.mobileMenu nav {
+  padding-top: 100px;
+}
+
+.mobileMenu.on {
   right: 0;
   top: 0;
+  transition: 0.7s ease;
 }
 
-
-.mobileCloseBtn a{
+.mobileMenu nav > ul > li {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  line-height: 50px;
+  background: #fff;
+}
+.mobileMenu nav > ul > li  a{
+  color:#000;
+}
+.mobileMenu nav > ul > li:hover {
+  background: rgb(255, 216, 159);
+}
+.mobileMenu nav > ul > li:hover .na {
+  color: #000;
+  font-weight: bold;
+}
+.mobileMenu nav > ul > li a {
   display: block;
-  width: 25px;
-  height: 20px;
-  position:absolute;
-  right:10px; 
-  top:45px;
+  width: 100%;
 }
-
-.mobileCloseBtn a span{
-  display: block;
-  width: 20px;
-  height: 2px;
-  background:#000;
-  text-indent: -99999px;
-  position:absolute;
-  top:10px; right:0px;   
-  transform: translateY(-50%);
-  transition:all ease 0.3s;
-
-}
-
-.mobileCloseBtn a span::before{
-  content: '';
-  width: 20px;
-  height: 2px;
-  background:#000;
-  position:absolute;
-  right:0px; top:-8px;
-  transition:all ease 0.3s;
-}
-
-.mobileCloseBtn a span::after{
-  content: '';
-  width: 20px;
-  height: 2px;
-  background:#000;
-  position:absolute;
-  right:0px; top:8px;
-  transition:all ease 0.3s;
-}
-
-.mobileCloseBtn button{
-  position:absolute;
-  right:0px; top:0px;
-  z-index: 10;
+.mobileMenu nav > ul > li .sub1 {
   display: none;
+  width: 100%;
 }
-.line.on span{
-  background:rgba(0, 0, 0, 0)
+.mobileMenu .sub1 li {
+  background: #fffbf4;
+}
+.mobileMenu .sub1 li a {
+  color: #000;
+  font-size: 14px;
+}
+.mobileMenu .sub1 li:hover a {
+  background: rgb(207, 156, 89);
+  color: #fff;
 }
 
-.line.on span::before{
-  top:0;
-  transform: rotate(45deg);
+.sub_footer{
+  width: 100%;
+  position:absolute;
+  left:0;
+  bottom:20px;
+  padding-top:20px;
+  display: flex;
+  justify-content: space-around;
+  border-top: 2px solid  #ccc;
 }
-
-.line.on span::after{
-  top:0;
-  transform: rotate(-45deg);
+.sub_footer p{
+  display: block;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
 }
-
 /* ==== header ==== */
 
 header {
   width: 100%;
   height: 100px;
   border-top: 3px solid #009329;
+  border-bottom: 1px solid #ccc;
+  position:sticky;
+  left:0;
+  top:0;
+  background:#fff;
+  z-index: 150;
 }
 header .header_inner {
   position: relative;
@@ -105,7 +190,7 @@ header .header_inner .logo {
 header .header_inner .logo h1 {
   text-align: center;
   line-height: 100px;
-  font-size: 8vw;
+  font-size: 50px;
   font-family: "HANAMDAUM";
   color: #009329;
 }

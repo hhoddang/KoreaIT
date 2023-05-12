@@ -1,13 +1,29 @@
-$(function(){
-    sw=0;
-    $('.btn').click(function(){
-        if(sw==0){
-            $('.line').addClass('on');
-            sw=1;
-        }else{
-            $('.line').removeClass('on')
-            sw=0;
-        }
-    });
+
+
+$(function () {
+  $(".mobileCloseBtn").click(function () {
+      $(".mobileMenu").toggleClass("on");
+      $(".mobileMenuBg").toggleClass("on");
+      $(".line").toggleClass("on");
+  });
+});
+$(function () {
+  $(".mobileMenuBg").click(function () {
+      $(".mobileMenu").toggleClass("on");
+      $(".mobileMenuBg").toggleClass("on");
+      $(".line").toggleClass("on");
+  });
 });
 
+
+$(function () {
+  $("nav>ul>li>.na").click(function () {
+    $(this)
+      .next()
+      .slideToggle(300)
+      .parent()
+      .siblings()
+      .find(".sub1")
+      .slideUp();
+  });
+});
