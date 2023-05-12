@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>노원당</title>
+        <script src="https://kit.fontawesome.com/27d9ad6fd0.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/import.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Gamja+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+        <style>
+
+            /*로고*/
+            h1{
+                font-size: 80px; text-align: center; font-family: 'Gamja Flower', cursive;
+                font-family: 'Nanum Pen Script', cursive;
+            }
+            /*로그인,회원가입*/
+            ul.util li a{font-size: 15px}
+            /*메인메뉴*/
+            ul.util{position: relative; right: 15px; bottom: 38px}
+        </style>
+    </head>
+    
+    <body>
+        <div id="wrapper">
+            <header id="header">
+                <div class="header_box">
+                    <h1><a href="#">노원당</a></h1>
+                    <ul class="util">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                    </ul>
+                </div>
+                <div class="header_nav">
+                    <nav>
+                        <ul>
+                            <li class="na"><a href="#" class="na">브랜드소개</a>
+                                <ul class="sub1">
+                                    <li><a href="#">브랜드역사</a></li>
+                                    <li><a href="#">브랜드약속</a></li>
+                                </ul>
+                            </li>
+                            <li class="na"><a href="#" class="na">메뉴소개</a>
+                                <ul class="sub1">
+                                    <li><a href="#">베스트</a></li>
+                                    <li><a href="#">신상품</a></li>
+                                    <li><a href="#">식빵</a></li>
+                                    <li><a href="#">케이크</a></li>
+                                </ul>
+                            </li>
+                            <li class="na"><a href="#" class="na">가맹점</a>
+                                <ul class="sub1">
+                                    <li><a href="#">프렌차이즈</a></li>
+                                    <li><a href="#">가맹문의</a></li>
+                                    <li><a href="#">지점안내</a></li>
+                                </ul>
+                            </li>
+                            <li class="na"><a href="#" class="na">온라인주문</a>
+                                <ul class="sub1">
+                                    <li><a href="#">주문하기</a></li>
+                                    <li><a href="#">단체주문</a></li>
+                                </ul>
+                            </li>
+                            <li class="na"><a href="#" class="na">새소식</a>
+                                <ul class="sub1">
+                                    <li><a href="#">프로모션</a></li>
+                                    <li><a href="#">뉴스</a></li>
+                                    <li><a href="#">광고영상</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="bg"></div><!--5.11추가-->
+                    </nav>
+                </div>
+            </header>
+
+            <div id="contents">
+                <section class="main">
+                    <!--메인화면이미지-->
+                    <div><img src="images/main3.jpg"></div>
+                    
+                    <a href="#" class="prev" onClick="prev(); return false"><i class="fa-solid fa-angle-left"></i></a>
+                    <a href="#" class="next" onClick="next(); return false"><i class="fa-solid fa-angle-right"></i></a>
+                </section>
+                <section class="menu">
+                    <div class="popular">
+                        <h2>인기상품</h2>
+                        <ul>
+                            <li><a href="#"><img class="img" src="images/bread1.png"></a></li>
+                            <li><a href="#"><img class="img" src="images/bread2.png"></a></li>
+                            <li><a href="#"><img class="img" src="images/bread3.png"></a></li>
+                            <li><a href="#"><img class="img" src="images/bread4.png"></a></li>
+                        </ul>
+                    </div>
+                    <div class="newmenu">
+                        <h2>신규상품</h2>
+                        <ul>
+                            <li><a href="#"><img class="img" src="images/bread3.png"></a></li>
+                            <li><a href="#"><img class="img" src="images/bread4.png"></a></li>
+                            <li><a href="#"><img class="img" src="images/bread5.png"></a></li>
+                            <li><a href="#"><img class="img" src="images/bread6.png"></a></li>
+                        </ul>
+                    </div>
+                    <div class="cake">
+                        <h2>케이크</h2>
+                        <ul>
+                            <li><a href="#"><img class="img" src="images/bread1.png"></a></li>
+                            <li><a href="#"><img class="img" src="images/bread2.png"></a></li>
+                            <li><a href="#"><img class="img" src="images/bread3.png"></a></li>
+                            <li><a href="#"><img class="img" src="images/bread4.png"></a></li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section class="news">
+                    <img src="">
+                    <img src="">
+                    <img src="">
+                    <img src="">
+                </section>
+                <section class="event">
+                    <div class="story_share">
+                            <ul>
+                                <li><a href="#" class="twitter"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                                <li><a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                                <li><a href="#" class="google"><i class="fa-brands fa-google-plus-g"></i> Google+</a></li>
+                            </ul>
+                        </div>
+                </section>
+            </div>
+
+            <footer id="footer">
+                <p>저작권</p>
+            </footer>
+        </div>
+        
+    </body>
+</html>
