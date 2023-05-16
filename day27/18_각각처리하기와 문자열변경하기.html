@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스 추가 삭제하기</title>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <style>
+
+    </style>
+    <script>
+        $(function () {
+            $(".rollover").each(function () {
+                var a = $(this);
+                var img = a.children("img")
+                var src_off = img.attr("src")
+                var src_on = src_off.replace("_off", "_on")
+
+                a.hover(
+                    function () {  // mouseenter의 동작
+                        // 이미지의 속성값중에서 일부문자를 변경
+                        img.attr("src", src_on);
+                    },
+                    function () { // mouseleave의 동작
+                        img.attr("src", src_off);
+                    }
+                )
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#" class="rollover"><img src="img/menu01_off.png" alt=""></a></li>
+        <li><a href="#" class="rollover"><img src="img/menu02_off.png" alt=""></a></li>
+        <li><a href="#" class="rollover"><img src="img/menu03_off.png" alt=""></a></li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아코디언 메뉴</title>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script>
+        $(function () {
+            $(".accordion").each(function () {
+                var dl = $(this);
+                var dl_dt = dl.children("dt");
+                var dl_dd = dl.children("dd");
+                dl_dd.hide();
+                dl_dt.css("cursor", "pointer")
+                dl_dt.click(function () { //메뉴를 클릭했을때 동작만들기
+                    var dt = $(this)
+                    var dd = dt.next(); // dd 요소를 변수에 넣어 놓는다.
+                    dl_dd.hide(); //감추기
+                    dd.show();
+                });
+            });
+        });
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        dl {
+            border: 1px solid #000;
+        }
+
+        dl dt {
+            background: #000;
+            color: #fff;
+        }
+
+        dl dd {
+            background: burlywood;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>아코디언 메뉴</h1>
+    <dl class="accordion">
+        <dt>메뉴</dt>
+        <dd>설명</dd>
+    </dl>
+    <dl class="accordion">
+        <dt>메뉴</dt>
+        <dd>설명</dd>
+    </dl>
+    <dl class="accordion">
+        <dt>메뉴</dt>
+        <dd>설명</dd>
+    </dl>
+    <dl class="accordion">
+        <dt>메뉴</dt>
+        <dd>설명</dd>
+    </dl>
+    <!-- <div class="slideshow">
+        <img src="img/dinner1.jpg" alt="">
+        <img src="img/dinner2.jpg" alt="">
+    </div>
+    <div class="slideshow">
+        <img src="img/illust1.png" alt="">
+        <img src="img/illust2.png" alt="">
+        <img src="img/illust3.png" alt="">
+    </div>
+    <div class="slideshow">
+        <img src="img/art1.gif" alt="">
+        <img src="img/art2.gif" alt="">
+        <img src="img/art3.gif" alt="">
+        <img src="img/art4.gif" alt="">
+    </div> -->
+</body>
+
+</html>

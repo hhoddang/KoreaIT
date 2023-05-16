@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한번에 이벤트설정하기</title>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script>
+        $(function () {
+            $(".rollover").each(function () {
+                var a = $(this);
+                var img = a.children("img");
+                var src_off = img.attr("src");
+                var src_on = src_off.replace("_off", "_on");
+
+                a.bind("mouseenter focus", function () {
+                    img.attr("src", src_on);
+                });
+                a.bind("mouseleave blur", function () {
+                    img.attr("src", src_off);
+                });
+            });
+        });
+    </script>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#" class="rollover"><img src="img/menu01_off.png" alt=""></a></li>
+        <li><a href="#" class="rollover"><img src="img/menu02_off.png" alt=""></a></li>
+        <li><a href="#" class="rollover"><img src="img/menu03_off.png" alt=""></a></li>
+    </ul>
+</body>
+
+</html>
