@@ -8,7 +8,9 @@
     <title>노원당_mobile</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/font.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Gamja+Flower&family=Nanum+Pen+Script&display=swap"
+        rel="stylesheet">
     <script src="js/jquery-3.6.4.min.js"></script>
     <script src="https://kit.fontawesome.com/1fec5e6e1a.js" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
@@ -16,62 +18,64 @@
 
 <body>
     <div id="wrap">
-        <div class="mobileCloseBtn">
-            <div class="btn">
-                <a href="#" class="line">
-                    <span>메뉴</span>
-                </a>
-            </div>
-            <button type="button">
+        <div id="mobileMenuall">
+            <div class="mobileCloseBtn">
+                <div class="btn">
+                    <a href="javascirpt:;" class="line">
+                        <span>메뉴</span>
+                    </a>
+                </div>
+                <button type="button">
 
-            </button>
-        </div>
-        <div id="mobileMenuWrap">
-            <div class="mobileMenuBg"></div>
-            <div class="mobileMenu">
-                <nav>
-                    <ul>
-                        <li class="na"><a href="#" class="na">브랜드소개</a>
-                            <ul class="sub1">
-                                <li><a href="#">브랜드역사</a></li>
-                                <li><a href="#">브랜드약속</a></li>
-                            </ul>
-                        </li>
-                        <li class="na"><a href="#" class="na">메뉴소개</a>
-                            <ul class="sub1">
-                                <li><a href="#">베스트</a></li>
-                                <li><a href="#">신상품</a></li>
-                                <li><a href="#">식빵</a></li>
-                                <li><a href="#">케이크</a></li>
-                            </ul>
-                        </li>
-                        <li class="na"><a href="#" class="na">가맹점</a>
-                            <ul class="sub1">
-                                <li><a href="#">프렌차이즈</a></li>
-                                <li><a href="#">가맹문의</a></li>
-                                <li><a href="#">지점안내</a></li>
-                            </ul>
-                        </li>
-                        <li class="na"><a href="#" class="na">온라인주문</a>
-                            <ul class="sub1">
-                                <li><a href="#">주문하기</a></li>
-                                <li><a href="#">단체주문</a></li>
-                            </ul>
-                        </li>
-                        <li class="na"><a href="#" class="na">새소식</a>
-                            <ul class="sub1">
-                                <li><a href="#">프로모션</a></li>
-                                <li><a href="#">뉴스</a></li>
-                                <li><a href="#">광고영상</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="sub_footer">
-                        <p>고객센터</p>
-                        <p>상담하기</p>
-                        <p>문의하기</p>
-                    </div>
-                </nav>
+                </button>
+            </div>
+            <div id="mobileMenuWrap">
+                <div class="mobileMenuBg"></div>
+                <div class="mobileMenu">
+                    <nav>
+                        <ul>
+                            <li class="na"><a href="#" class="na">브랜드소개</a>
+                                <ul class="sub1">
+                                    <li><a href="#">브랜드역사</a></li>
+                                    <li><a href="#">브랜드약속</a></li>
+                                </ul>
+                            </li>
+                            <li class="na"><a href="#" class="na">메뉴소개</a>
+                                <ul class="sub1">
+                                    <li><a href="#">베스트</a></li>
+                                    <li><a href="#">신상품</a></li>
+                                    <li><a href="#">식빵</a></li>
+                                    <li><a href="#">케이크</a></li>
+                                </ul>
+                            </li>
+                            <li class="na"><a href="#" class="na">가맹점</a>
+                                <ul class="sub1">
+                                    <li><a href="#">프렌차이즈</a></li>
+                                    <li><a href="#">가맹문의</a></li>
+                                    <li><a href="#">지점안내</a></li>
+                                </ul>
+                            </li>
+                            <li class="na"><a href="#" class="na">온라인주문</a>
+                                <ul class="sub1">
+                                    <li><a href="#">주문하기</a></li>
+                                    <li><a href="#">단체주문</a></li>
+                                </ul>
+                            </li>
+                            <li class="na"><a href="#" class="na">새소식</a>
+                                <ul class="sub1">
+                                    <li><a href="#">프로모션</a></li>
+                                    <li><a href="#">뉴스</a></li>
+                                    <li><a href="#">광고영상</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="sub_footer">
+                            <p>고객센터</p>
+                            <p>상담하기</p>
+                            <p>문의하기</p>
+                        </div>
+                    </nav>
+                </div>
             </div>
         </div>
         <header>
@@ -92,24 +96,55 @@
             <div class="popular menu_box">
                 <h2>인기상품</h2>
                 <ul>
-                    <li><a href="#"><img class="img" src="images/bread1.png"></a></li>
-                    <li><a href="#"><img class="img" src="images/bread2.png"></a></li>
+                    <li>
+                        <a href="#">
+                            <img class="img" src="images/bread1.png">
+                            <div class="product_text"><span>상세보기</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="img" src="images/bread2.png">
+                            <div class="product_text"><span>상세보기</span></div>
+
+                        </a>
+                    </li>
                 </ul>
                 <button>더보기 +</button>
             </div>
             <div class="newmenu menu_box">
                 <h2>신규상품</h2>
                 <ul>
-                    <li><a href="#"><img class="img" src="images/bread3.png"></a></li>
-                    <li><a href="#"><img class="img" src="images/bread4.png"></a></li>
+                    <li>
+                        <a href="#">
+                            <img class="img" src="images/bread3.png">
+                            <div class="product_text"><span>상세보기</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="img" src="images/bread4.png">
+                            <div class="product_text"><span>상세보기</span></div>
+                        </a>
+                    </li>
                 </ul>
                 <button>더보기 +</button>
             </div>
             <div class="cake menu_box">
                 <h2>케이크</h2>
                 <ul>
-                    <li><a href="#"><img class="img" src="images/bread1.png"></a></li>
-                    <li><a href="#"><img class="img" src="images/bread2.png"></a></li>
+                    <li>
+                        <a href="#">
+                            <img class="img" src="images/bread1.png">
+                            <div class="product_text"><span>상세보기</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="img" src="images/bread2.png">
+                            <div class="product_text"><span>상세보기</span></div>
+                        </a>
+                    </li>
                 </ul>
                 <button>더보기 +</button>
             </div>

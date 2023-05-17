@@ -154,10 +154,11 @@
 
   .sub_footer {
     width: 100%;
+    height: 40px;
     position: absolute;
     left: 0;
-    bottom: 20px;
-    padding-top: 20px;
+    bottom: 0px;
+    line-height: 40px;
     display: flex;
     justify-content: space-around;
     border-top: 2px solid #ccc;
@@ -167,6 +168,9 @@
     width: 100%;
     text-align: center;
     cursor: pointer;
+  }
+  .sub_footer p:hover{
+    background:#ccc;
   }
   /* ==== header ==== */
 
@@ -192,7 +196,8 @@
     text-align: center;
     line-height: 100px;
     font-size: 50px;
-    font-family: "HANAMDAUM";
+    font-weight: bold;
+    font-family: 'Gamja Flower';
     color: #009329;
   }
 
@@ -263,28 +268,51 @@
   .menu_box h2 {
     text-indent: 10px;
     font-size: 18px;
-    font-weight: 500;
-    font-family: "HANAMDAUM";
+    font-weight: bold;
   }
   .menu_box button {
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 0px;
     border: none;
     background: none;
     color: rgb(51, 51, 51);
+    cursor: pointer;
   }
 
   .menu_box ul {
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: space-around;
+    border-top:1px solid #ccc;
+    margin-top:10px;
+  }
+  .menu_box ul  li{
+    position:relative;
+  }
+  .menu_box ul  li:hover div{
+    display: block;
+  }
+
+  .menu_box ul  li a div{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height:50px;
+    display: none;
+  }
+  .menu_box ul  li a div span{
+    display: block;
+    font-size:14px;
+    text-align: center;
+    color:#000;
   }
   .menu_box ul li a img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
   }
+
 
   /* ===== news ==== */
 
@@ -302,11 +330,11 @@
   }
   #newsWrap .news div {
     height: 200px;
-    background: #fff;
     margin-bottom: 20px;
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
     box-sizing: border-box;
+    overflow: hidden;
   }
   #newsWrap .news div:first-child {
     border: none;
@@ -317,6 +345,7 @@
   }
   #newsWrap .news div:last-child {
     padding: 20px 20px 0px 30px;
+    background:#fff;
   }
   #newsWrap .news div:last-child h3 {
     font-size: 30px;
@@ -347,6 +376,9 @@
     display: flex;
     justify-content: space-around;
     line-height: 100px;
+  }
+  #sns div{
+    cursor: pointer;
   }
 
   #sns .twitter div {

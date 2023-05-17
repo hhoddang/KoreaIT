@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html lang="ko">
+	<head> 
+		<title>Black Jack</title> 
+		<meta charset="utf-8" />
+        <script src="js/jquery-3.6.4.min.js"></script> 
+        <script src="js/my_script.js"></script>    
+        <script>
+$(function(){
+    //alert("Ok");
+    
+    //3.랜덤숫자를 나오게 하는 함수를 만들어서 랜덤한 카드를 줄 수 있게 한다
+    function Rendom(x){
+        //52보다 큰수가 나오면 안됨
+        
+    }	
+    
+    function hit (){//카드를 받아서 펼쳐서 계산하는 동작
+        //일단 필요한것은 임의의 숫자(0~51까지의 숫자)  
+    }
+    
+    $("#btnHit").click(function(){
+        //모든카드가 뒤집어진 이미지를 클릭하면 카드게임시작
+        hit(); //hit함수로 연결  
+    });
+    
+    //card의 생성자 함수
+    function card(name, suit, value){//1.카드의 생성자함수를 만들어놓는다
+        this.name = name;
+        this.suit = suit;
+        this.value = value;
+    }
+    
+    var deck = [  //2.카드마다 새 객체를 만들어서 3개의 프로퍼티값을 생성자함수에 넣어 
+	               //52개의 모든 카드를 배열로 모아둔다 
+        //모든 카드는 이름,모양,숫자로 구분할수 있다
+        //하나의 카드에는 프로퍼티가 3개가 담겨있다    
+           new card("Ace", "Diamonds", 11),//카드객체(인스턴스)
+           new card("two", "Diamonds", 2)//카드객체(인스턴스)
+        /*{name:"Ace", suit:"Diamonds", value:11  },//Ace는 11로 계산
+        {name:"two", suit:"Diamonds", value:2  },
+        {name:"three", suit:"Diamonds", value:3  },
+        {name:"four", suit:"Diamonds", value:4  },
+        {name:"five", suit:"Diamonds", value:5  },        
+        {name:"six", suit:"Diamonds", value:6  },
+        {name:"seven", suit:"Diamonds", value:7  },        
+        {name:"eight", suit:"Diamonds", value:8  },       
+        {name:"nine", suit:"Diamonds", value:9  },        
+        {name:"ten", suit:"Diamonds", value:10  },
+        {name:"king", suit:"Diamonds", value:10  },
+        {name:"qeeen", suit:"Diamonds", value:10  },
+        {name:"jack", suit:"Diamonds", value:10  }*/
+        
+     ];//모든 카드(52개)를 배열로 담아둔다
+    
+    alert(deck[0].name+" "+ deck[0].suit +" "+ deck[0].value);//Object
+    
+});
+		</script>		
+		<link href="css/style.css" rel="stylesheet">
+	</head> 
+	<body>
+		<div id="main">
+			<h1>GAME</h1>
+			<h2 id="hdrTotal"></h2>
+			<h2 id="hdrResult"></h2>
+			<div id="my_hand"></div>
+
+			<div id="controls">
+				<div id="btnDeal"><img src="images/deck_small.jpg">	</div>
+				<div id="btnHit">	<img src="images/hit_small.jpg"></div>
+				<div id="btnStick">	<img src="images/stick_small.jpg"></div>
+				<div id="btnRestart">	<img src="images/restart_small.jpg"></div>
+	            <img src="" id="imgResult"></div>
+			</div>
+
+	</body>
+</html>

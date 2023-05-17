@@ -9,18 +9,28 @@
     <script src="js/jquery-3.6.4.min.js"></script>
     <script>
         $(function () {
-            var interval = 3000;
+            var interval = 1000;
             $(".slideshow").each(function () {
                 var container = $(this);
+                var as = container.children("a")
+                var timer;
                 function swichImg() {
-                    var imgs = container.children("img"); //div 내부에 있는 이미지들을 배열로 넣어놓는다.
-                    var first = imgs.eq(0);//첫번째 이미지요소
-                    var second = imgs.eq(1);//두번째 이미지요소
+                    var as = container.children("a"); //div 내부에 있는 이미지들을 배열로 넣어놓는다.
+                    var first = as.eq(0);//첫번째 이미지요소
+                    var second = as.eq(1);//두번째 이미지요소
                     first.fadeOut().appendTo(container); // 첫번째이미지 맨뒤로 천천히 사라지게 하면서 보낸다.
                     second.fadeIn(); // 두번째 이미지는 천천히 보여지게 만든다.
 
                 };
-                setInterval(swichImg, interval);
+                function startTimer() {
+                    timer = setInterval(swichImg, interval);
+                };
+                function endTimer() {
+                    clearInterval(timer);
+                }
+                container.children("a").hover(endTimer, startTimer);
+                startTimer();
+
             });
         });
     </script>
@@ -44,25 +54,29 @@
             left: 0;
             top: 0;
         }
+
+        .none {
+            /* display: none; */
+        }
     </style>
 </head>
 
 <body>
     <h1>슬라이드쇼</h1>
     <div class="slideshow">
-        <img src="img/dinner1.jpg" alt="">
-        <img src="img/dinner2.jpg" alt="">
+        <a href="http://www.naver.com" target="_blank"><img src="img/dinner1.jpg" alt=""></a>
+        <a href="http://www.naver.com" target="_blank" class="none"><img src="img/dinner2.jpg" alt=""></a>
     </div>
     <div class="slideshow">
-        <img src="img/illust1.png" alt="">
-        <img src="img/illust2.png" alt="">
-        <img src="img/illust3.png" alt="">
+        <a href="http://www.naver.com" target="_blank"><img src="img/illust1.png" alt=""></a>
+        <a href="http://www.naver.com" target="_blank" class="none"><img src="img/illust2.png" alt=""></a>
+        <a href="http://www.naver.com" target="_blank" class="none"><img src="img/illust3.png" alt=""></a>
     </div>
     <div class="slideshow">
-        <img src="img/art1.gif" alt="">
-        <img src="img/art2.gif" alt="">
-        <img src="img/art3.gif" alt="">
-        <img src="img/art4.gif" alt="">
+        <a href="http://www.naver.com" target="_blank"> <img src="img/art1.gif" alt=""></a>
+        <a href="http://www.naver.com" target="_blank" class="none"><img src="img/art2.gif" alt=""></a>
+        <a href="http://www.naver.com" target="_blank" class="none"> <img src="img/art3.gif" alt=""></a>
+        <a href="http://www.naver.com" target="_blank" class="none"> <img src="img/art4.gif" alt=""></a>
     </div>
 </body>
 

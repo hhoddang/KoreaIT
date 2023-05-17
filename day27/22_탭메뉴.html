@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴</title>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script>
+        $(function () {
+            $(".tabMenuWrap").each(function () {
+                var tabMenuDiv = $(this);
+                var menu_a = tabMenuDiv.find("a");
+                var panelDiv = tabMenuDiv.find(".panel")
+                panelDiv.hide();
+
+                var panelOne;// 클래스가 on인 a
+                var panelShow; // 클래스가 on인 href 의 연결패널
+
+                var panelOne = menu_a.filter(".on") // 클래스가 on 인  a
+                var panelShow = $(panelOne.attr("href"));
+                panelShow.show(); // class의 값이 on인 패널만 보이게하기.
+
+                menu_a.click(function (x) {
+                    var currentA = $(this);
+                    var currentA_panel = $(currentA.attr("href"));
+                    x.preventDefault(); // a 태그의 최우선 동작인 href 의 값을 거짓으로 만든다.
+
+                    panelOne.removeClass("on");
+                    currentA.addClass("on");
+
+                    panelShow.hide(); // on 클래스가 부여되었던 a의 패널은 감춘다.
+                    currentA_panel.show();
+
+                    panelOne = currentA;
+                    panelShow = currentA_panel;
+                });
+            });
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        /* ==== 탭메뉴 전체영역==== */
+        .tabMenuWrap {
+            width: 400px;
+            border: 1px solid #000;
+            margin-bottom:20px;
+        }
+
+        .tabMenuWrap .tabMenu:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .tabMenuWrap .tabMenu li {
+            float: left;
+        }
+
+        .tabMenuWrap .tabMenu li a {
+            display: block;
+            padding: 10px 20px 10px 20px;
+            border: 1px solid red;
+            text-decoration: none;
+            background: gray;
+        }
+
+        /* ==== 탭메뉴 내용 ==== */
+        .contents .panel {
+            background: yellow;
+            height: 200px;
+            border: 5px solid aqua;
+        }
+
+        .tabMenuWrap .tabMenu li a.on {
+            display: block;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>탭메뉴</h2>
+    <div class="tabMenuWrap">
+        <ul class="tabMenu">
+            <li><a href="#panel2-1" class="on">탭메뉴1</a></li>
+            <li><a href="#panel2-2">탭메뉴2</a></li>
+            <li><a href="#panel2-3">탭메뉴3</a></li>
+            <li><a href="#panel2-4">탭메뉴4</a></li>
+        </ul>
+        <div class="contents">
+            <!-- 탭메뉴 내용-->
+            <div class="panel" id="panel2-1">내용1</div>
+            <div class="panel" id="panel2-2">내용2</div>
+            <div class="panel" id="panel2-3">내용3</div>
+            <div class="panel" id="panel2-4">내용4</div>
+        </div>
+    </div>
+</body>
+
+</html>
