@@ -5,7 +5,7 @@ $(function () {
   function Rendom(num) {
     //52보다 큰수가 나오면 안됨
     var my_num = Math.floor(Math.random() * num);
-    return my_num;
+    return alert(my_num);
   }
 
   $("#btnHit").click(function () {
@@ -15,30 +15,60 @@ $(function () {
 
   function deal() {
     // 4. 카드 분배
-    for (var i = 0; i < 2; ) {
+    for (var i = 0; i < 2; i++) {
       // 두번의 카드를 펼치는 동작.
       hit();
     }
   }
 
-  var used_cards = []; //player가 사용한 카드
+  var used_cards = []; //6.player가 사용한 카드배열, 최대 5개까지 담을 수 있다.
+  var asd = {
+    // 7. 내가 받은 카드의 배열 , 그때 그때 받은 카드의 합계 , 모든 카드의 총합.
+    cards: [],
+    current_total: 0,
+    sumCardTotal: function () {
+      //카드의 합을 21과 비교
+      for(){ //플레이어가 가지고 있는 카드갯수만큼 반복
 
-  function total(){
-    // 6. 카드의 총합이 21인지 비교
+      }
+      // 카드 총 합계를 21과 비교한다
+    if(){ // 카드의 합이 21 이상일경우
+
+    }else if(){ // 카드의 합이 21인 경우
+
+    }else if(){ //카드의 합이 21이거나 카드를 5개 가지고 있는경우
+
+    }
+  }
+
+  };
+  // 플레이어가 가지고 있는 카드 객체
+
+  function total() {
+    // 7. 카드의 총합이 21인지 비교
   }
 
   function hit() {
-     //5. 카드를 받아서 펼쳐서 계산하는 동작
+    //5. 카드를 받아서 펼쳐서 계산하는 동작
     //일단 필요한것은 임의의 숫자(0~51까지의 숫자)
-    do{// 제일 처음의 카드는 랜덤함수를 통해 나온 임의의 숫자를  덱배열의 index에 추가해서 카드하나를 펼친다.
-        var index = Rendom(52);
+    // do{// 제일 처음의 카드는 랜덤함수를 통해 나온 임의의 숫자를  덱배열의 index에 추가해서 카드하나를 펼친다.
+    var index = Rendom(52);
 
-        // player가 카드를 몇개 사용했는지 필요.
-        used_cards[used_cards.length] = index ; 
-        alert("현재 플레이어가 사용한 카드의 갯수는 : "+ used_cards.length);
+    // player가 카드를 몇개 사용했는지 필요.
+    used_cards[used_cards.length] = index;
+    alert("현재 플레이어가 사용한 카드의 갯수는 : " + used_cards.length);
 
-        // 두번의 카드를 뽑아서 펼쳤을때 두카드의 합이 21인지 비교하여 결과를 알려줌
-    }while()
+    var c = deck[index]; // 모든 카드가 담긴 덱배열 인덱스자리에 랜덤숫자를 넣어서 카드하나를 담는다.
+    hand.cards[hand.cards.length] = c; // 나의 카드로 만든다
+    alert("플레이어가 가지고 있ㄴ는 카드의 갯수는:" + used_cards.length);
+
+    // 두번의 카드를 뽑아서 펼쳤을때 두카드의 합이 21인지 비교하여 결과를 알려줌
+    var $d = $("<div id='imgWrap'>"); // 가상의 요소를 jquery 객체로 만든다.
+    $("<img class='img'>")
+      .appendTo($d)
+      .attr("src", "images/cards/" + c.suit + "/" + c.name + ".jpg");
+    $d.appendTo($("#my_hand"));
+    // }while()
   }
 
   $("#btnDeal").click(function () {

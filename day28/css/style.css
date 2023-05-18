@@ -1,0 +1,12 @@
+#my_hand {
+    border: 5px solid red;
+    width: 850px;
+    height: 250px;
+}
+#my_hand div{
+    float:left;
+}
+
+#btnDeal {
+  border: 2px solid #000;
+}

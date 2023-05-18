@@ -8,20 +8,24 @@
         <link href="css/style.css" rel="stylesheet">
         <script>
 
-		</script>		
+		</script>
 	</head> 
 	<body>
 		<div id="main">
 			<h1>GAME</h1>
-			<h2 id="hdrTotal"></h2>
-			<h2 id="hdrResult"></h2>
-			<div id="my_hand"></div>
+			<h2 id="hdrTotal"></h2> <!--카드 합계 표시-->
+			<h2 id="hdrResult"></h2> <!--카드 게임의 결과 승패(bust / win)가 보여지는 곳-->
+			<div id="my_hand"></div>  <!--카드를 펼쳐보이는 곳-->
 
 			<div id="controls">
+				<!-- 모든 카드가 뒤집어져 있는 곳 , 제일 처음에 클릭해서 카드게임을 시작-->
 				<div id="btnDeal"><img src="images/deck_small.jpg">	</div>
+
 				<div id="btnHit">	<img src="images/hit_small.jpg"></div>
 				<div id="btnStick">	<img src="images/stick_small.jpg"></div>
 				<div id="btnRestart">	<img src="images/restart_small.jpg"></div>
+
+				<!-- 이기면 체크표시, 지면 엑스표시 -->
 	            <img src="" id="imgResult"></div>
 			</div>
 
