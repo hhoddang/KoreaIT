@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소명으로 접근하는 방식</title>
+    <script>
+        function changeStyle() {
+            var myP = document.getElementsByClassName("txt");
+            for (var i = 0; i < myP.length; i++) {
+                myP[i].style.background = "yellow";
+                myP[i].style.border = "1px solid red"
+                myP[i].style.fontSize = "20px"
+                myP[i].style.fontWeight ="bold"
+
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <p id="txt1" class="txt">요소의 스타일 수정하기</p>
+    <p id="txt2" class="txt">요소의 스타일 수정하기</p>
+    <p id="txt3" class="txt">요소의 스타일 수정하기</p>
+
+    <button onclick="changeStyle()"> 스타일 변경하기 </button>
+</body>
+
+</html>

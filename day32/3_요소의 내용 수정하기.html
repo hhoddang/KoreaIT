@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소명으로 접근하는 방식</title>
+    <script>
+        function student() {
+            var message = "<div><p>강아지들</p></div>";
+
+            document.getElementById("mem1").textContent = message;
+            document.getElementById("mem2").innerHTML = message;
+
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <ul id="animal">
+        <li id="mem1">비글</li>
+        <li id="mem2">푸들</li>
+        <li id="mem3">치와와</li>
+    </ul>
+
+    <button onclick="student()">내용 바꾸기</button>
+</body>
+
+</html>

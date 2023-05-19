@@ -1,0 +1,20 @@
+#my_hand {
+    border:5px solid red; height:200px;
+    width:850px; 
+    height:250px;
+}
+#my_hand div{float:left}
+
+/*화면에 안보이게 감추기*/
+#btnHit, #btnRestart {display:none}
+
+#btnDeal {border:2px solid black;}
+
+/* v, x 이미지 */
+#imgResult {
+    position:absolute; width:500px; height:250px;
+    left:200px; top:100px; display:none;
+}
+
+.red {color:red}
+.blue {color:blue}

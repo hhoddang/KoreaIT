@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소명으로 접근하는 방식</title>
+
+</head>
+
+<body>
+    <h2 class="bgcolor">클래스요소명으로 접근하는 DOM</h2>
+    <p class="bgcolor">사용메소드</p>
+    <div class="bgcolor"> getElementsByTagName();</div>
+
+    <script>
+                window.onload = function () {
+            var myClass = document.getElementsByClassName("bgcolor");
+            // alert(myClass);
+            for (var i = 0; i < myClass.length; i++) {
+                // document.write("<li>" + myClass[i].innerHTML + " </li>");
+                alert("ok");
+            }
+            // document.write("<ul>")
+            // document.myStyle = myClass.style.border = "10px solid black"
+        }
+    </script>
+</body>
+
+</html>

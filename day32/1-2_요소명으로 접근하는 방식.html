@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소명으로 접근하는 방식</title>
+    <script>
+        function student() {
+            var message = "입력한내용: " ;
+            var myInput = document.getElementsByTagName("input")
+            for( var i = 0; i < myInput.length ; i++ ){
+                message += myInput[i].value;
+                alert(message);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="">
+        강아지이름 : <input type="text" value="비글" onchange="student()"><br />
+        학년 : <input type="text" value="1학년"  onchange="student()"><br />
+        거주 : <input type="text" value="서울"  onchange="student()"><br />
+        좋아하는것 : <input type="text" value="달리기"  onchange="student()"><br />
+    </form>
+</body>
+
+</html>

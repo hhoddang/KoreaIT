@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소명으로 접근하는 방식</title>
+    <script>
+        function removeNode() {
+            var message = "<div><p>강아지들</p></div>";
+
+            var animal = document.getElementById("animal")
+            var mem1 = document.getElementById("mem2")
+
+            animal.removeChild(mem2);
+        }
+
+    </script>
+</head>
+
+<body>
+    <ul id="animal">
+        <li id="mem1">비글</li>
+        <li id="mem2">푸들</li>
+        <li id="mem3">치와와</li>
+    </ul>
+
+    <button onclick="removeNode()">요소 삭제하기</button>
+</body>
+
+</html>
