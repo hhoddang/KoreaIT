@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 객체 </title>
+    <script>
+        var car = {
+            name: "car1",
+            model: 479,
+            color: "white"
+        };
+        car.color = "red";
+        alert(car.color);
+
+        alert(Object.keys(car));
+        alert(Object.keys(car).length);
+
+        delete(car.color);
+        var x = "";
+        for (var i in car) {
+            x += i + ": " + car[i] + "\n";
+        }
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

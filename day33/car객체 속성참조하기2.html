@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var car = {
+            name: "car1",
+            model: 479,     // 동적으로 속성추가
+            color: "white",
+            run = function () {
+                var x = "";
+                for (var i in this) {
+                    if (i != "run") {
+                        x += i + ":" + this[i] + "\n";
+                    }
+                } alert(x);
+            };
+        };
+
+
+        var stu1 = {
+            name: "hyeunmin"
+        }
+        stu1.run = car.run;
+
+        car.run();
+        stu1.run();
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

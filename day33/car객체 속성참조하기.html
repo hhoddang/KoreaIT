@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 객체 </title>
+    <script>
+        var car = {}; //빈 객체생성
+
+        car.name = "car1";
+        car.model = 479;      // 동적으로 속성추가
+        car.color = "white";
+        car.run = function(){
+            alert(this.name + " 번개같이 달린다 ")
+        }
+        //속성의 값을 메소드로 추가
+        
+        var stu1 = {
+            name:"hyeunmin"
+        }
+        stu1.run = car.run;
+        
+        car.run();
+        stu1.run();
+        
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 객체 </title>
+    <script>
+        function drink (){
+            var coffee = document.createElement("div");
+                coffee.innerHTML = "<img src='img/americano.JPG'>";
+
+            var drink = document.getElementById("drink");
+            drink.appendChild(coffee);
+
+            drink();
+        }
+    </script>
+
+</head>
+<body>
+    <div id="drink">  </div>
+    <button onclick="drink()">커피 이미지 보이기</button>
+</body>
+</html>

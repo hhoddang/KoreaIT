@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 객체 </title>
+    <script>
+        var car = {}; //빈 객체생성
+
+        car.name = "car1";
+        car.model = "479";      // 동적으로 속성추가
+        car.color = "white";
+                                    //속성의 값을 메소드로 추가
+        car.printName = function () {
+            alert("the car's name :" + this.name);
+        }
+        delete
+        car["printModel"] = function () {
+            alert("The car's model:" + this.model);
+        };
+        car.printModel();
+
+        var x = "";
+        for (var i in car) {
+            x += i + ": " + car[i]+"\n";
+            alert(x)        //객체 출력
+        }
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
