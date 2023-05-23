@@ -7,24 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function player( , , ,) {
+        function player() {
             this.name = name;
             this.run = run;
             this.swim = swim;
             this.bike = bike;
         }
 
-        // var player0 = { name: "선수1", run: 10, swim: 3, bike: 5 }
-        // var player1 = { name: "선수2", run: 5, swim: 7, bike: 11 }
-        // var player2 = { name: "선수3", run: 15, swim: 3, bike: 4 }
-        // var player3 = { name: "선수4", run: 9, swim: 1, bike: 20 }
-        // var player4 = { name: "선수5", run: 1, swim: 10, bike: 3 }
+
 
         var player = [
-            new player("선수1",10,3,5)
-            new player("선수2",5,7,11)
-            new player("선수3",15,3,4)
-            new player("선수4",9,1,20)
+            new player("선수1",10,3,5),
+            new player("선수2",5,7,11),
+            new player("선수3",15,3,4),
+            new player("선수4",9,1,20),
             new player("선수5",1,10,3)
         ];
         for (var i in player) {
@@ -41,6 +37,7 @@
                 x += name + "종목별로 합산한 순위 :" + score() + "평균 순위 : " + average() + "\n";
             }
         }
+        console.log(player);
     </script>
 </head>
 
