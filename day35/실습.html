@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function player() { }
+        player.prototype.score = function () {
+            return this.run + this.swim + this. bike;
+        }
+        player.prototype.average = function () {
+            var result = Math.floor(this.score() / 3);
+            return result
+        }
+
+        function JunierPlayer(name, run, swim, bike) {
+            this.name = name;
+            this.run = run;
+            this.swim = swim;
+            this.bike = bike;
+        }
+        JunierPlayer.prototype = new player();
+        JunierPlayer.prototype.best = function(){
+            return "good";
+        }
+        
+        var JunierPlayer1 = new JunierPlayer("쥬니어선수1",5,3,7);
+        alert("쥬니어 선수1의 score: " + JunierPlayer1.score() + "입니다.");
+        alert("쥬니어 선수1의 average: " + JunierPlayer1.average() + "입니다.");
+        alert("쥬니어 선수1의 best: "+JunierPlayer1.best() + "입니다.");
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
