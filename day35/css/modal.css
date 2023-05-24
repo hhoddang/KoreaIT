@@ -1,0 +1,37 @@
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    left:0; top:0;
+    background:rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center; 
+    /* 가로방향 정렬 */
+    align-items: center;
+    /* 세로항향 정렬 */
+    
+}
+
+.modal .inner{
+    background:#fff;
+    display: block;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding:20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+    color:#000;
+    font-size:14px;
+    animation:fadeAni 200ms ease-out;
+}
+
+@keyframes fadeAni{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
