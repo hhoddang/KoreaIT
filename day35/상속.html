@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function A() { }   //생성자 함수
+        A.prototype.runA = function () {
+            alert("A");
+        }
+
+        function B() { }   //생성자 함수
+        B.prototype = new A(); // A의 새 객체생성
+        // 부모객체 자식객체 관계가 성립
+        // 프로토타입체인으로 연결
+        B.prototype.runB = function () {
+            alert("B");
+        }
+
+        function C() { }   //생성자 함수
+        C.prototype = new B();
+        // 부모객체 자식객체 관계가 성립
+        // 프로토타입체인으로 연결
+        C.prototype.runC = function () {
+            alert("C");
+        }
+
+        var abc = new C();
+        abc.runC();
+        abc.runB();
+        abc.runA();
+    </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
