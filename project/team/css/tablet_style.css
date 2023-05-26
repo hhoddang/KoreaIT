@@ -1,0 +1,364 @@
+@media (min-width: 600px) and (max-width: 767px) {
+  body {
+    border: 0px solid red;
+  }
+
+  .header#header {
+    border: 0px solid blue;
+    background-color: blue;
+  }
+  .header_nav {
+    width: 100%;
+  }
+  .header_box:after {
+    margin-left: 0px;
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .header_box {
+    border: 0px solid black;
+    width: 100%;
+  }
+
+  /*로그인,회원가입*/
+  ul.util {
+    border: 0px solid black;
+    bottom: 10px;
+  }
+  ul.util:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  ul.util li {
+    float: left;
+    margin-left: 10px;
+    position: relative;
+    bottom: 15px;
+    right: 15px;
+  }
+  ul.util li a {
+    display: block;
+  }
+
+  /*메인메뉴*/
+  nav {
+    position: relative; /*서브메뉴전체배경의 배치기준*/
+    width: 100%;
+    box-sizing: border-box;
+    border: 0px solid blue;
+  }
+  nav > ul {
+    width: 100%;
+    border: 0px solid black;
+    z-index: 100;
+    justify-content: space-around;
+  }
+
+  nav > ul > li {
+    left: 0px;
+    position: relative;
+    float: left;
+    text-align: center;
+    width: 20%;
+  }
+  nav > ul > li > a {
+    display: block;
+    width: auto;
+    padding: 0;
+    font-size: 16px;
+  }
+  /*서브메뉴*/
+  ul.sub1 {
+    display: block;
+    height: px;
+    width: 100%;
+    transition: all 0.7s;
+    z-index: 300;
+    top: 50px;
+  }
+  ul.sub1 li {
+    width: auto;
+  }
+  ul.sub1 li a {
+    display: block;
+    border: 0px solid black;
+    width: auto;
+    position: relative;
+  }
+
+  /*메인화면이미지*/
+  .main {
+    position: relative;
+  } /*다음이번버튼배치기준*/
+  .main div {
+    width: 100%;
+    border: 0px solid aqua;
+    height: auto;
+  }
+  .main div img {
+    width: 100%;
+    height: auto;
+  }
+  .main a {
+    position: absolute;
+    font-size: 50px;
+    color: lightgray;
+  }
+  .main a.prev {
+    left: 60px;
+    top: 40%;
+  } /*이전버튼*/
+  .main a.next {
+    right: 60px;
+    top: 40%;
+  } /*다음버튼*/
+
+  /*인기상품이미지*/
+  div.popular {
+    margin-top: 10px;
+    padding: 20px 0;
+  }
+  div.popularBox {
+    width: 100%;
+  }
+  div.popular h2 {
+    margin-left: 75px;
+    margin-bottom: 10px;
+  }
+  div.popular ul {
+    width: 100%;
+  }
+  div.popular ul:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  div.popular ul li {
+    border: 0px solid black;
+    position: relative;
+    margin: 0;
+  }
+  div.popular ul li {
+    width: 50%;
+    position: relative;
+  }
+  div.popular ul li a {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    height: auto;
+  }
+  div.popular ul li a:hover {
+    opacity: 1;
+  }
+  div.popular ul li a img {
+    width: 100%;
+    height: auto;
+  }
+  div.popular ul li a img:hover {
+    transform: scale(1.3);
+  }
+  div.popular ul li div {
+    width: 100%;
+  }
+  /*신규상품이미지*/
+  div.newmenu {
+    margin-top: 10px;
+    padding: 20px 0;
+  }
+  div.newmenuBox {
+    width: 100%;
+  }
+  div.newmenu h2 {
+    margin-left: 75px;
+    margin-bottom: 10px;
+  }
+  div.newmenu ul:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  div.newmenu ul {
+    width: 100%;
+  }
+  div.newmenu ul li {
+    border: 0px solid black;
+    position: relative;
+    margin: 0;
+  }
+  div.newmenu ul li {
+    width: 50%;
+    margin-left: 0px;
+  }
+  div.newmenu ul li a {
+    display: block;
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+  }
+  div.newmenu ul li a:hover {
+    opacity: 1;
+  }
+  div.newmenu ul li a img {
+    width: 100%;
+    height: 100%;
+  }
+  div.newmenu ul li a img:hover {
+    transform: scale(1.3);
+  }
+
+  /*케이크상품이미지*/
+  div.cake {
+    margin-top: 10px;
+  }
+  div.cakeBox {
+    width: 100%;
+  }
+  div.cake h2 {
+    margin-left: 75px;
+    margin-bottom: 10px;
+  }
+  div.cake ul:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  div.cake ul {
+    width: 100%;
+  }
+  div.cake ul li {
+    border: 0px solid black;
+    position: relative;
+    margin-left: 0;
+  }
+  div.cake ul li {
+    margin-left: 0px;
+    width: 50%;
+  }
+  div.cake ul li a {
+    display: block;
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+  }
+  div.cake ul li a:hover {
+    opacity: 1;
+  }
+  div.cake ul li a img {
+    width: 100%;
+    height: 100%;
+  }
+  div.cake ul li a img:hover {
+    transform: scale(1.3);
+  }
+  
+/*뉴스배너*/
+section.news {
+    padding-top: 30px;
+  }
+  section.news #newswrap {
+    width: 100%;
+    height: 100%;
+  }
+  section.news #newswrap .eventBox1 {
+    display: block;
+    padding: 0;
+    display: flex;
+  }
+  .news #newswrap .eventBox1 .event1 {
+    width: 45%;
+    height: auto;
+  }
+  .news #newswrap .eventBox1 .event2 {
+    width: 45%;
+    height: auto;
+  }
+  .news #newswrap .newsBox {
+    width: 100%;
+  }
+  .news #newswrap .newsBox .notice {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .news #newswrap .newsBox .notice .noticeHd {
+    width: 30%;
+    display: block;
+    left: 10%;
+  }
+  .news #newswrap .newsBox .notice .noticeTx {
+    left: 50%;
+    width: 300px;
+  }
+  .news #newswrap .newsBox .notice2 {
+    display: none;
+  }
+  
+  .news #newswrap div {
+    width: 400px;
+  }
+  .news #newswrap div a {
+    display: block;
+  }
+  .news #newswrap div a img.event1 {
+    height: 300px;
+    width: 100%;
+  }
+  .news #newswrap div a img.event2 {
+    height: 300px;
+    width: 100%;
+  }
+  
+  /*소셜 공유*/
+  div.share {
+    width: 100%;
+  }
+  div.share ul:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  div.share ul li {
+    float: left;
+  }
+  /*저작권*/
+  footer#footer div ul:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .footer_menu {
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  footer#footer div ul li a {
+    margin-left: 20px;
+    font-weight: bold;
+  }
+  footer#footer div {
+    width: 100%;
+    font-size: 14px;
+    color: white;
+    border: 0px solid black;
+  }
+  footer#footer div:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  footer#footer p.logo {
+    font-size: 50px;
+    text-align: right;
+    font-family: "Gamja Flower", cursive;
+    font-family: "Nanum Pen Script", cursive;
+    float: right;
+    position: relative;
+    right: 20px;
+  }
+  
+  
+  
+}
