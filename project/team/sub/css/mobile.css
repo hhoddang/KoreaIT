@@ -117,7 +117,6 @@
     transform: translateX(-50%);
     z-index: 150;
     line-height: 100px;
-    background: floralwhite;
     border-bottom:1px solid #ccc;
   }
   .header_nav,

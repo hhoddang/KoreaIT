@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
 }
+button {
+  cursor: pointer;;
+}
 ul li {
   list-style: none;
 }
@@ -44,7 +47,6 @@ a {
 }
 
 .title {
-  padding: 10px;
   font-size: 40px;
   text-align: center;
   font-family: "Gamja Flower", cursive;
@@ -66,7 +68,7 @@ a {
   display: block;
   top: 0;
   right: 0;
-  max-width: 550px;
+  /* max-width: 550px; */
   width: 100%;
   background-color: #fff;
   font-size: 14px;
@@ -216,111 +218,117 @@ div.share ul li a.instagram {
     margin: 0 auto;
   }
 
-  /* header */
-  .header__wrap_container {
-    width: 100%;
-    background-color: #fff;
-  }
-
-  .header__login_ul {
-    display: flex;
-    margin-top: -70px;
-    position: absolute;
-    right: 10%;
-  }
-
-  .header__wrap_container {
-    width: 100%;
-    background-color: #fff;
-  }
-
-  .header__menu_ul {
-    background-color: #fff;
-    display: flex;
+  
+  .header__top {
+    max-width: 1280px;
+    position: relative;
     margin: 0 auto;
-    max-width: 1000px;
-    z-index: 2;
-    /* background-color: #009223; */
+    height: 100px;
   }
+ 
+  .header__wrap_container {
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+    border-top:5px solid #009223;
+  }
+
+  /* header */
+  .header__login_ul {
+    position: absolute;
+    right:0;
+    bottom:0;
+  }
+
+  .header__login_ul li {
+    float: left;  
+    position: relative; 
+    margin-left:10px
+  }
+
+  .header__login_ul li:hover a{
+    color:#009223; font-weight: bold;
+  }
+  .header__login_ul li a{
+    display: block;
+    font-size:16px;
+  }
+
+  .header__login_ul:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+
   .header__menu {
     height: 50px;
   }
 
-  .header__login_ul > li {
-    font-size: 14px;
-    margin: 10px 0 10px 0;
-    padding: 10px;
+  .header__menu_ul {
+    max-width: 1280px;
+    width: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .header__menu_ul:after {
+    content: ""; display: block; clear: both;
   }
 
   .header__menu_ul > li {
-    /* padding: 20px 0 20px 0; */
-    display: block;
-    text-align: center;
+    float: left;
     position: relative;
-    text-align: center;
-    flex-grow: 1;
+    left: 137px;
   }
 
-  .header__menu_ul > li > a > h2 {
-    font-size: 18px;
-    margin: 10px;
-    font-weight: 700;
-    font-weight: 700;
+  .header__menu_ul > li > a>h2{
+    display: block; font-weight: bold; font-size: 20px;
+    box-sizing: border-box; padding: 10px; text-align: center;
+    width: 200px; border: 0px solid black;
+  }
+
+  .test {
+    position:absolute;
+    background:#fff;
+    width: 100%;
+    height: 0px;
+    left:0;
+    top:155px;
+    z-index:99;transition: all 0.7s;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+  }
+  
+
+  .header__menu_drop_ul {
+    display: block; position: absolute; height: 0px; overflow: hidden;
+    transition: all 0.7s;
+    z-index: 100;
   }
 
   .header__menu_ul > li > a:hover {
     color: #009223;
   }
-  .test {
-    position: absolute;
-    width: 100%;
-    top: 156px;
-    left: 0;
-    z-index: 1;
-    background-color: #fff;
-    transition: all 0.7s;
-    height: 0px;
-  }
-
-  .header__menu_drop_ul {
-    width: 100%;
-    display: block;
-
-    z-index: 2;
-    position: absolute;
-    top: 46px;
-    height: 0px;
-    transition: all 0.7s;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-
   .header__menu_ul > li:hover > a {
     color: #009223;
   }
 
   .header__menu:hover .test {
-    height: 170px;
+    height: 200px;
     transition: all 0.7s;
   }
   
   .header__menu:hover .header__menu_drop_ul {
-    background-color: #fff;
-    height: 170px;
+    height: 200px;
     transition: all 0.7s;
   }
 
-  .header__menu_drop_ul > li {
-    font-size: 14px;
-    padding: 10px;
-    color: #ddd;
-  }
-
   .header__menu_drop_ul > li > a {
-    display: block;
-    box-sizing: border-box;
-    text-align: center;
-    color: #666666;
+    display: block; box-sizing: border-box;
+    padding: 10px;
+    text-align: center; width: 200px; 
   }
 
   .header__menu_drop_ul > li > a:hover {

@@ -285,10 +285,6 @@ span.star
     text-indent: -999px;
   }
 
-  .header_wrap {
-    border-top: 5px solid #009223;
-    position: absolute;
-  }
 
   .icon_wrap {
     display: none;

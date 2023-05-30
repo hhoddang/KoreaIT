@@ -53,6 +53,7 @@ ul.sub1 li a{
 .main a{position: absolute; font-size: 50px; color: lightgray}
 .main a.prev{left: 20px; top:50%; transform:translateY(-50%);}
 .main a.next{right: 20px; top:50%; transform:translateY(-50%);}
+#Mobilemainimg{display: none;}
 /*인기상품이미지*/
 div.popular{  margin:0 auto ;border: 0px solid black;padding:20px;}
 div.popular h3{margin-left: 75px; margin-bottom: 0px; font-size: 30px}

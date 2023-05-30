@@ -7,7 +7,7 @@
   <title>best</title>
   <script src="https://kit.fontawesome.com/27d9ad6fd0.js" crossorigin="anonymous"></script>
   <script src="js/jquery-3.6.4.min.js"></script>
-  <script src="js/sub.js"></script>
+  <script src="js/sub.js" defer></script>
   <link rel="stylesheet" href="css/import.css" type="text/css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,12 +29,12 @@
             <div class="header__wrap_container">
               <div class="header__top">
                 <div class="title"><h1><a href="../index.html" class="logo">노원당</a></h1></div>
-              </div>
-              <div class="header__login">
-                <ul class="header__login_ul">
-                  <li><div class="header__login_box"><a href="login.html">로그인</a></div></li>
-                  <li><div class="header___join_box"><a href="membership.html">회원가입</a></div></li>
-                </ul>
+                <div class="header__login">
+                  <ul class="header__login_ul">
+                    <li><div class="header__login_box"><a href="login.html">로그인</a></div></li>
+                    <li><div class="header___join_box"><a href="membership.html">회원가입</a></div></li>
+                  </ul>
+                </div>
               </div>
               <!-- 휴대폰 및 태블릿 메뉴 태그 -->
               <div class="icon_wrap">
@@ -58,7 +58,7 @@
                         </a></li>
                         <li class="na"><a href="#" class="na">메뉴소개<i class="fa-solid fa-chevron-down" id="hbg__drop icon"></i></a>
                           <ul class="hbg__drop">
-                            <li><a href="best.html">베스트</a></li>
+                            <li><a href="#">베스트</a></li>
                             <li><a href="#">신상품</a></li>
                             <li><a href="#">식빵</a></li>
                             <li><a href="#">케이크</a></li>
@@ -93,40 +93,40 @@
                 <div class="test"></div>
                 <ul class="header__menu_ul">
                 
-                  <li><a href="#"><h2>브랜드소개</h2>
+                  <li><a href="#"><h2>브랜드소개</h2></a>
                     <ul class="header__menu_drop_ul">
                       <li><a href="#">브랜드역사</a></li>
                       <li><a href="#">브랜드소개</a></li>
                     </ul>     
-                  </a></li>
-                  <li><a href="sub.html"><h2>메뉴소개</h2>
+                  </li>
+                  <li><a href="#"><h2>메뉴소개</h2></a>
                     <ul class="header__menu_drop_ul"> 
-                      <li><a href="#">베스트</a></li>
+                      <li><a href="best.html">베스트</a></li>
                       <li><a href="#">신상품</a></li>
                       <li><a href="#">식빵</a></li>
                       <li><a href="#">케이크</a></li>
                     </ul>                   
-                  </a></li>
-                  <li><a href="#"><h2>가맹점</h2>
+                  </li>
+                  <li><a href="#"><h2>가맹점</h2></a>
                     <ul class="header__menu_drop_ul">
                       <li><a href="#">프렌차이즈</a></li>
                       <li><a href="#">가맹문의</a></li>
                       <li><a href="#">지점안내</a></li>
                     </ul>                 
-                  </a></li>
-                  <li><a href="#"><h2>온라인주문</h2>
+                  </li>
+                  <li><a href="#"><h2>온라인주문</h2></a>
                     <ul class="header__menu_drop_ul">
                       <li><a href="#">주문하기</a></li>
                       <li><a href="#">단체주문</a></li>
                     </ul>                 
-                  </a></li>
-                  <li><a href="#"><h2>새소식</h2>
+                  </li>
+                  <li><a href="#"><h2>새소식</h2></a>
                     <ul class="header__menu_drop_ul">
                       <li><a href="#">프로모션</a></li>
                       <li><a href="#">뉴스</a></li>
                       <li><a href="#">광고영상</a></li>
                     </ul>                 
-                  </a></li>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -167,19 +167,28 @@
                     <tr class="tr_box star">
                       <td colspan="2">
                         <ul>
-                          <li><i class="fa-solid fa-check" style="color:#ffce32"></i> 좌측 배송일정을 확인하신 후 상품을 받으신 후 바로 드시는 것이 가장 좋습니다.</li>
-                          <li><i class="fa-solid fa-check" style="color:#ffce32"></i> 주문금액이 50,000원 미만일 경우 5,000원 배송비를 부과합니다.</li>
-                          <li><i class="fa-solid fa-check" style="color:#ffce32"></i> 도서지방(제주도, 섬, 군부대)은 배송이 불가합니다.</li>
+                          <li><i class="fa-solid fa-check" style="color:#ffce32"></i>  좌측 배송일정을 확인하신 후 상품을 받으신 후 바로 드시는 것이 가장 좋습니다.</li>
+                          <li><i class="fa-solid fa-check" style="color:#ffce32"></i>  주문금액이 50,000원 미만일 경우 5,000원 배송비를 부과합니다.</li>
+                          <li><i class="fa-solid fa-check" style="color:#ffce32"></i>  도서지방(제주도, 섬, 군부대)은 배송이 불가합니다.</li>
                         </ul>
                       </td>
                     </tr>
                     <tr class="tr_box">
                       <td>크로와사삭 수량</td>
-                      <td><input type="number" class="number"></td>
+                      <td>
+                        <div class="button--price" style="position:relative;">
+
+                          <input type="text" value= "1" class="number" id="number"><label for="number" style="display: block; text-indent:-9999999px;height:0px;">제품수량</label>
+                          <div class="button--arrow">
+                            <button id="plus"><i class="fa-solid fa-arrow-up"></i></button>
+                            <button id="minus"><i class="fa-solid fa-arrow-down"></i></button>
+                          </div>
+                        </div> 
+                      </td>
                     </tr>
                     <tr class="tr_box result">
                       <td>총 금액: </td>
-                      <td></td>
+                      <td><span id="print_price">3900원</span></td>
                     </tr>
                     <tr class="box_button">
                       <td><button class="btn--sub total">장바구니</button></td>

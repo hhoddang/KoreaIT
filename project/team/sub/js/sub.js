@@ -33,6 +33,8 @@ $(function () {
 });
 
 
+
+
 $(function(){
   $(".tabMenuWrap").each(function(){
     var tabMenuDiv = $(this);
@@ -70,3 +72,49 @@ $(function(){
 })
 
 });
+
+// best 메뉴 단품 가격 버튼 
+function Button_d(price){
+  let el = document.getElementById('number');
+  let plus = document.getElementById("plus");
+  let minus = document.getElementById("minus");
+  var count = 0;
+
+  var print_price = document.getElementById("print_price");
+
+  plus.addEventListener("click", function(){
+    count += 1;
+    console.log(count); 
+    print_price.innerHTML = `${count*price}원(${count}개)` 
+    el.value = count;
+    if(count<1){
+      print_price.innerHTML = "수량은 한개이상입니다."
+    }
+  });
+
+  minus.addEventListener("click", function(){
+
+    if(count<1){
+      print_price.innerHTML = "수량은 한개이상입니다."
+      count = 0;
+      el.value = count;
+    } else {
+    count -= 1;
+    print_price.innerHTML = `${count*price}원` 
+    el.value = count;
+    }
+  });
+}
+
+Button_d(3900);
+
+
+
+
+
+
+
+
+  
+
+

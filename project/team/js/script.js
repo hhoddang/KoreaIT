@@ -30,17 +30,36 @@ $(function () {
   });
 });
 
-  var w = $(window).width();
-  if (w < 599) {
-    $(function () {
-      $("nav>ul>li>.na").click(function () {
-        $(this)
-          .next()
-          .slideToggle(300)
-          .parent()
-          .siblings()
-          .find(".sub_m")
-          .slideUp();
-      });
+var w = $(window).width();
+if (w < 599) {
+  $(function () {
+    $("nav>ul>li>.na").click(function () {
+      $(this)
+        .next()
+        .slideToggle(300)
+        .parent()
+        .siblings()
+        .find(".sub_m")
+        .slideUp();
     });
+  });
+
+  var mbox = 1;
+  function next(x) {
+    mbox++;
+    if (mbox == 3) {
+      mbox = 1;
+    }
+    document.getElementById("Mobilemainimg").src =
+      "images/m_main" + mbox + ".jpg";
   }
+  function prev(x) {
+    mbox--; //1씩 증가
+    if (mbox == 0) {
+      
+      mbox = 1; 
+    }
+    document.getElementById("Mobilemainimg").src =
+      "images/m_main" + mbox + ".jpg";
+  }
+}
