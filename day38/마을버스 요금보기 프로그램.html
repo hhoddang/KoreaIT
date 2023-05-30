@@ -22,16 +22,19 @@
             min-height: 300px;
             background: lightyellow;
         }
+        h1{margin-bottom:20px;}
+        label{ display: block; margin-bottom:5px;}
+        button{margin-bottom:10px;}
     </style>
 </head>
 
 <body>
     <h1>마을버스 요금보기 프로그램</h1>
-    <label for="">출발정거장<select id="start"></select></label>
-    <label for="">도착정거장<select id="end"></select></label><br>
-    <label><input type="radio" value="adult" name="people" checked /> 어른(일반)</label>
-    <label><input type="radio" value="young" name="people" /> 청소년</label>
-    <label><input type="radio" value="child" name="people" /> 어린이</label><br>
+    <label for="start">출발정거장<select id="start"></select></label><br>
+    <label for="end">도착정거장<select id="end"></select></label><br>
+    <label for="adult"><input type="radio" value="adult" name="people" id="adult" checked /> 어른(일반)</label>
+    <label for="young"><input type="radio" value="young" name="people" id="young" /> 청소년</label>
+    <label for="child"><input type="radio" value="child" name="people" id="child" /> 어린이</label><br>
     <button type="button" onclick="calculator()">버스요금보기</button>
 
     <!-- 버스요금이 보여지는 영역 -->

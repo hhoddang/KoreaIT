@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다중삼항연산자</title>
+    <link rel="stylesheet" href="">
+    <script>
+        //삼항연산자 = 조건 ? 참일경우 값 :  거짓일경우 값
+
+        //다중 삼항연산자
+        // 조건 ? 참일경우 값  : 조건 ? 참일경우 값 : 조건 ? 참일경우 값 : 조건에 해당하지 않을 경우 값 종료;
+
+        var x = Number(prompt("나이를 입력하세요", "0"));
+        var age =
+            (x > 18) ? alert("어른") :
+                (x < 19) && (x > 13) ? alert("청소년") :
+                    (x < 14) && (x > 5) ? alert("어린이") : alert("영유아");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
