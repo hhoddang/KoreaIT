@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시계</title>
+    <script>
+        function watch() {
+
+            var now = new Date();
+            // alert(now);
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            // 시침은 시와 함께 분에따라서도 각도가 변함
+            var degHours = hours * (360 / 12) + minutes * (360 / 12 / 60);
+            var degMinutes = minutes * (360 / 60);
+            var degSeconds = seconds * (360 / 60);
+
+            var elementH = document.getElementById("lineHour"); // id가 lineHour인 요소
+            var elementM = document.getElementById("lineMin"); // id가 lineMin인 요소
+            var elementS = document.getElementById("lineSec"); // id가 lineMin인 요소
+
+            elementH.style.transform = `rotate(${degHours}deg )`
+            elementM.style.transform = `rotate(${degMinutes}deg )`
+            elementS.style.transform = `rotate(${degSeconds}deg )`
+        }
+
+        setInterval(watch, 1000);
+    </script>
+    <style>
+        #clock {
+            position: relative;
+            margin: 0 auto;
+            border: 1px solid #000;
+            width: 400px;
+            height: 400px;
+            background: url("images/back.jpg") center center;
+            background-size: cover;
+            border-radius: 50%;
+        }
+
+
+        #lineHour {
+            position: absolute;
+            top: calc(50% - 150px);
+            left: calc(50% - 5px);
+            background: #111;
+            width: 10px;
+            height: 150px;
+            transform-origin: bottom;
+        }
+
+        #lineMin {
+            position: absolute;
+            top: calc(50% - 200px);
+            left: calc(50% - 2px);
+            background: #000;
+            width: 4px;
+            height: 170px;
+            transform-origin: bottom;
+        }
+
+        #lineSec {
+            position: absolute;
+            top: calc(50% - 200px);
+            left: calc(50% - 1px);
+            background: b#000;
+            width: 2px;
+            height: 200px;
+            transform-origin: bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clock">
+        <!-- 시침 -->
+        <div id="lineHour"></div>
+        <!-- 분침 -->
+        <div id="lineMin"></div>
+        <!-- 초침 -->
+        <div id="lineSec"></div>
+
+    </div>
+</body>
+
+</html>
