@@ -1,0 +1,13 @@
+<script>
+    fetch("http://localhost:3000/program")
+        .then((response) => response.json())
+        .then((json) => console.log(json)); //전체데이터 조회
+
+    fetch("http://localhost:3000/pannel/3")
+        .then((response) => response.json())
+        .then((json) => console.log(json)); //id값으로 조회
+
+    fetch("http://localhost:3000/pannel?num=1")
+        .then((response) => response.json())
+        .then((json) => console.log(json)); //num의 값을 1로 조회
+</script>

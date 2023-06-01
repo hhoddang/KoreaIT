@@ -1,0 +1,35 @@
+{
+  "program": [
+    {
+      "title": "Easy Easy Easy Engilsh",
+      "author": "Jung",
+      "id": 2
+    }
+  ],
+  "title": {
+    "Listening ": "started it to"
+  },
+  "time": {
+    "t": 600
+  },
+  "pannel": [
+    {
+      "id": 1,
+      "name": "Jina Kim",
+      "debut": "June 1 2023",
+      "num": 1
+    },
+    {
+      "id": 2,
+      "name": "Cristin Joe",
+      "debut": "May 10 2023",
+      "num": 2
+    },
+    {
+      "id": 3,
+      "name": "Serina",
+      "debut": "March 20 2023",
+      "num": 3
+    }
+  ]
+}
