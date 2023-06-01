@@ -2,8 +2,6 @@
 @import url("color.css");
 @import url("common.css");
 @import url("style.css");
-
-/* 모바일 */
 @import url("mobile.css");
 
 /*테블릿*/

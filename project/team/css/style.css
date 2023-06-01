@@ -3,7 +3,7 @@ header#header{border-top:5px solid #009223; border-bottom:1px solid #ccc;}
 .header_box{border: 0px solid black; height: 100px; position:relative;}
 .header_nav{height: 50px;}
 /*로그인,회원가입*/
-ul.util{position:absolute; right:0; bottom:0; border: 0px solid black}
+ul.util{position:absolute; right:150px; bottom:25px; border: 0px solid black}
 ul.util:after{content: ""; display: block; clear: both}
 ul.util li{float: left; margin-left:10px ; position: relative; }
 ul.util li:hover a{color:#009223; font-weight: bold;}
@@ -15,13 +15,16 @@ nav{
 nav>ul{
     border: 0px solid black;
     height: 100%;
+    display: flex;
+    justify-content: center;
     }
 nav>ul:after{content: ""; display: block; clear: both}
-nav>ul>li{float: left; position: relative; left: 137px}
+nav>ul>li{position: relative;}
 nav>ul>li>a{
     display: block; font-weight: bold; font-size: 20px;
     box-sizing: border-box; padding: 10px; text-align: center;
-    width: 200px; border: 0px solid black
+    border: 0px solid black;
+    width: 200px;
     }
 .gnbWrap{
     position:absolute;
@@ -38,15 +41,16 @@ nav>ul>li>a{
     display: none;
 }
 ul.sub1{
+    width: 100%;
     display: block; position: absolute; height: 0px; overflow: hidden;
     transition: all 0.7s;
     border: 0px solid black;
     z-index: 100;
     }
-ul.sub1 li{}
+ul.sub1 li{ width: 100%; text-align: center;}
 ul.sub1 li a{
     display: block; box-sizing: border-box;padding: 10px;
-    text-align: center; width: 200px; border: 0px solid black
+    text-align: center;  border: 0px solid black
     }
 /*메인화면이미지*/
 .main{position:relative;}
@@ -59,50 +63,59 @@ div.popular{  margin:0 auto ;border: 0px solid black;padding:20px;}
 div.popular h3{margin-left: 75px; margin-bottom: 0px; font-size: 30px}
 div.popular h3.pop{background: url(../images/icon.PNG) no-repeat 0px 0px}
 div.popular ul:after{content: ""; display: block; clear: both}
+div.popular ul {width: 80%; margin:0 auto; display: flex; justify-content: center;}
 div.popular ul li{
-    float: left; width: 25%;left: 0px; border: 0px solid black; position: relative;
+    left: 0px; border: 0px solid black; position: relative;
       border:0px solid black;
+      width: 25%;
     }
-div.popular ul li a{display: block; overflow: hidden; width: 260px; height: 200px; margin: 0 auto;}
+div.popular ul li a{display: block; overflow: hidden; margin: 0 auto;}
 div.popular ul li div{font-size: 16px; text-align: center; font-weight: bold; }
 div.popular ul li a img{width: 100%; height: 100%}
 div.popular ul li a img:hover{transform:scale(1.3); transition: 1s all}
-div.popularBox {width: 1280px;margin:0 auto;}
+div.popularBox {margin:0 auto; padding :0 150px;}
 /*신규상품이미지*/
 div.newmenu{  margin:0 auto ;border: 0px solid black;padding:20px;}
 div.newmenu h3{margin-left: 75px; margin-bottom: 0px; font-size: 30px}
 div.newmenu h3.new{background: url(../images/icon.PNG) no-repeat 0px 0px}
 div.newmenu ul:after{content: ""; display: block; clear: both}
+div.newmenu ul{width: 80%; margin:0 auto; display: flex; justify-content: center;}
 div.newmenu ul li{
-    float: left; border: 0px solid black; position: relative;
-    width: 25%;left: 0px; border:0px solid black
+    left: 0px; border: 0px solid black; position: relative;
+      border:0px solid black;
+      width: 25%;
     }
-div.newmenu ul li a{display: block; overflow: hidden; width: 260px; height: 200px; margin:0 auto; }
+div.newmenu ul li a{display: block; overflow: hidden;  margin:0 auto; }
 div.newmenu ul li div{font-size: 16px; text-align: center; font-weight: bold; }
 div.newmenu ul li a img{width: 100%; height: 100%}
 div.newmenu ul li a img:hover{transform:scale(1.3); transition: 1s all}
-div.newmenuBox{width: 1280px;margin:0 auto;}
+div.newmenuBox{margin:0 auto;padding :0 150px;}
 /*케이크상품이미지*/
 div.cake{  margin:0 auto ;border: 0px solid black; padding:20px;}
 div.cake h3{margin-left: 75px; margin-bottom: 0px; font-size: 30px}
 div.cake h3.cake{background: url(../images/icon.PNG) no-repeat 0px 0px}
 div.cake ul:after{content: ""; display: block; clear: both}
+div.cake ul{width: 80%; margin:0 auto; display: flex; justify-content: center;}
 div.cake ul li{
     float: left; border: 0px solid black; position: relative;
     width: 25%;left: 0px; border:0px solid black
     }
-div.cake ul li a{display: block; overflow: hidden; width: 260px; height: 200px; margin: 0 auto;}
+div.cake ul li a{display: block; overflow: hidden; margin: 0 auto;}
 div.cake ul li div{font-size: 16px; text-align: center; font-weight: bold; }
 div.cake ul li a img{width: 100%; height: 100%}
 div.cake ul li a img:hover{transform:scale(1.3); transition: 1s all}
-div.cakeBox{width: 1280px; margin: 0 auto;}
+div.cakeBox{ margin: 0 auto;padding :0 150px;}
 /*뉴스배너*/
+.news #newswrap .eventBox1{
+    padding:30px 15% 0 15%;
+
+}
 .news #newswrap .eventBox1 {
     display: flex;
     justify-content: space-around;
 }
 .news #newswrap .eventBox1 .event1{
-    width: 400px;
+    width: 35%;
     height: 300px;
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -114,7 +127,7 @@ div.cakeBox{width: 1280px; margin: 0 auto;}
     height: 100%;
 }
 .news #newswrap .eventBox1 .event2 {
-    width: 800px;
+    width: 60%;
     height: 300px;
 }
 .news #newswrap .eventBox1 .event2 img{
@@ -123,24 +136,31 @@ div.cakeBox{width: 1280px; margin: 0 auto;}
     border-radius: 30px 0 30px 0;
 }
 .news #newswrap .newsBox{
-    padding-top:30px;
+    position:relative;
     display: flex;
     justify-content: space-around;
+    padding:30px 15% 0 15%;
 }
 .news #newswrap .newsBox .notice{
-    width: 900px;
+    width: 60%;
     background:#fff;
     height: 300px;
     border-radius: 30px 0 30px 0;
     position:relative;
+    display: flex;
 }
 .news #newswrap .newsBox .notice .noticeHd{
+    width: 40%;
+    height: 100%;
+    position:relative;
+}
+.news #newswrap .newsBox .notice .noticeHd .noticeHdTxt{
     position:absolute;
-    left:80px;
+    right:5%;
     top:50%;
     transform: translateY(-50%);
-    width: 250px;
 }
+
 .news #newswrap .newsBox .notice .noticeHd h2{
     color: #292929;
     font-size: 30px;
@@ -156,10 +176,15 @@ div.cakeBox{width: 1280px; margin: 0 auto;}
     color: #666666;
 }
 .news #newswrap .newsBox .notice .noticeTx{
-    width:500px;
+    width: 60%;
+    height: 100%;
+    position:relative;
+}
+
+.news #newswrap .newsBox .notice .noticeTx ul {
     position:absolute;
-    right:0px;
     top:50%;
+    left:5%;
     transform: translateY(-50%);
 }
 .news #newswrap .newsBox .notice .noticeTx ul li{
@@ -173,7 +198,7 @@ div.cakeBox{width: 1280px; margin: 0 auto;}
 
 
 .news #newswrap .newsBox .notice2{
-    width: 300px;
+    width: 35%;
     height: 300px;
     background:#fff;
     border-radius: 0 30px 0 30px;
