@@ -1,14 +1,21 @@
 {
   "program": [
     {
+      "id": 2,
       "title": "Easy Easy Easy Engilsh",
-      "author": "Jung",
+      "author": "Jung"
+    }
+  ],
+  "title": [
+    {
+      "id": 1,
+      "Listening ": "started it to"
+    },
+    {
+      "name": "ho chan",
       "id": 2
     }
   ],
-  "title": {
-    "Listening ": "started it to"
-  },
   "time": {
     "t": 600
   },

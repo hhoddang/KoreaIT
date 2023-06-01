@@ -1,15 +1,14 @@
 <script>
-    fetch("http://localhost:3000/program/2", {
+    fetch("http://localhost:3000/title", {
         //http 요청방법
         method: "put",
         //전송할데이터
         body: JSON.stringify({
-            title: "Easy Easy Easy Engilsh",
-            author: "Jung"
+            name : "ho chan"
         }),
 
         headers: {//데이터의 언어타입을 헤더값으로 정의
-            "content-type": "application/json; charser=utf-8"
+            "content-type": "application/json; charset=utf-8"
         }
     })
         .then((response) => response.json())

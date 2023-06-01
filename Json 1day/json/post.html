@@ -1,15 +1,16 @@
 <script>
-    fetch("http://localhost:3000/program", {
+    // post 방식 사용시 json 파일의 해당 속성을 객체방식으로 변경하기.
+    
+    fetch("http://localhost:3000/title", {
         //http 요청방법
         method: "post",
         //전송할데이터
         body: JSON.stringify({
-            title: "Easy Engilsh",
-            author: "Kim"
+            name : "ho chan"
         }),
 
         headers: {//데이터의 언어타입을 헤더값으로 정의
-            "content-type": "application/json; charser=utf-8"
+            "content-type": "application/json; charset=utf-8"
         }
     })
         .then((response) => response.json())
