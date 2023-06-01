@@ -22,7 +22,7 @@ a:focus{}
 }
 nav ul li a:hover{color: green}
 nav ul li:hover .na{color: green}
-nav ul:hover ul.sub1{height: 200px; width: 100%;}
+nav ul:hover ul.sub1{height: 200px;}
 footer#footer div ul li a:hover{color: lightgreen; text-decoration: underline}
 
 

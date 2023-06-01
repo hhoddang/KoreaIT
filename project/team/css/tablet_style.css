@@ -24,7 +24,7 @@
   /*로그인,회원가입*/
   ul.util {
     border: 0px solid black;
-    right:20px;
+    bottom: 10px;
   }
   ul.util:after {
     content: "";
@@ -117,11 +117,11 @@
 
   /*인기상품이미지*/
   div.popular {
+    margin-top: 10px;
     padding: 20px 0;
   }
   div.popularBox {
     width: 100%;
-    padding:0;
   }
   div.popular h2 {
     margin-left: 75px;
@@ -129,7 +129,6 @@
   }
   div.popular ul {
     width: 100%;
-    display: block;
   }
   div.popular ul:after {
     content: "";
@@ -140,7 +139,6 @@
     border: 0px solid black;
     position: relative;
     margin: 0;
-    float:left;
   }
   div.popular ul li {
     width: 50%;
@@ -167,10 +165,10 @@
   }
   /*신규상품이미지*/
   div.newmenu {
+    margin-top: 10px;
     padding: 20px 0;
   }
   div.newmenuBox {
-    padding:0;
     width: 100%;
   }
   div.newmenu h2 {
@@ -184,12 +182,10 @@
   }
   div.newmenu ul {
     width: 100%;
-    display: block;
   }
   div.newmenu ul li {
     border: 0px solid black;
     position: relative;
-    float:left;
     margin: 0;
   }
   div.newmenu ul li {
@@ -215,9 +211,9 @@
 
   /*케이크상품이미지*/
   div.cake {
+    margin-top: 10px;
   }
   div.cakeBox {
-    padding:0;
     width: 100%;
   }
   div.cake h2 {
@@ -231,7 +227,6 @@
   }
   div.cake ul {
     width: 100%;
-    display: block;
   }
   div.cake ul li {
     border: 0px solid black;
@@ -282,24 +277,27 @@ section.news {
   }
   .news #newswrap .newsBox {
     width: 100%;
-    padding:0;
   }
   .news #newswrap .newsBox .notice {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
-    margin-top:20px;
   }
   .news #newswrap .newsBox .notice .noticeHd {
-    
+    width: 30%;
+    display: block;
+    left: 10%;
   }
   .news #newswrap .newsBox .notice .noticeTx {
-    
+    left: 50%;
+    width: 300px;
   }
   .news #newswrap .newsBox .notice2 {
     display: none;
   }
   
-
+  .news #newswrap div {
+    width: 400px;
+  }
   .news #newswrap div a {
     display: block;
   }

@@ -22,21 +22,6 @@ body {
   border: 1px solid #fff;
 }
 
-.header_wrap {
-  width: 100%;
-  margin-top: 20px;
-}
-
-.header_wrap {
-  position: fixed;
-  z-index: 999;
-  top: -20px;
-  right: 0;
-  height: 90px;
-  width: 100%;
-  background-color: #fff;
-}
-
 a {
   text-decoration: none;
   color: #333;
@@ -65,11 +50,12 @@ a {
 /* app용 햄버거 */
 .hamburger_wrap {
   position: absolute;
-  display: block;
+  display: none;
   top: 0;
   right: 0;
   /* max-width: 550px; */
   width: 100%;
+  /* height: 100%; */
   background-color: #fff;
   font-size: 14px;
   padding: 20px 24px;
@@ -213,12 +199,13 @@ div.share ul li a.instagram {
 }
 
 @media (min-width: 1024px) {
+  #wrap {
+    border-top:5px solid #009223;
+  }
   .inner {
     max-width: 1280px;
     margin: 0 auto;
   }
-
-  
   .header__top {
     max-width: 1280px;
     position: relative;
@@ -230,8 +217,12 @@ div.share ul li a.instagram {
     width: 100%;
     height: 150px;
     background-color: #fff;
-    border-top:5px solid #009223;
   }
+  .header_wrap {
+  height: 90px;
+  width: 100%;
+  background-color: #fff;
+}
 
   /* header */
   .header__login_ul {
@@ -263,6 +254,7 @@ div.share ul li a.instagram {
 
   .header__menu {
     height: 50px;
+
   }
 
   .header__menu_ul {
@@ -271,6 +263,7 @@ div.share ul li a.instagram {
     background-color: #fff;
     margin: 0 auto;
     height: 100%;
+    margin-top: -50px;
   }
 
   .header__menu_ul:after {
@@ -295,7 +288,7 @@ div.share ul li a.instagram {
     width: 100%;
     height: 0px;
     left:0;
-    top:155px;
+    top:150px;
     z-index:99;transition: all 0.7s;
     border-top:1px solid #ccc;
     border-bottom:1px solid #ccc;
@@ -339,4 +332,54 @@ div.share ul li a.instagram {
   .footer_txt {
     display: flex;
   }
+}
+
+/* .header_wrap {
+  position: fixed;
+  z-index: 999;
+  top: -20px;
+  right: 0;
+  height: 90px;
+  width: 100%;
+  background-color: #fff;
+} */
+
+
+@media(min-width:600px) and (max-width:767px){
+  .header_wrap {
+  position: fixed;
+  z-index: 999;
+  top: -20px;
+  right: 0;
+  height: 90px;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20px;
+}
+}
+@media(min-width:768px) and (max-width:1023px){
+  .header_wrap {
+  position: fixed;
+  z-index: 999;
+  top: -20px;
+  right: 0;
+  height: 90px;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+}
+@media(max-width:599px){
+  .header_wrap {
+  position: fixed;
+  z-index: 999;
+  top: -20px;
+  right: 0;
+  height: 90px;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
 }

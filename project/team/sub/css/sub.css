@@ -129,7 +129,7 @@
   }
   .content{
     width: 100%;
-    margin-top: 130px;
+    /* margin-top: 130px; */
   }
 
   .content__header_drop>li>a:hover {
@@ -343,6 +343,11 @@
     position: absolute;
   } */
 
+  .content{
+    width: 100%;
+    margin-top: -40px;
+  }
+
   .icon_wrap {
     display: none;
   }
@@ -359,8 +364,6 @@
 
   .content{
     width: 100%;
-    margin-top: -38px;
-    /* border: 10px solid red; */
   }
 
   
@@ -371,6 +374,7 @@
     background-image: url(../images/main5.jpg);
     background-size: 100% auto;
     background-attachment: scroll;
+    margin-top: -10px;
   }
 
   .content__header_wrap{

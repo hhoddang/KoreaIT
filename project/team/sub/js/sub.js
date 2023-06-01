@@ -1,15 +1,8 @@
-// sub페이지 헤드메뉴 드랍.
-$(".header__menu_ul").mouseenter(function(){
-  $(".header__menu_drop_ul").stop().slideDown(500);
-})
 
-$(".header__menu_ul").mouseleave(function(){
-  $(".header__menu_drop_ul").stop().slideUp(200);
-})
 
 $(function(){
   $("#appmenu_icon").click(function(){
-    $(".hamburger_wrap").stop().slideDown(200);
+    $(".hamburger_wrap").css("display","block");
   })
   $(".appmenu__close").click(function(){
     $(".hamburger_wrap").stop().slideUp(200);

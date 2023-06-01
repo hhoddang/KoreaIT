@@ -32,6 +32,7 @@
   background-color: #ffce32;
   border:none;
   border-radius: 15px;
+  color:#333;
 }
 
 .tr_box {
@@ -204,7 +205,7 @@
     background-image: url(../images/main5.jpg);
     background-size: 100% auto;
     background-attachment: scroll;
-    margin-top:-40px;
+    /* margin-top:-40px; */
   }
 
   .content__header_wrap{

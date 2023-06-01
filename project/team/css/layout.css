@@ -1,6 +1,8 @@
-
 header#header{width: 100%;  height: 150px}
+.header_box{width: 80%; margin: 0 auto;}
+.header_nav{width: 80%; margin:0 auto;}
 div#contents{
+    width: 100%;
     height: auto;
 }
 section.main{width: 100%}
@@ -9,11 +11,13 @@ section.main ul#mainimg{width: 100%; height: auto; margin: 0 auto}
 section.main div img{width: 100%; height: auto; margin: 0 auto}
 section.menu{width: 100%; margin: 0 auto}
 section div h3{height: 60px}
-section.news{width: 100%; background:url("../images/bg_content.gif"); padding: 80px 20px; box-sizing: border-box;}
-section.news #newswrap{ margin : 0 auto; }
+section.news{width: 100%; background:url("../images/bg_content.gif"); padding: 80px 0;}
+section.news #newswrap{width: 80%;  margin : 0 auto; }
+section.news #newswrap .eventBox1{width:100%;height: auto;}
 
-div.share{width:1280px; margin:0 auto; height:100%;}
+section.event{width: 100%;height: 100px}
+div.share{width:80%; margin:0 auto; height:100%;}
 footer#footer{width: 100%; height: 100px;margin: 0 auto; }
-footer .footerBox1{width: 1280px; margin: 0 auto; }
-footer .footerBox2{width: 1280px; margin: 0 auto;}
+footer .footerBox1{width: 80%; margin: 0 auto; }
+footer .footerBox2{width: 80%; margin: 0 auto;}
 
