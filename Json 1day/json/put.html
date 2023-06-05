@@ -1,10 +1,12 @@
 <script>
-    fetch("http://localhost:3000/title", {
+    fetch("http://localhost:3000/program/3", {
         //http 요청방법
         method: "put",
         //전송할데이터
         body: JSON.stringify({
-            name : "ho chan"
+            id:2,
+            title:"the korea",
+            author :"jane",
         }),
 
         headers: {//데이터의 언어타입을 헤더값으로 정의

@@ -281,22 +281,21 @@ section.news {
   .news #newswrap .newsBox .notice {
     width: 90%;
     margin: 0 auto;
+    position:relative;
   }
   .news #newswrap .newsBox .notice .noticeHd {
-    width: 30%;
+    width: 40%;
     display: block;
-    left: 10%;
   }
-  .news #newswrap .newsBox .notice .noticeTx {
-    left: 50%;
-    width: 300px;
+  .news #newswrap .newsBox .notice .noticeHd .NTHD{
+    right:0;
   }
+
   .news #newswrap .newsBox .notice2 {
     display: none;
   }
   
   .news #newswrap div {
-    width: 400px;
   }
   .news #newswrap div a {
     display: block;

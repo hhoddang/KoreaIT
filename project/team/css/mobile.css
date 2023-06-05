@@ -366,9 +366,11 @@
     margin: 0 auto;
   }
   .news #newswrap .newsBox .notice {
+    width: 100%;
     position:relative;
     margin: 0 auto;
     padding:20px;
+    padding-top:30px;
     box-sizing: border-box;
   }
   .news #newswrap .newsBox .notice2 {
@@ -383,18 +385,21 @@
     transform: translateY(0);
     padding-top:20px;
   }
+  .news #newswrap .newsBox .notice .noticeHd .NTHD{
+    width: 100%;
+    left:0;
+  }
   .news #newswrap .newsBox .notice .noticeHd h2 {
-    display: block;
-    float: left;
-    font-size:7.5vw;
+    float: none;
+    text-align: left;
   }
   .news #newswrap .newsBox .notice .noticeHd p {
     display: block;
-    float: right;
     line-height: 20px;
-    margin-top: 20px;
-    margin-right:30px;
-    font-size:3vw;
+    margin:10px;
+  }
+  .news #newswrap .newsBox .notice .noticeHd p br{
+    display: none;
   }
   .news #newswrap .newsBox .notice .noticeTx {
     width: 100%;
