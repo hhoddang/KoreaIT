@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check() {
+            var i = 0;
+            var sum = 0;
+            while (1) { //참일경우 실행.
+                i++; //씩 증가
+                sum += i; //sum에 1+2+3+4··· 
+                if (sum > 20) { // sum이 20보다 커질경우
+                    message(); // message 함수 실행
+                    break; //종료
+                }
+            }
+        }
+
+        var message = function () {
+            alert("합이 20이 넘었습니다.");
+        }
+        check(message);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
