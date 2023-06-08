@@ -1,0 +1,214 @@
+/* COMMON */
+body {
+  color: #333;
+  font-size: 16px;
+}
+
+#wrap {
+  position: relative;
+  width: 100%;
+  border: 1px solid #fff;
+}
+
+.header_wrap {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.header_wrap {
+  position: fixed;
+  z-index: 999;
+  top:-20px;
+  right: 0;
+  height: 90px;
+  width: 100%;
+  background-color: #fff;
+}
+
+a {text-decoration: none; 
+  color:#333;
+}
+
+.logo {color: #009223;}
+
+.title {
+  padding: 10px;
+  font-size: 90px;
+  text-align: center;
+  font-family: 'Gamja Flower', cursive;
+  font-family: 'Nanum Pen Script', cursive;
+} 
+
+
+/* header */
+
+.header__menu_ul {
+  display: flex;
+  width: 100%;
+}
+
+.header__menu_ul>li {
+  display: block;
+  text-align: center;
+}
+.header__menu_ul>li>a>h2{
+  font-size: 18px;
+  margin: 10px;
+  font-weight: 700;
+}
+
+/* app용 햄버거 */
+/* 햄버거 메뉴 상세 */
+.hbg__drop {
+  display: none;
+  padding: 10px 10px 10px 30px;
+  line-height: 30px;
+  width:100%;
+}
+
+/* app용 햄버거 */
+.hamburger_wrap{
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  max-width: 550px;
+  width: 100%;
+  background-color: #fff;
+  font-size: 14px;
+  padding: 20px 24px;
+  z-index: 999;
+  box-sizing: border-box;
+}
+
+/* 햄버거 엑스 아이콘*/
+.close {
+  width: 100%;
+  text-align: end;
+  margin-top: 10px;
+
+}
+
+.appmenu__close {
+  width: 50px;
+  height: 50px;
+  border:none;
+  background-color: #fff;
+  color:#fff
+}
+
+.appmenu__close:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#appmenu__icon_x {
+  font-size: 40px;
+  display: block;
+  color:#009223;
+  width: 100%;
+  border:none;
+}
+
+/* 화살표아이콘 */
+.fa-solid.fa-chevron-down {
+  float: right;
+  font-size: 20px;
+  color: #ffce32;
+  padding-right: 15px;
+}
+
+.hamburger__ul {
+  width: 100%;
+  line-height: 25px;
+  margin-top: 10px;
+  position: relative;
+}
+
+/* 햄버거 메뉴 타이틀 */
+.hamburger__ul>li>.na {
+  font-size: 16px;
+  /* font-weight: ; */
+  display: block;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  padding: 20px;
+}
+
+
+.share{
+  box-sizing: border-box;
+  width: 100%;
+  
+}
+
+.share>ul {
+  display: flex;
+}
+
+.share>ul>li {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+div.share ul li a {
+  display: block;
+  padding: 20px;
+  height: 50px;
+  font-size: 16px;
+}
+
+div.share ul li a.twitter{background-color: skyblue}
+div.share ul li a.facebook{background-color: deepskyblue}
+div.share ul li a.instagram{background-color: mediumpurple}
+
+#footer {
+  background-color: #ddd;
+  width: 100%;
+  padding: 20px 0 20px 0;
+  font-size: 13px;
+}
+
+.footer_txt {
+  display: block;
+}
+
+.footer_txt>li>span {
+  font-weight: 900;
+}
+
+.footer_txt>li::after{
+  content: "I";
+  padding: 0 10px 0 10px; 
+}
+
+
+.footer__link>ul {
+  display: flex;
+  width: 100%;
+}
+.footer__link>ul>li {
+  display: block;
+  padding-right: 15px;
+  font-size: 13px;
+  margin: 10px 0 10px 0;
+  font-weight: 900;
+}
+
+.footer__link>ul>li>a:hover {
+  color:#009223;
+}
+
+/* 더보기 아이콘 */
+.icon_wrap {
+  float: right;
+  margin: -73px 10px 0 0; 
+}
+
+.icon_txt {
+  font-size: 30px;
+  color: #009223;
+}

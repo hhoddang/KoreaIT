@@ -1,0 +1,27 @@
+/*여백초기화*/
+*{margin: 0; padding: 0}
+/*가운데정렬*/
+div#wrapper{margin: 0 auto; box-sizing: border-box; width: 100%;}
+/*불릿표시 없앰*/
+ul li{list-style: none}
+/*form관련스타일*/
+fieldset{border: none}
+legend{display: none}
+/*정렬*/
+input, select{vertical-align: middle}
+/*기본링크스타일*/
+a, a:link{text-decoration: none}
+a:visited{}
+a:hover{}
+a:active{}
+a:focus{}
+
+nav ul li a:hover{color: green}
+nav ul li:hover .na{color: green}
+nav ul:hover ul.sub1{height: 200px}
+footer#footer div ul li a:hover{color: lightgreen; text-decoration: underline}
+
+
+ul.sub1 a:hover{text-decoration: underline}
+
+/* body{font-family: ; font-size: } */

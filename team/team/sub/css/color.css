@@ -1,0 +1,16 @@
+* a{color: black}
+h1 a{color: green;}
+.logo a{color: lightgreen;}
+section.menu div ul li div.txt2{color: green}
+
+
+div#contents{background-color: white}
+/*section.main{background-color: black; border: 3px solid black}*/
+/*section.main div {background-color: black; border: 3px solid black}*/
+
+div.popular{background-color: floralwhite;}
+div.newmenu{background-color: beige;}
+div.cake{background-color: floralwhite;}
+section.news{background-color: floralwhite;}
+section.event{background-color: darkorange;}
+footer#footer{background-color: slategray;}

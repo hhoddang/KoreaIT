@@ -3,26 +3,37 @@
         {
             "title" : "범죄도시3",
             "summary" : "대체불가 괴물형사 마석도, 서울 광수대로 발탁!",
-            "link" : "",
-            "thumnailImage" : ""
+            "rank": "1",
+            "link" : "http://www.cgv.co.kr/movies/detail-view/?midx=87045",
+            "thumnailImage" : "http://choooockc.dothome.co.kr/project01/src/images/b.jpg"
         },
         {
             "title" : "플래시 ",
             "summary" : "시공간이 붕괴된 세계,차원이 다른 히어로가 온다!",
-            "link" : "",
-            "thumnailImage" : ""
+            "rank": "2",
+            "link" : "http://www.cgv.co.kr/movies/detail-view/?midx=87090",
+            "thumnailImage" : "http://choooockc.dothome.co.kr/project01/src/images/f.jpg"
         },
         {
             "title" : "트랜스포머-비스트의 서막",
             "summary" : "전 우주의 행성을 집어삼키는 절대자",
-            "link" : "",
-            "thumnailImage" : ""
+            "rank": "3",
+            "link" : "http://www.cgv.co.kr/movies/detail-view/?midx=87055",
+            "thumnailImage" : "http://choooockc.dothome.co.kr/project01/src/images/t.jpg"
         },
         {
             "title" : "엘리멘탈",
             "summary" : "디즈니·픽사의 놀라운 상상력!올여름, 세상이 살아 숨 쉰다",
-            "link" : "",
-            "thumnailImage" : ""
+            "rank": "4",
+            "link" : "http://www.cgv.co.kr/movies/detail-view/?midx=87034",
+            "thumnailImage" : "http://choooockc.dothome.co.kr/project01/src/images/e.jpg"
+        },
+        {
+            "title" : "엘리멘탈",
+            "summary" : "디즈니·픽사의 놀라운 상상력!올여름, 세상이 살아 숨 쉰다",
+            "rank": "5",
+            "link" : "http://www.cgv.co.kr/movies/detail-view/?midx=87034",
+            "thumnailImage" : "http://choooockc.dothome.co.kr/project01/src/images/e.jpg"
         }
     ]
 }

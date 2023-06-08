@@ -1,0 +1,317 @@
+/* COMMON */
+/* 테두리없앰 */
+fieldset {border:none;}
+/* 제목숨김 */
+legend{display:none;}
+/* 정렬 */
+label,input,select {
+  vertical-align:middle;
+}
+
+.membership_wrap>h1 {
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  color:#ffce32;
+  font-weight: 900;
+  background-color: #58006c;
+  padding:15px 0 15px 0;
+  width: 100%;
+  max-width: 500px;
+  margin:0 auto;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+}
+
+
+
+/* ///약관구역 시작///// */
+    /* 약관전체선택 */
+    .allSelector {
+      position: relative;
+      margin-top: 15px;
+    }
+    
+    /* 체크박스..목록.. */
+    .check.wrap{
+      position: relative;
+    }
+
+    .check--test{
+      font-size: 15px;
+      font-weight: 900;
+      margin: -25px 0 0 22px;
+      padding-left: 10px;
+
+    }
+
+    .check--test2{
+      position: absolute;
+      top:0;
+      left:30px;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+
+    input[id="whole"]:checked + label::after,
+    input[id="ad1"]:checked + label::after,
+    input[id="ad2"]:checked + label::after,
+    input[id="ad3"]:checked + label::after,
+    input[id="ad4"]:checked + label::after
+    {
+      content:'✔';
+      color:#009223;
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      position: absolute;
+      left: 0;
+      top:-5px;
+    }
+
+    input[id="check1"]:checked + label::after,
+    input[id="check2"]:checked + label::after{
+      left: 0;
+      top:-2px;
+    }
+
+
+
+    /* 약관내용 스크롤바 박스 */
+    .join {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 450px; 
+      max-height: 88px;
+      border: 1px solid rgba(148, 146, 146, 0.377);
+      padding: 12px;
+      overflow: auto;
+      background-color: rgb(255, 255, 255);
+      font-size: 12px;
+    }
+    
+    /* 약관 챕터 */
+    .selector1,
+    .selector2, 
+    .selector3, 
+    .selector4 {
+      box-sizing: border-box;
+      display:block;
+      color:#333;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: 700; 
+      position: relative;
+      width: 100%;
+
+    }  
+
+    .selector1 {
+      margin-top: 30px;
+
+    }
+      
+    label{
+      cursor: pointer;
+    }
+
+    /* 체크박스  */
+    .star {
+      color:#009223;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .nonstar{
+      font-weight: bold;
+      font-size: 12px;
+      color: #ddd;
+    }
+    
+
+    /* 박스가 아닌 챕터 */
+    .motion {
+      width: 100%;
+      max-width: 460px; 
+      max-height: 88px;
+      font-size: 12px;
+      font-weight: 400;
+      color:#333;
+      padding-bottom: 10px;
+    }
+
+    /* 버튼wrap */
+    .btn_wrap {
+      font-size: 20px;
+      width: 100%;
+      height: 50px;
+      display: flex;
+      padding: 10px 0 10px 0;
+    }
+    /* 버튼공통스타일 */
+
+    .button{
+      cursor: pointer;
+      width: 47%;    
+      color: white;
+      border:none; 
+      border-radius: 15px;
+      font-size: 15px;
+    }
+
+    /* 취소버튼 */
+    .cancel {
+      background-color: #ddd;
+      margin-right: 10px;
+    }
+    
+    /* 확인버튼 */
+    .ok {
+      background-color: #ffce32;
+    }
+
+
+.content:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.content_wrap {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.membership_wrap {
+  width: 100%;
+}
+
+.membership_content {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border:1px solid #ddd;
+  border-radius: 0 0 15px 15px;
+  padding: 0 10px 10px 25px; 
+  box-sizing: border-box;
+}
+
+@media(min-width:768px){
+
+  .header__menu,
+  .header__login {
+    display: none;
+  }
+
+  .content_wrap {
+    width: 100%;
+    margin: 130px 0 20px 0;
+  }
+
+
+}
+
+
+
+@media(min-width:1024px){
+  
+
+
+ /* common 시작@###@@@@@@@@@@@@@@@@@@@@@ */
+ .border_wrap {
+  position: relative;
+  text-indent: -999px;
+}
+
+
+.icon_wrap {
+  display: none;
+}
+
+.header__menu,
+.header__login {
+  display: block;
+}
+
+
+
+  .content_wrap {
+    margin: 250px 0 50px 0;
+     line-height: 20px;
+     width: 100%;
+  }
+  input[id="whole"]:checked + label::after,
+  input[id="ad1"]:checked + label::after,
+  input[id="ad2"]:checked + label::after,
+  input[id="ad3"]:checked + label::after,
+  input[id="ad4"]:checked + label::after
+  {
+    content:'✔';
+    color:#009223;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top:0px;
+  }
+
+  input[id="check1"]:checked + label::after,
+  input[id="check2"]:checked + label::after{
+    left: 0;
+    top:-2px;
+  }
+
+
+}
+
+
+
+@media(max-width:599px){
+
+  .header__login,
+  .header__menu{
+    display: none;
+  }
+
+  .content_wrap {
+    width: 100%;
+    margin: 120px 0 30px 0;
+  }
+
+  .share>ul {
+    display: block;
+    width: 100%;
+  }
+
+
+}
+@media(min-width:600px) and (max-width:767px){
+
+
+  .header__login,
+  .header__menu{
+    display: none;
+  }
+
+  .content_wrap {
+    width: 100%;
+    margin: 130px 0 20px 0;
+  }
+  .share>ul {
+    display: block;
+    width: 100%;
+  }
+
+  
+}
+
+
+
+
+
+  

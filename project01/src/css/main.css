@@ -1,6 +1,185 @@
-li{
-    margin:10px 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-a{
-    text-decoration: none;
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+/* ==== 헤더 ==== */
+header {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+}
+
+header .headerWrap {
+  width: 1024px;
+  margin: 0 auto;
+  display: flex;
+}
+header div h1 {
+  width: 150px;
+  line-height: 60px;
+  font-size: 20px;
+}
+header div h1 a {
+  display: block;
+}
+header .gnb ul {
+  height: 60px;
+  display: flex;
+}
+header .gnb ul li {
+  margin-right: 10px;
+}
+header .gnb ul li a {
+  display: block;
+  line-height: 60px;
+}
+
+/* ==== 메인 이미지 ==== */
+
+#mainImage {
+  width: 100%;
+  position: relative;
+}
+#mainImage div {
+  width: 80%;
+  height: 730px;
+  margin: 0 auto;
+}
+#mainImage div:before {
+  content: "";
+  display: block;
+  background: linear-gradient(
+    to right,
+    #181819 0%,
+    #181819 30%,
+    rgba(24, 24, 25, 0) 100%
+  );
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 650px;
+  height: 100%;
+}
+#mainImage div:after {
+  content: "";
+  display: block;
+  background: linear-gradient(
+    to right,
+    rgba(24, 24, 25, 0) 0%,
+    #181819 70%,
+    #181819 100%
+  );
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 650px;
+  height: 100%;
+}
+#mainImage div img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ==== 영화 메뉴 ==== */
+#moviegnb {
+  position: absolute;
+  left: 50%;
+  top: 80px;
+  transform: translateX(-50%);
+}
+#moviegnb > ul {
+  display: flex;
+  justify-content: space-around;
+}
+#moviegnb > ul > li {
+  margin: 0 30px;
+}
+#moviegnb > ul > li > a {
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+}
+#moviegnb > ul > li:hover > a {
+  color: #fff;
+}
+
+/* ===== 영화 ===== */
+.loading {
+  width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+}
+.loading img {
+  width: 100px;
+}
+/* topRanking */
+
+#rankingList {
+  display: flex;
+  justify-content: space-between;
+}
+.title{
+    text-align: center;
+    font-size:16px;
+    margin-top:10px;
+}
+.topRanking {
+  width: 200px;
+  height: 300px;
+  position:relative;
+}
+
+.rank{
+    position:absolute;
+    left:10px;
+    top:0px;
+    font-size:40px;
+    color:rgba(255, 255, 255, 0.8);
+    font-style: italic;
+}
+.movie_text{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    box-sizing: border-box;
+    color:#fff;
+}
+.movie_text:hover{
+    background:rgba(0, 0, 0, 0.9);
+    border-radius: 25px;
+}
+.movie_text:hover .description{
+    display: block;
+}
+.description{
+    display: none;
+    padding:15px;
+    position:absolute;
+    left:0;
+    bottom:10px;
+}
+.topRanking img {
+  border-radius: 25px;
+  width: 200px;height:100%;
+}
+
+#top-news-section {
+  width: 1024px;
+  margin: 0 auto;
+  position:relative;
+  top:-250px;
+}
+#latest-section {
+  width: 1024px;
+  margin: 0 auto;
 }

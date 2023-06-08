@@ -5,26 +5,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>영화</title>
-    <script src="src/js/main.js"></script>
+    <title>로딩이미지 구현</title>
+    <script type="module" src="src/js/main.js"></script>
     <link rel="stylesheet" href="src/css/main.css">
 </head>
 
 <body>
-    <h1 id="h1">소식</h1>
-    
-    <section id="top-news-section">
-        <h2>Top News</h2>
-        <article id="rankingList">
-            <div id="loading" class="loading"></div>
-        </article>
-    </section>
-    <section class="latest-section">
-            <h3>영화</h3>
+    <div id="wrap">
+        <header>
+            <div class="headerWrap">
+                <div class="header">
+                    <h1>
+                        <a href="http://choooockc.dothome.co.kr/project01/index.html">
+                            <h1>DaUM 영화</h1>
+                        </a>
+                    </h1>
+                </div>
+                <div class="gnb">
+                    <ul>
+                        <li><a href="#">뉴스</a></li>
+                        <li><a href="#">연애</a></li>
+                        <li><a href="#">스포츠</a></li>
+                        <li><a href="#">자동차</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section id="mainImage">
+            <div><img src="http://choooockc.dothome.co.kr/project01/src/images/background.jpg" alt=""></div>
+        </section>
+        <div id="moviegnb">
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">랭킹</a></li>
+                <li><a href="#">상영/예정작</a></li>
+                <li><a href="#">콘텐츠</a></li>
+            </ul>
+        </div>
+        <section id="top-news-section">
+            <div class="articleBox">
+                <!-- <h2>Top News</h2> -->
+                <article id="rankingList">
+                    <div id="loading" class="loading"></div>
+                </article>
+            </div>
+        </section>
+        <!-- <section id="latest-section">
+            <h3>뉴스</h3>
             <ul id="news-list" class="news-list">
                 <div id="loading" class="loading"></div>
             </ul>
-    </section>
+        </section> -->
+    </div>
 </body>
 
 </html>
