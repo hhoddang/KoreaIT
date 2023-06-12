@@ -41,6 +41,13 @@
   ul.util li a {
     display: block;
   }
+  #mainimg {
+    display: none;
+  }
+  #tabletmainimg {
+    display: block;
+    height: 100%;
+  }
 
   /*메인메뉴*/
   nav {
@@ -55,7 +62,7 @@
     z-index: 100;
     justify-content: space-around;
   }
-  nav>ul>.na>a{
+  nav > ul > .na > a {
     line-height: 50px;
   }
   nav > ul > li {
@@ -89,21 +96,26 @@
     width: auto;
     position: relative;
   }
-  .gnbWrap{
-    top:150px;
+  .gnbWrap {
+    top: 150px;
   }
   /*메인화면이미지*/
   .main {
     position: relative;
   } /*다음이번버튼배치기준*/
+
   .main div {
     width: 100%;
     border: 0px solid aqua;
-    height: auto;
   }
-  .main div img {
-    width: 100%;
-    height: auto;
+  .pc_main,.mb_main{
+    display: none;
+  }
+  .tb_main{
+    height: 300px;
+  }
+  .tb_main img{
+
   }
   .main a {
     position: absolute;
@@ -257,9 +269,9 @@
   div.cake ul li a img:hover {
     transform: scale(1.3);
   }
-  
-/*뉴스배너*/
-section.news {
+
+  /*뉴스배너*/
+  section.news {
     padding-top: 30px;
   }
   section.news #newswrap {
@@ -268,7 +280,7 @@ section.news {
   }
   section.news #newswrap .eventBox1 {
     width: 90%;
-    margin:0 auto;
+    margin: 0 auto;
     display: block;
     padding: 0;
     display: flex;
@@ -300,7 +312,7 @@ section.news {
   .news #newswrap .newsBox .notice2 {
     display: none;
   }
-  
+
   .news #newswrap div {
     width: 400px;
   }
@@ -315,7 +327,7 @@ section.news {
     height: 300px;
     width: 100%;
   }
-  
+
   /*소셜 공유*/
   div.share {
     width: 100%;
@@ -354,7 +366,7 @@ section.news {
     display: block;
     clear: both;
   }
-  
+
   footer#footer p.logo {
     font-size: 50px;
     text-align: right;
@@ -364,7 +376,4 @@ section.news {
     position: relative;
     right: 20px;
   }
-  
-  
-  
 }

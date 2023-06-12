@@ -3,7 +3,7 @@ header#header{border-top:5px solid #009223; border-bottom:1px solid #ccc;}
 .header_box{border: 0px solid black; height: 100px; position:relative;}
 .header_nav{height: 50px;}
 /*로그인,회원가입*/
-ul.util{position:absolute; right:0; bottom:0; border: 0px solid black}
+ul.util{position:absolute; right:20px; bottom:20px; border: 0px solid black}
 ul.util:after{content: ""; display: block; clear: both}
 ul.util li{float: left; margin-left:10px ; position: relative; }
 ul.util li:hover a{color:#009223; font-weight: bold;}
@@ -12,18 +12,17 @@ ul.util li a{display: block}
 nav{
     height: 50px;
 }
-nav>ul{
+nav>.gnbPc{
     border: 0px solid black;
     height: 100%;
     display: flex;
     justify-content: space-around;
     }
-nav>ul:after{content: ""; display: block; clear: both}
-nav>ul>li{position: relative; }
+nav>ul>li{position: relative; width: 100%;}
 nav>ul>li>a{
     display: block; font-weight: bold; font-size: 20px;
     box-sizing: border-box; padding: 10px; text-align: center;
-    width: 200px; border: 0px solid black
+     border: 0px solid black
     }
 .gnbWrap{
     position:absolute;
@@ -40,15 +39,16 @@ nav>ul>li>a{
     display: none;
 }
 ul.sub1{
+    width: 100%;
     display: block; position: absolute; height: 0px; overflow: hidden;
     transition: all 0.7s;
     border: 0px solid black;
     z-index: 100;
     }
-ul.sub1 li{}
+ul.sub1 li{width: 100%;}
 ul.sub1 li a{
     display: block; box-sizing: border-box;padding: 10px;
-    text-align: center; width: 200px; border: 0px solid black
+    text-align: center;  width: 100%;
     }
 /*메인화면이미지*/
 .main{position:relative;}
@@ -56,6 +56,7 @@ ul.sub1 li a{
 .main a.prev{left: 20px; top:50%; transform:translateY(-50%);}
 .main a.next{right: 20px; top:50%; transform:translateY(-50%);}
 #Mobilemainimg{display: none;}
+#tabletmainimg{display:none;}
 /*인기상품이미지*/
 div.popular{  margin:0 auto ;border: 0px solid black;padding:20px;}
 div.popular h3{margin-left: 75px; margin-bottom: 0px; font-size: 30px}
@@ -65,7 +66,7 @@ div.popular ul li{
     float: left; width: 25%;left: 0px; border: 0px solid black; position: relative;
       border:0px solid black;
     }
-div.popular ul li a{display: block; overflow: hidden; width: 260px; height: 200px; margin: 0 auto;}
+div.popular ul li a{display: block; overflow: hidden; margin: 0 auto;}
 div.popular ul li div{font-size: 16px; text-align: center; font-weight: bold; }
 div.popular ul li a img{width: 100%; height: 100%}
 div.popular ul li a img:hover{transform:scale(1.3); transition: 1s all}
@@ -79,7 +80,7 @@ div.newmenu ul li{
     float: left; border: 0px solid black; position: relative;
     width: 25%;left: 0px; border:0px solid black
     }
-div.newmenu ul li a{display: block; overflow: hidden; width: 260px; height: 200px; margin:0 auto; }
+div.newmenu ul li a{display: block; overflow: hidden;  margin:0 auto; }
 div.newmenu ul li div{font-size: 16px; text-align: center; font-weight: bold; }
 div.newmenu ul li a img{width: 100%; height: 100%}
 div.newmenu ul li a img:hover{transform:scale(1.3); transition: 1s all}
@@ -93,7 +94,7 @@ div.cake ul li{
     float: left; border: 0px solid black; position: relative;
     width: 25%;left: 0px; border:0px solid black
     }
-div.cake ul li a{display: block; overflow: hidden; width: 260px; height: 200px; margin: 0 auto;}
+div.cake ul li a{display: block; overflow: hidden; margin: 0 auto;}
 div.cake ul li div{font-size: 16px; text-align: center; font-weight: bold; }
 div.cake ul li a img{width: 100%; height: 100%}
 div.cake ul li a img:hover{transform:scale(1.3); transition: 1s all}
@@ -200,7 +201,6 @@ div.share ul li a{display: block; height:100px; padding:0; line-height: 100px; f
     -webkit-text-fill-color: transparent;}
 /*저작권*/
 
-.footer_menu{float: left; margin-top: 10px; margin-bottom: 10px}
 footer#footer div ul li a{margin-left: 20px; font-weight: bold}
 footer#footer div{font-size: 14px; color: white; border: 0px solid black}
 footer#footer div:after{content: ""; display: block; clear: both}
@@ -212,6 +212,27 @@ footer#footer p.logo{
     font-size: 50px; text-align: right; font-family: 'Gamja Flower', cursive;
     font-family: 'Nanum Pen Script', cursive; 
     float: right; position: relative; right: 20px
+}
+.footerBox1 ul{
+    line-height: 50px;
+}
+.footerBox1 ul li{
+    float:left;
+    position:relative;
+}
+.footerBox1 ul li::before{
+    display: block;
+    content:'';
+    width: 1px;
+    height: 10px;
+    background:rgb(35, 35, 35);
+    position:absolute;
+    left:10px;
+    top:50%;
+    transform: translateY(-50%);
+}
+.footerBox1 ul li:first-child:before{
+    display: none;
 }
 .footerBox2{
     padding:0px 20px;
