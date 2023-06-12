@@ -15,9 +15,11 @@ nav{
 nav>ul{
     border: 0px solid black;
     height: 100%;
+    display: flex;
+    justify-content: space-around;
     }
 nav>ul:after{content: ""; display: block; clear: both}
-nav>ul>li{float: left; position: relative; left: 137px}
+nav>ul>li{position: relative; }
 nav>ul>li>a{
     display: block; font-weight: bold; font-size: 20px;
     box-sizing: border-box; padding: 10px; text-align: center;
@@ -67,7 +69,7 @@ div.popular ul li a{display: block; overflow: hidden; width: 260px; height: 200p
 div.popular ul li div{font-size: 16px; text-align: center; font-weight: bold; }
 div.popular ul li a img{width: 100%; height: 100%}
 div.popular ul li a img:hover{transform:scale(1.3); transition: 1s all}
-div.popularBox {width: 1280px;margin:0 auto;}
+div.popularBox {max-width:1280px;;margin:0 auto;}
 /*신규상품이미지*/
 div.newmenu{  margin:0 auto ;border: 0px solid black;padding:20px;}
 div.newmenu h3{margin-left: 75px; margin-bottom: 0px; font-size: 30px}
@@ -81,7 +83,7 @@ div.newmenu ul li a{display: block; overflow: hidden; width: 260px; height: 200p
 div.newmenu ul li div{font-size: 16px; text-align: center; font-weight: bold; }
 div.newmenu ul li a img{width: 100%; height: 100%}
 div.newmenu ul li a img:hover{transform:scale(1.3); transition: 1s all}
-div.newmenuBox{width: 1280px;margin:0 auto;}
+div.newmenuBox{max-width:1280px;;margin:0 auto;}
 /*케이크상품이미지*/
 div.cake{  margin:0 auto ;border: 0px solid black; padding:20px;}
 div.cake h3{margin-left: 75px; margin-bottom: 0px; font-size: 30px}
@@ -95,7 +97,7 @@ div.cake ul li a{display: block; overflow: hidden; width: 260px; height: 200px; 
 div.cake ul li div{font-size: 16px; text-align: center; font-weight: bold; }
 div.cake ul li a img{width: 100%; height: 100%}
 div.cake ul li a img:hover{transform:scale(1.3); transition: 1s all}
-div.cakeBox{width: 1280px; margin: 0 auto;}
+div.cakeBox{max-width:1280px;; margin: 0 auto;}
 /*뉴스배너*/
 .news #newswrap .eventBox1 {
     display: flex;
