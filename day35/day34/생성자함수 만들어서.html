@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function player(name, run, swim, bike) {
+            this.name = name;
+            this.run = run;
+            this.swim = swim;
+            this.bike = bike;
+        }
+
+        var player = [
+            new player("선수1", 10, 3, 5),
+            new player("선수2", 5, 7, 11),
+            new player("선수3", 15, 3, 4),
+            new player("선수4", 9, 1, 20),
+            new player("선수5", 1, 10, 3)
+        ];
+
+        player.prototype.score = function () {
+            return this.run + this.swim + this.bike;
+        };
+        player.prototype.average = function () {
+            var result = Math.floor(this.score() / 3);
+            return result
+        };
+
+        var x = "";
+        for (var k in player) {
+            with (player[k]) {
+                x += name + ",  " + 
+                    "5.23 화 종목별합산순위 : " + score() + ",  "+
+                        "5.23 화 종목별합산순위 : " + average() + 
+                            "\n";
+            }
+        }
+        alert(x);
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

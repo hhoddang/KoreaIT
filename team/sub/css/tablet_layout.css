@@ -1,0 +1,20 @@
+@media (min-width:600px) and (max-width:767px){
+    body:before {/*영역확인테스트용*/
+       
+    }
+    
+    body {background-color: }
+    
+    header#header, section.main, section.menu, section.news, section.event, footer#footer{
+        width: 100%; margin: 0 auto; border: 0px solid red;
+    }
+    
+    header#header{height: 110px; border-bottom: 30px solid beige}
+    section.main{}
+    section.menu{}
+    section.news{}
+    section.event{height: 150px}
+    footer#footer{height: 200px}
+
+    div.popular img.img, div.newmenu img.img, div.cake img.img{width: 100; height: 200px;}
+}
