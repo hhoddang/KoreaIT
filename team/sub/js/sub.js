@@ -1,16 +1,13 @@
-
-
+// 햄버거메뉴 
 $(function(){
   $("#appmenu_icon").click(function(){
-    $(".hamburger_wrap").css("display","block");
+    $(".hamburger_wrap").stop().slideDown(200);
+    $(".hamburger_wrap").css("display", "block");
   })
   $(".appmenu__close").click(function(){
     $(".hamburger_wrap").stop().slideUp(200);
   })
 
-  $("#wrap").mouseenter(function(){
-    $(".hamburger_wrap").stop().slideUp(200);
-  })
 });
 
 $(function () {
@@ -28,6 +25,7 @@ $(function () {
 
 
 
+// 로그인관련
 $(function(){
   $(".tabMenuWrap").each(function(){
     var tabMenuDiv = $(this);
@@ -63,12 +61,13 @@ $(function(){
       
   })
 })
-
 });
+
+
 
 // best 메뉴 단품 가격 버튼 
 function Button_d(price){
-  let el = document.getElementById('number');
+  let el = document.getElementById("number");
   let plus = document.getElementById("plus");
   let minus = document.getElementById("minus");
   var count = 0;
@@ -100,8 +99,6 @@ function Button_d(price){
 }
 
 Button_d(3900);
-
-
 
 
 

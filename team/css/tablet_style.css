@@ -48,7 +48,6 @@
     display: block;
     height: 100%;
   }
-
   /*메인메뉴*/
   nav {
     position: relative; /*서브메뉴전체배경의 배치기준*/

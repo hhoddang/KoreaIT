@@ -91,7 +91,9 @@ input[id="check4"]:checked + label::after{
   position: absolute;
   left: 0;
   top:-5px;
+  font-weight: 700;
 }
+
 
 input[id="check1"]:checked + label::after,
 input[id="check2"]:checked + label::after{
@@ -273,12 +275,16 @@ span.star
     display: none;
   }
 
-
 }
-
 
 @media(min-width:1024px){
 
+  input[id="check1"]:checked + label::after,
+  input[id="check2"]:checked + label::after{
+    left: 0;
+    top: 0px;
+  }
+  
   /* common 시작@###@@@@@@@@@@@@@@@@@@@@@ */
   .border_wrap {
     position: relative;

@@ -4,12 +4,22 @@ h1 a{color: green;}
 section.menu div ul li div.txt2{color: green}
 
 
-div#contents{background-color: white}
+div#contents{background-color: #ffffff;}
 /*section.main{background-color: black; border: 3px solid black}*/
 /*section.main div {background-color: black; border: 3px solid black}*/
 
-div.popular{background-color: floralwhite;}
-div.newmenu{background-color: beige;}
-div.cake{background-color: floralwhite;}
-section.news{background-color: floralwhite;}
-footer#footer{background-color: #ccc;}
+div.popular{background-color: #ffffff;}
+div.newmenu{background-color: #ebe0d2;}
+div.cake{background-color: #ffffff;}
+section.news{background-color: #ffffff;}
+footer#footer{background-color: slategray;}
+
+div.share ul li a.twitter {
+  background-color: skyblue;
+}
+div.share ul li a.facebook {
+  background-color: deepskyblue;
+}
+div.share ul li a.instagram {
+  background-color: mediumpurple;
+}
