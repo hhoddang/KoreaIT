@@ -1,4 +1,7 @@
 @media (min-width: 380px) and (max-width: 599px) {
+  body{
+    overflow-x: hidden;
+  }
   section.main div img {
     width: 100%;
   }
@@ -354,6 +357,7 @@
     margin: 0 auto;
   }
   .news #newswrap .newsBox .notice {
+    width: 100%;
     position:relative;
     margin: 0 auto;
     padding:20px;
@@ -386,6 +390,7 @@
   }
   .news #newswrap .newsBox .notice .noticeTx {
     width: 100%;
+    height: auto;
     padding: 20px 30px;
     box-sizing: border-box;
     bottom: 20px;
