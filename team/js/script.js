@@ -55,7 +55,7 @@ if (w < 599) {
   function prev(x) {
     mbox--; //1씩 증가
     if (mbox == 0) {
-      mbox = 1;
+      mbox = 2;
     }
     document.getElementById("Mobilemainimg").src =
       "images/m_main" + mbox + ".jpg";
@@ -77,10 +77,23 @@ if (w < 767 && w > 600) {
     tbox--; //1씩 증가
     if (tbox == 0) {
       //변수 box의 값이 5보다 크게되면
-      tbox = 1; //변수 box 재선언한다(파일명에 1이 들어간 이미지를 보이게 한다)
+      tbox = 2; //변수 box 재선언한다(파일명에 1이 들어간 이미지를 보이게 한다)
     }
     document.getElementById("tabletmainimg").src =
       "images/tablet_bg" + tbox + ".jpg";
   }
 }
 // ==== 태블릿 슬라이드 ====
+
+/* 사이즈 변경시 자동 새로고침*/
+// $(window).resize(function () {
+//   document.location.reload();
+// });
+// var delay = 100;
+// var timer = null;
+// $(window).on("resize", function () {
+//   clearTimeout(timer);
+//   timer = setTimeout(function () {
+//     document.location.reload();
+//   }, delay);
+// });
