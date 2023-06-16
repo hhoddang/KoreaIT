@@ -86,14 +86,14 @@ if (w < 767 && w > 600) {
 // ==== 태블릿 슬라이드 ====
 
 /* 사이즈 변경시 자동 새로고침*/
-// $(window).resize(function () {
-//   document.location.reload();
-// });
-// var delay = 100;
-// var timer = null;
-// $(window).on("resize", function () {
-//   clearTimeout(timer);
-//   timer = setTimeout(function () {
-//     document.location.reload();
-//   }, delay);
-// });
+  // $(window).resize(function () {
+  //   document.location.reload();
+  // });
+  // var delay = 100;
+  // var timer = null;
+  // $(window).on("resize", function () {
+  //   clearTimeout(timer);
+  //   timer = setTimeout(function () {
+  //     document.location.reload();
+  //   }, delay);
+  // });
