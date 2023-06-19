@@ -20,19 +20,19 @@ body {
   position: relative;
 }
 .full1 {
-  background: red;
+  background: rgb(255, 198, 198);
 }
 .full2 {
-  background: yellow;
+  background: rgb(255, 255, 208);
 }
 .full3 {
-  background: green;
+  background: rgb(183, 255, 183);
 }
 .full4 {
-  background: blue;
+  background: rgb(197, 197, 255);
 }
 .full5 {
-  background: purple;
+  background: rgb(255, 201, 255);
 }
 #fullpage span {
   display: block;
@@ -61,14 +61,14 @@ li {
   z-index: 100000;
 }
 .quick li {
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   margin-bottom: 10px;
   border-radius: 15px;
-  border: 2px solid #fff;
+  border: 2px solid #000;
   cursor: pointer;
 }
 .quick .on {
-  background: #fff;
+  background: #000;
 }
 /* === full page set ==== */

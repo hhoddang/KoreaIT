@@ -24,12 +24,12 @@ function fullset() {
       }
       if (page.index() > 0) {
         page = page.index() - 1;
-        $("#fullpage").animate({ top: -pagelength + "px" }, 1000, "swing");
-      } 
+        $("#fullpage").animate({ top: -pagelength + "px" }, 500, "swing");
+      }
     } else {
       // 마우스 휠을 아래로
-      var nextPage = parseInt(page.index() + 1); 
-      var lastPageNum = parseInt($(".quick ul li").size()); 
+      var nextPage = parseInt(page.index() + 1);
+      var lastPageNum = parseInt($(".quick ul li").size());
       if (page.index() <= $(".quick ul li").size() - 1) {
         page.next().addClass("on").siblings(".on").removeClass("on");
       }
@@ -40,8 +40,8 @@ function fullset() {
         for (var i = 1; i < nextPage + 1; i++) {
           pagelength += $(".full" + i).height();
         }
-        $("#fullpage").animate({ top: -pagelength + "px" }, 1000, "swing");
-      } 
+        $("#fullpage").animate({ top: -pagelength + "px" }, 500, "swing");
+      }
     }
   });
   $(window).resize(function () {
