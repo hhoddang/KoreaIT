@@ -27,9 +27,9 @@ export default {
       localStorage.setItem(todoItem, todoItem);
       this.todoItems.push(todoItem);
     },
-    removeTodo(todoItem,index) {
+    removeTodo(todoItem, index) {
       localStorage.removeItem(todoItem);
-      this.todoItems.splice(index,1);
+      this.todoItems.splice(index, 1);
     }
   },
   created() {
