@@ -1,0 +1,8 @@
+#wrap{
+    max-width:1920px;
+    height: 100%;
+}
+#header{
+    width: 245px;
+    height: 100vh;
+}
