@@ -1,8 +1,17 @@
-#wrap{
-    max-width:1920px;
-    height: 100%;
+html,
+body {
+  padding-bottom: 280px;
 }
-#header{
-    width: 245px;
-    height: 100vh;
+#wrap {
+  max-width: 1920px;
+  height: 100%;
+  margin: 0 auto;
+}
+#header {
+  width: 245px;
+}
+
+#content {
+  min-height: 700px;
+  padding-left: 245px;
 }
