@@ -1,4 +1,4 @@
-modal<template>
+<template>
   <div class="inputBox shadow">
     <input
       type="text"
