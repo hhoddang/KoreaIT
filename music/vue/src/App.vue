@@ -1,23 +1,20 @@
 <template>
   <div id="app">
-    <TodoHeader></TodoHeader>
-    <TodoInput></TodoInput>
-    <TodoList></TodoList>
-    <TodoFooter></TodoFooter>
+    <Header></Header>
+    <contents></contents>
+    <Playbar></Playbar>
   </div>
 </template>
 
 <script>
-import TodoHeader from "./components/TodoHeader.vue";
-import TodoInput from "./components/TodoInput.vue";
-import TodoList from "./components/TodoList.vue";
-import TodoFooter from "./components/TodoFooter.vue";
+import Header from "./components/Header.vue";
+import contents from "./components/contents.vue";
+import Playbar from "./components/Playbar.vue";
 export default {
   components: {
-    TodoHeader: TodoHeader,
-    TodoInput: TodoInput,
-    TodoList: TodoList,
-    TodoFooter: TodoFooter
+    Header: Header,
+    contents: contents,
+    Playbar: Playbar
   }
 };
 </script>
@@ -39,3 +36,5 @@ a {
   text-decoration: none;
 }
 </style>
+
+

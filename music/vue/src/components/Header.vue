@@ -10,13 +10,13 @@
         <button class="login" id="show-modal" @click="showModal = true">
           로그인
         </button>
-        <Teleport to="body">
+        <div to="body">
           <modal :show="showModal" @close="showModal = false">
             <template #header>
               <h3>로그인</h3>
             </template>
           </modal>
-        </Teleport>
+        </div>
       </div>
       <div class="search">
         <input type="search" />
@@ -81,6 +81,7 @@ export default {
   bottom: 50px;
   color: #fff;
   z-index: 1000000;
+  border-right:1px solid #ffffff70;
 }
 #header > h1 {
   text-indent: 25px;
@@ -114,7 +115,7 @@ nav > p {
   border-top: 1px solid #ccc;
 }
 
-.login>button {
+.login > button {
   width: 100%;
   height: 45px;
   border: none;
@@ -138,7 +139,7 @@ nav > p {
   font-weight: bold;
   cursor: pointer;
 }
-.login span {
+.login > span {
   display: block;
   font-size: 16px;
   letter-spacing: 1px;
