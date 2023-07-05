@@ -27,32 +27,58 @@
           </div>
         </div>
       </div>
+
       <div class="TodayChart">
         <h3>실시간 차트</h3>
-        <ul v-for="Today in Today">
-          <li>
-            {{ Today.text }}
-          </li>
-        </ul>
-      </div>
-      <div class="genreMusic">
-        <h3>장르별 차트</h3>
-        <ul v-for="genre in genre">
-          <li></li>
-        </ul>
+        <div class="TodayList">
+          <div>
+            <ul>
+              <li v-for="music in music">
+                <a href="#">
+                  <img :src="music.img" alt="">
+                  <h2>{{ music.name }}</h2>
+                  <span>{{ music.artist }}</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
 export default {
-  el: "app",
   data() {
     return {
-      Today: [
-       
+      music :[
+        {
+          name:"I AM",
+          artist:"IVE(아이브)",
+          img:"https://musicmeta-phinf.pstatic.net/album/009/334/9334427.jpg?type=r480Fll&v=20230524152040"
+        },
+        {
+          name:"퀸카 (Queencard)",
+          artist:"(여자)아이들",
+          img:"https://musicmeta-phinf.pstatic.net/album/009/637/9637036.jpg?type=r480Fll&v=20230523141228"
+        },
+        {
+          name:"이브, 프시케 그리고 푸른 수염의 아내",
+          artist:"LE SSERAFIM (르세라핌)",
+          img:"https://musicmeta-phinf.pstatic.net/album/009/615/9615768.jpg?type=r480Fll&v=20230523135926"
+        },
+        {
+          name:"Spicy",
+          artist:"aespa",
+          img:"https://musicmeta-phinf.pstatic.net/album/009/620/9620172.jpg?type=r480Fll&v=20230605164400"
+        },
+        {
+          name:"Kitsch",
+          artist:"IVE(아이브)",
+          img:"https://musicmeta-phinf.pstatic.net/album/009/334/9334427.jpg?type=r480Fll&v=20230524152040"
+        }
       ]
-    };
+    }
   }
 };
 </script>
@@ -63,6 +89,7 @@ body {
 
 #contentWrap {
   padding-left: 245px;
+  padding-bottom:100px;
 }
 #addText {
   width: 100%;
@@ -90,23 +117,20 @@ body {
 }
 .eventBanner {
   width: 100%;
-  margin-top: 20px;
   height: 350px;
+  margin-top: 20px;
+  display: flex;
 }
 
 .eventBanner .eventImg {
-  width: 35%;
-  height: 100%;
-  float: left;
+  height: auto;
 }
 .eventBanner .eventImg img {
   width: 100%;
   height: 100%;
 }
 .eventBanner .eventText {
-  width: 65%;
-  height: 100%;
-  float: right;
+  width: 70%;
   position: relative;
   padding-left: 70px;
   box-sizing: border-box;
@@ -118,7 +142,6 @@ body {
   font-size: 50px;
 }
 .eventBanner .eventText p {
-  margin-top: 30px;
   color: #ffffff90;
   text-align: left;
   line-height: 30px;
@@ -127,12 +150,9 @@ body {
   display: block;
   color: #ffffff90;
   text-align: left;
-  margin-top: 20px;
 }
 .eventBanner .eventText .eventTextbox {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-top: 60px;
 }
 
 #content .TodayChart h3 {
@@ -145,5 +165,39 @@ body {
   color: #fff;
   text-align: left;
   font-size: 40px;
+}
+.TodayChart {
+  margin-top: 20px;
+}
+.TodayChart .TodayList div {
+  margin-top:20px;
+}
+.TodayChart .TodayList ul{
+  display: flex;
+  justify-content: space-between;
+}
+.TodayChart .TodayList li:first-child{
+  margin-left:0;
+}
+.TodayChart .TodayList li{
+  width: 285px;
+  margin:0 10px;
+}
+.TodayChart .TodayList li a{
+  display: block;
+}
+.TodayChart .TodayList li img{
+  width: 100%;
+}
+.TodayChart .TodayList li h2{
+  color:#fff;
+  text-align: left;
+  font-size:18px;
+}
+.TodayChart .TodayList li span{
+  display: block;
+  color:#ffffff70;
+  text-align: left;
+  margin-top:5px;
 }
 </style>

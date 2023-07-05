@@ -1,19 +1,19 @@
 <template>
   <div id="app">
     <Header></Header>
-    <contents></contents>
+    <home></home>
     <Playbar></Playbar>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
-import contents from "./components/contents.vue";
+import home from "./components/home.vue";
 import Playbar from "./components/Playbar.vue";
 export default {
   components: {
     Header: Header,
-    contents: contents,
+    home: home,
     Playbar: Playbar
   }
 };
