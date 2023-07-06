@@ -8,9 +8,13 @@
           <p>Stan Getz, Joao Gilberto</p>
         </div>
       </div>
-      <div class="playBtn">
-        플레이
-      </div>
+      <ul class="playBtn">
+        <li class="Playsuffle"><img src="../assets/images/suffle.png" alt=""></li>
+        <li class="PlayPrev"><img src="../assets/images/prev.png" alt=""></li>        
+        <li class="play"><img src="../assets/images/play.png" alt=""></li>
+        <li class="PlayNext"><img src="../assets/images/next.png" alt=""></li>
+        <li class="PlayRepeat"><img src="../assets/images/repeat.png" alt=""></li>
+      </ul>
       <div class="playList"></div>
     </div>
   </div>
@@ -58,8 +62,32 @@ export default {};
 #playBarWrap .playBtn{
   width: 280px;
   height: 55px;
-  margin:0 auto;
-  margin-top:25px;
+  display: flex;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  align-items: center;
+}
+#playBarWrap .playBtn li {
+  margin : 0 10px;
+  cursor: pointer;
+}
+#playBarWrap .playBtn li:nth-child(2) img{
+  width: 70%;
+}
+#playBarWrap .playBtn li:nth-child(4) img{
+  width: 70%;
+}
+#playBarWrap .playBtn li img{
+  width: 90%;
+}
+#playBarWrap .playBtn li:nth-child(3){
+  position:relative;
 }
 
+
 </style>
+
+
+

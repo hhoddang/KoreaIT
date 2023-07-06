@@ -76,6 +76,11 @@ export default {
           name:"Kitsch",
           artist:"IVE(아이브)",
           img:"https://musicmeta-phinf.pstatic.net/album/009/334/9334427.jpg?type=r480Fll&v=20230524152040"
+        },
+        {
+          name:"UNFORGIVEN(feat. Nile Rodgers)",
+          artist:"LE SSERAFIM (르세라핌)",
+          img:"https://musicmeta-phinf.pstatic.net/album/009/615/9615768.jpg?type=r480Fll&v=20230523135926"
         }
       ]
     }
@@ -184,6 +189,7 @@ body {
   margin:0 10px;
 }
 .TodayChart .TodayList li a{
+  font-size:12px;
   display: block;
 }
 .TodayChart .TodayList li img{
@@ -192,7 +198,7 @@ body {
 .TodayChart .TodayList li h2{
   color:#fff;
   text-align: left;
-  font-size:18px;
+  font-size:14px;
 }
 .TodayChart .TodayList li span{
   display: block;
