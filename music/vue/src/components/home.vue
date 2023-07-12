@@ -44,6 +44,15 @@
           </div>
         </div>
       </div>
+
+      <div class="TodayChart">
+        <h3>장르별 스테이션</h3>
+        <div class="TodayList">
+          <div>
+           
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -157,13 +166,15 @@ body {
   text-align: left;
 }
 .eventBanner .eventText .eventTextbox {
+  
   margin-top: 60px;
 }
 
 #content .TodayChart h3 {
   color: #fff;
   text-align: left;
-  font-size: 40px;
+  font-size: 3
+  0px;
 }
 
 #content .genreMusic h3 {

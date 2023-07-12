@@ -68,6 +68,7 @@ export default {
       showModal: false
     };
   }
+  
 };
 </script>
 
