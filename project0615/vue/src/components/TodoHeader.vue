@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>todos</h1>
+    <h1>to do list</h1>
   </header>
 </template>
 
@@ -11,6 +11,10 @@ export default {
 </script>
 
 <style scoped>
+header{
+  margin: 0 auto;
+  width: 700px;
+}
 h1 {
   color: #b83f45;
   font-weight: 900;

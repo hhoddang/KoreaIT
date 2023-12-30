@@ -1,6 +1,6 @@
 <template>
   <div class="clearAllContainer">
-    <span class="clearAllBtn" @click="clearTodo">Clear All</span>
+    <span class="clearAllBtn" @click="clearTodo">모두 지우기</span>
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
 
 <style>
 .clearAllContainer {
-  width: 8em;
+  width: 700px;
   height: 50px;
   line-height: 50px;
   background: #fff;

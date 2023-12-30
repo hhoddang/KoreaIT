@@ -24,6 +24,10 @@ export default {
 </script>
 
 <style scoped>
+section{
+  margin: 0 auto;
+  width: 700px;
+}
 ul{
   list-style: none;
   padding-left:0;
@@ -37,6 +41,7 @@ ul li{
   padding:0 0.9rem;
   background:#fff;
   border-radius: 5px;
+  line-height: 50px;
 }
 .checkBtn{
   line-height: 45px;
@@ -44,6 +49,7 @@ ul li{
   margin-right:50px;
 }
 .removeBtn{
+  cursor: pointer;
   margin-left:auto;
   color:#de4343;
   line-height: 45px;

@@ -3,7 +3,7 @@
     <input
       type="text"
       v-model="newTodoItem"
-      placeholder="할일을 메모하세요."
+      placeholder="내용을 작성해주세요."
       v-on:keyup.enter="addTodo"
     />
     <span class="addContainer" v-on:click="addTodo">
@@ -11,7 +11,7 @@
     </span>
 
     <modal v-if="showModal" @close="showModal = false">
-      <h3 slot="header">경고</h3>
+      <h3 slot="header">알림</h3>
       <span slot="footer" @click="showModal = false">
         할일을 입력하세요.
         <i class="closeModalBtn fa-solid fa-xmark" aria-hidden="true"></i>
@@ -55,14 +55,17 @@ input:focus {
   outline: none;
 }
 .inputBox {
+  width: 700px;
   background: #fff;
   height: 50px;
   line-height: 50px;
   border-radius: 5px;
+  margin: 0 auto;
 }
 .inputBox input {
   border-style: none;
   font-size: 0.9rem;
+  width: 600px;
 }
 .addContainer {
   float: right;
